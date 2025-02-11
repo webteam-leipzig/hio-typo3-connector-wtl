@@ -11,3 +11,5 @@
 
 /.cache/
 /Build/testing-docker/.env
+
+/Resources/Private/Frontend/node_modules/
