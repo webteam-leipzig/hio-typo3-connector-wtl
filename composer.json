@@ -1,0 +1,36 @@
+{
+    "name": "wtl/hio-typo3-connector-wtl",
+    "description": "TYPO3 Connector for HISinOne (WTL Demo)",
+    "type": "typo3-cms-extension",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "require": {
+        "typo3/cms-core": "^12.4 || ^13.0",
+        "wtl/hio-typo3-connector": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wtl\\HioTypo3Connector\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "hio_typo3_connector_wtl"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "src/extensions/*"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/webteam-leipzig/typo3-ext-hio-typo3-connector.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/webteam-leipzig/hio-typo3-connector-wtl.git"
+        }
+    ]
+}

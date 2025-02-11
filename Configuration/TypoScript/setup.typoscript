@@ -1,0 +1,6 @@
+plugin.tx_hiotypo3connector {
+  view {
+    templateRootPaths.1734438688 = EXT:hio_typo3_connector_wtl/Resources/Private/Templates/
+    partialRootPaths.1734438688 = EXT:hio_typo3_connector_wtl/Resources/Private/Partials/
+  }
+}
