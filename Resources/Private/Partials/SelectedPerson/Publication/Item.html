@@ -16,7 +16,7 @@
                         <f:for each="{publication.details.persons}" as="person" key="personIndex">
                             <f:variable name="isFirst" value="{personIndex === 0}"/>
                             <f:render partial="Publication/List/Person"
-                                  arguments="{person: person, isFirst: isFirst}"/>
+                                      arguments="{person: person, isFirst: isFirst}"/>
                         </f:for>
                     </span>
                 </f:if>
@@ -26,6 +26,7 @@
                     </span>
                 </f:if>
             </f:else>
+        </f:if>
     </li>
 </f:if>
 
