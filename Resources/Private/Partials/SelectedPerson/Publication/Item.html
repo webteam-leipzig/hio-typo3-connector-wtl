@@ -1,0 +1,32 @@
+<html
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        data-namespace-typo3-fluid="true" lang="en">
+
+<f:if condition="{publication}">
+    <li class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 py-5 sm:flex-nowrap">
+        <f:if condition="{publication.details.citations} && {selectedCitationStyle}">
+            <f:then>
+                <f:render partial="SelectedPerson/Publication/Citation"
+                          arguments="{citations: publication.details.citations, selectedCitationStyle: selectedCitationStyle}"/>
+            </f:then>
+            <f:else>
+                <strong>{publication.title}</strong><br/>
+                <f:if condition="{publication.details.persons}">
+                    <span class="text-gray-700">
+                        <f:for each="{publication.details.persons}" as="person" key="personIndex">
+                            <f:variable name="isFirst" value="{personIndex === 0}"/>
+                            <f:render partial="Publication/List/Person"
+                                  arguments="{person: person, isFirst: isFirst}"/>
+                        </f:for>
+                    </span>
+                </f:if>
+                <f:if condition="{publication.details.journal}">
+                    <span class="text-gray-700">
+                        {publication.details.journal.title}, {publication.details.journal.releaseYear}, S. {publication.details.journal.pageRange}
+                    </span>
+                </f:if>
+            </f:else>
+    </li>
+</f:if>
+
+</html>
