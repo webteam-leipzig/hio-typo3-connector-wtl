@@ -1,0 +1,16 @@
+<html
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        data-namespace-typo3-fluid="true" lang="en">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <f:if condition="{person}">
+        <div class="bg-white px-6 py-6 lg:px-8">
+            <f:render partial="SelectedPerson/DoctorateList" arguments="{doctorates: person.doctorates}" />
+        </div>
+    </f:if>
+
+</f:section>
+
+</html>
