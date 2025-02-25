@@ -8,8 +8,8 @@
     <f:if condition="{person}">
         <div class="bg-white px-6 py-6 lg:px-8">
             <div class="max-w-3xl text-base/7 text-gray-700">
-                <f:for each="{person.doctorates}" as="doctorate">
-                    <div>{doctorate.title}</div>
+                <f:for each="{person.habilitations}" as="habilitation">
+                    <div>{habilitation.title}</div>
                 </f:for>
             </div>
         </div>
