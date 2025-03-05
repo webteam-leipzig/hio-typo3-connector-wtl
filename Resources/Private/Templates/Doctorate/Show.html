@@ -11,19 +11,19 @@
             <div class="text-base/7 text-gray-700">
                 <p class="font-semibold text-gray-600 py-0">
                     <f:if condition="{doctorate.details.courseOfStudy}">
-                        No.: {doctorate.details.courseOfStudy}
+                        <f:translate key="doctorate.courseOfStudy" />: {doctorate.details.courseOfStudy}
                         &middot;
                     </f:if>
                     <f:if condition="{doctorate.details.language}">
-                        Sprache: {doctorate.details.language}
+                        <f:translate key="doctorate.language" />: {doctorate.details.language}
                         &middot;
                     </f:if>
                     <f:if condition="{doctorate.details.startDate}">
-                        Start: <f:format.date format="d.m.Y" >{doctorate.details.startDate}</f:format.date>
+                        <f:translate key="doctorate.startDate" />: <f:format.date format="d.m.Y" >{doctorate.details.startDate}</f:format.date>
                         &middot;
                     </f:if>
                     <f:if condition="{doctorate.details.endDate}">
-                        Ende: <f:format.date format="d.m.Y" >{doctorate.details.endDate}</f:format.date>
+                        <f:translate key="doctorate.endDate" />: <f:format.date format="d.m.Y" >{doctorate.details.endDate}</f:format.date>
                     </f:if>
                 </p>
                 <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{doctorate.title}</h1>
@@ -32,7 +32,7 @@
             <div class="mt-6 border-t border-gray-100">
                 <dl class="divide-y divide-gray-100">
                     <div class="py-6 sm:grid sm:grid-cols-3 sm:gap-4">
-                        <dt class="text-sm/6 font-medium text-gray-900"><f:translate key="hio.doctorate.inventors" /></dt>
+                        <dt class="text-sm/6 font-medium text-gray-900"><f:translate key="doctorate.persons" /></dt>
                         <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
                             <f:for each="{doctorate.details.persons}" as="person">
                                 <span>
@@ -42,7 +42,7 @@
                         </dd>
                     </div>
                     <div class="py-6 sm:grid sm:grid-cols-3 sm:gap-4">
-                        <dt class="text-sm/6 font-medium text-gray-900"><f:translate key="hio.doctorate.description" /></dt>
+                        <dt class="text-sm/6 font-medium text-gray-900"><f:translate key="doctorate.description" /></dt>
                         <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
                                 {doctorate.details.description}
                         </dd>
@@ -51,10 +51,10 @@
                         <dt class="text-sm/6 font-medium text-gray-900">
                             <f:if condition="{doctorate.details.subjectAreas -> f:count()} == 1">
                                 <f:then>
-                                    <f:translate key="hio.doctorate.subjectArea" />
+                                    <f:translate key="doctorate.subjectArea" />
                                 </f:then>
                                 <f:else>
-                                    <f:translate key="hio.doctorate.subjectAreas" />
+                                    <f:translate key="doctorate.subjectAreas" />
                                 </f:else>
                             </f:if>
                         </dt>
@@ -71,10 +71,10 @@
                             <dt class="text-sm/6 font-medium text-gray-900">
                                 <f:if condition="{doctorate.details.researchAreas -> f:count()} == 1">
                                     <f:then>
-                                        <f:translate key="hio.doctorate.researchArea" />
+                                        <f:translate key="doctorate.researchArea" />
                                     </f:then>
                                     <f:else>
-                                        <f:translate key="hio.doctorate.researchAreas" />
+                                        <f:translate key="doctorate.researchAreas" />
                                     </f:else>
                                 </f:if>
                             </dt>
