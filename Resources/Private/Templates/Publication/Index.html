@@ -5,10 +5,7 @@
 <f:section name="Main">
     <f:flashMessages />
     <div class="tx-hio-typo3-connector">
-        <f:form action="search" controller="Publication" enctype="multipart/form-data">
-            <f:form.textfield id="search" name="searchWord" placeholder="Search..." value="{searchWord}" />
-            <f:form.submit value="Search" />
-        </f:form>
+        <f:render partial="List/SearchForm" arguments="{action:'search', controller:'Publication', searchWord:searchWord}" />
         <f:render partial="Publication/List" arguments="{pagination:pagination, paginator:paginator}" />
     </div>
 </f:section>
