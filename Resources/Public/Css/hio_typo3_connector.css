@@ -778,6 +778,10 @@ select {
   margin-bottom: -1px;
 }
 
+.-mr-px {
+  margin-right: -1px;
+}
+
 .-mt-px {
   margin-top: -1px;
 }
@@ -830,6 +834,10 @@ select {
   display: inline-flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
 }
@@ -870,8 +878,20 @@ select {
   flex: 1 1 0%;
 }
 
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
 .list-none {
   list-style-type: none;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-wrap {
@@ -888,6 +908,11 @@ select {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-x-1\.5 {
+  -moz-column-gap: 0.375rem;
+       column-gap: 0.375rem;
 }
 
 .gap-x-2 {
@@ -955,6 +980,11 @@ select {
 .rounded-l-md {
   border-top-left-radius: 0.375rem;
   border-bottom-left-radius: 0.375rem;
+}
+
+.rounded-r-md {
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
 }
 
 .border-b {
@@ -1040,6 +1070,11 @@ select {
   padding-right: 0.5rem;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1058,6 +1093,11 @@ select {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.py-1\.5 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
 }
 
 .py-2 {
@@ -1080,13 +1120,12 @@ select {
   padding-bottom: 1.5rem;
 }
 
-.py-1\.5 {
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
-}
-
 .pl-1 {
   padding-left: 0.25rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
 }
 
 .pl-3 {
@@ -1101,16 +1140,12 @@ select {
   padding-right: 2.5rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
-}
-
-.pl-10 {
-  padding-left: 2.5rem;
-}
-
 .pr-3 {
   padding-right: 0.75rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-2xl {
@@ -1264,9 +1299,18 @@ select {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
+.focus-within\:relative:focus-within {
+  position: relative;
+}
+
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.hover\:bg-gray-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
 .hover\:text-gray-700:hover {
@@ -1291,6 +1335,10 @@ select {
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.focus\:relative:focus {
+  position: relative;
 }
 
 .focus\:border-indigo-500:focus {
