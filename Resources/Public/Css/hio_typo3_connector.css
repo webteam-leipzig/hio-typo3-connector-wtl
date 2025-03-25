@@ -1384,6 +1384,10 @@ select {
   outline-color: #4f46e5;
 }
 
+.focus\:outline-wtl-red:focus {
+  outline-color: #CC0033;
+}
+
 .focus\:ring-indigo-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity));
