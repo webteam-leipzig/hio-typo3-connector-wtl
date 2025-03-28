@@ -81,6 +81,13 @@
                             </dd>
                         </div>
                     </f:if>
+
+                    <f:if condition="{project.details.dynamicObjects}">
+                        <f:then>
+                            <f:render partial="DynamicObjects" arguments="{dynamicObjects: project.details.dynamicObjects}" />
+                        </f:then>
+                    </f:if>
+
                 </dl>
             </div>
 

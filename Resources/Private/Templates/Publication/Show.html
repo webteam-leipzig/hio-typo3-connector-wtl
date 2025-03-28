@@ -75,7 +75,7 @@
 
             <f:if condition="{publication.details.dynamicObjects}">
                 <f:then>
-                    <f:render partial="Publication/Show/DynamicObjects" arguments="{dynamicObjects: publication.details.dynamicObjects}" />
+                    <f:render partial="DynamicObjects" arguments="{dynamicObjects: publication.details.dynamicObjects}" />
                 </f:then>
             </f:if>
 

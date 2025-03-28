@@ -28,6 +28,15 @@
                         <f:render partial="SelectedPerson/PatentList" arguments="{patents: person.patents}"/>
                     </f:if>
                 </div>
+
+                <f:if condition="{person.details.dynamicObjects}">
+                    <f:then>
+                        <div class="mt-10 max-w-2xl">
+                            <f:render partial="DynamicObjects" arguments="{dynamicObjects: person.details.dynamicObjects}" />
+                        </div>
+                    </f:then>
+                </f:if>
+
             </div>
         </div>
     </f:if>

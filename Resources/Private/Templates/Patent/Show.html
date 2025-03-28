@@ -85,6 +85,13 @@
                             </dd>
                         </div>
                     </f:if>
+
+                    <f:if condition="{patent.details.dynamicObjects}">
+                        <f:then>
+                            <f:render partial="DynamicObjects" arguments="{dynamicObjects: patent.details.dynamicObjects}" />
+                        </f:then>
+                    </f:if>
+
                 </dl>
             </div>
 
