@@ -73,12 +73,6 @@
                 </dl>
             </div>
 
-            <f:if condition="{publication.details.dynamicObjects}">
-                <f:then>
-                    <f:render partial="DynamicObjects" arguments="{dynamicObjects: publication.details.dynamicObjects}" />
-                </f:then>
-            </f:if>
-
             <f:if condition="{publication.details.conference}">
                 <f:then>
                     <f:render partial="Publication/Show/Conference" arguments="{conference: publication.details.conference}" />
@@ -88,6 +82,12 @@
             <f:if condition="{publication.details.journal}">
                 <f:then>
                     <f:render partial="Publication/Show/Journal" arguments="{journal: publication.details.journal}" />
+                </f:then>
+            </f:if>
+
+            <f:if condition="{publication.details.dynamicObjects}">
+                <f:then>
+                    <f:render partial="DynamicObjects" arguments="{dynamicObjects: publication.details.dynamicObjects}" />
                 </f:then>
             </f:if>
         </div>
