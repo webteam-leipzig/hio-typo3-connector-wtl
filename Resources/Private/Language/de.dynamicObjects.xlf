@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="EXT:hio_typo3_connector_wtl/Resources/Private/Language/Modules/dynamicObjects.xlf" date="2024-10-17T00:00:00Z" product-name="hio_typo3_connector_wtl">
+        <header/>
+        <body>
+
+            <trans-unit id="fs.res.publication.Accounting.articleNumber" resname="fs.res.publication.Accounting.articleNumber">
+                <source>Article number</source>
+                <target>Artikelnummer</target>
+            </trans-unit>
+            <trans-unit id="fs.res.publication.Accounting.completionDate" resname="fs.res.publication.Accounting.completionDate">
+                <source>Completion date</source>
+                <target>Abgabedatum</target>
+            </trans-unit>
+            <trans-unit id="fs.res.publication.Accounting.dataPrivacyProtection" resname="fs.res.publication.Accounting.dataPrivacyProtection">
+                <source>Data privacy protection</source>
+                <target>Datenschutz</target>
+            </trans-unit>
+            <trans-unit id="fs.res.publication.Accounting.identificationNumber" resname="fs.res.publication.Accounting.identificationNumber">
+                <source>Identification number</source>
+                <target>Identifikationsnummer</target>
+            </trans-unit>
+            <trans-unit id="fs.res.publication.Accounting.numberOfDownloads" resname="fs.res.publication.Accounting.numberOfDownloads">
+                <source>Number of downloads</source>
+                <target>Anzahl der Downloads</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>
