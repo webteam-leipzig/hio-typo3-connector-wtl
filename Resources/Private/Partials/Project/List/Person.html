@@ -10,10 +10,10 @@
                            controller="Person"
                            arguments="{person: person.id}"
                            class="text-gray-700 underline hover:text-wtl-red-dark px-0 m-0">{person.name}</f:link.action>
-            <span>({person.role})</span>
+            <span> ({person.role})</span>
         </f:then>
         <f:else>
-            {person.name}
+            <span>{person.name} ({person.role})</span>
         </f:else>
     </f:if>
 </f:if>
