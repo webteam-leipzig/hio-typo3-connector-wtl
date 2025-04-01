@@ -9,22 +9,22 @@
     <f:if condition="{person}">
         <div class="bg-white px-6 py-6 lg:px-8">
             <div class="max-w-3xl xl:max-w-5xl text-base/7 text-gray-700">
-                <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight sm:text-5xl">{person.name}</h1>
+                <h2 class="mt-2 text-pretty font-semibold tracking-tight text-3xl sm:text-5xl xl:text-4xl">{person.name}</h2>
                 <div class="mt-10">
                     <f:if condition="{person.publications}">
-                        <h2 class="font-semibold">Meine Veröffentlichungen</h2>
+                        <h3 class="text-2xl xl:text-3xl  font-semibold">Meine Veröffentlichungen</h3>
                         <f:render partial="SelectedPerson/PublicationList" arguments="{publications: person.publications}"/>
                     </f:if>
                 </div>
                 <div class="mt-10">
                     <f:if condition="{person.projects}">
-                        <h2 class="font-semibold">Meine Projekte</h2>
+                        <h3 class="text-2xl xl:text-3xl  font-semibold">Meine Projekte</h3>
                         <f:render partial="SelectedPerson/ProjectList" arguments="{projects: person.projects}"/>
                     </f:if>
                 </div>
                 <div class="mt-10">
                     <f:if condition="{person.patents}">
-                        <h2 class="font-semibold">Meine Patente</h2>
+                        <h3 class="text-2xl xl:text-3xl  font-semibold">Meine Patente</h3>
                         <f:render partial="SelectedPerson/PatentList" arguments="{patents: person.patents}"/>
                     </f:if>
                 </div>
