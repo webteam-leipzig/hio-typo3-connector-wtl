@@ -11,17 +11,20 @@
         <f:else>
             <strong>{publication.title}</strong><br/>
             <f:if condition="{publication.details.persons}">
-                    <span class="text-gray-700">
+                    <span class="flex items-left text-gray-700">
                         <f:for each="{publication.details.persons}" as="person" key="personIndex">
-                            <f:if condition="{personIndex} > 0"><f:then><span>, </span></f:then></f:if>
+                            <f:if condition="{personIndex} > 0"><f:then><span class="pr-2">,</span></f:then></f:if>
                             <f:render partial="Publication/List/Person" arguments="{person: person}"/>
                         </f:for>
                     </span>
             </f:if>
             <f:if condition="{publication.details.journal}">
-                    <span class="text-gray-700">
-                        {publication.details.journal.title}, {publication.details.journal.releaseYear}, S. {publication.details.journal.pageRange}
-                    </span>
+                <f:if condition="{publication.details.persons}">
+                    <span class="pr-2">,</span>
+                </f:if>
+                <span class="text-gray-700">
+                    {publication.details.journal.title}, {publication.details.journal.releaseYear}, S. {publication.details.journal.pageRange}
+                </span>
             </f:if>
         </f:else>
     </f:if>

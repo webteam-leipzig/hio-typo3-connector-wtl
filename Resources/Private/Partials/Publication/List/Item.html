@@ -28,7 +28,7 @@
             <f:if condition="{publication.details.persons}">
                 <p class="flex items-left py-0 leading-5 mt-1">
                     <f:for each="{publication.details.persons}" as="person" key="personIndex">
-                        <f:if condition="{personIndex} > 0"><f:then><span class="pr-4">,</span></f:then></f:if>
+                        <f:if condition="{personIndex} > 0"><f:then><span class="pr-2">,</span></f:then></f:if>
                         <f:render partial="Publication/List/Person" arguments="{person: person}" />
                     </f:for>
                 </p>
