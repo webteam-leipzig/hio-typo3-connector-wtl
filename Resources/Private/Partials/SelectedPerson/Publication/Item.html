@@ -10,17 +10,15 @@
         </f:then>
         <f:else>
             <p class="text-gray-700">
-                <strong>{publication.title}</strong>
-                <span>,&nbsp;</span>
+                <strong class="m-0">{publication.title}</strong>
                 <f:for each="{publication.details.persons}" as="person" key="personIndex">
+                    <span class="m-0">,&nbsp;</span>
                     <f:render partial="Publication/List/Person" arguments="{person: person}"/>
-                    <span>,&nbsp;</span>
                 </f:for>
                 <f:if condition="{publication.details.journal}">
-                    <span>,&nbsp;</span>
-                    <span>
-                    {publication.details.journal.title}, {publication.details.journal.releaseYear}, S. {publication.details.journal.pageRange}
-                   </span>
+                    <span class="m-0">,&nbsp;
+                        {publication.details.journal.title}, {publication.details.journal.releaseYear}, S. {publication.details.journal.pageRange}
+                    </span>
                 </f:if>
             </p>
         </f:else>
