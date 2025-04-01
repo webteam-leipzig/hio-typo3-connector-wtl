@@ -1,0 +1,19 @@
+<html
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        data-namespace-typo3-fluid="true" lang="en">
+
+<f:if condition="{publication.id} && {settings.persons.publicationTargetPageUid}">
+    <f:then>
+        <f:link.action action="show"
+            pageUid="{settings.persons.publicationTargetPageUid}"
+            controller="Publication"
+            arguments="{publication: publication.id}"
+            class="text-gray-700 hover:underline hover:text-wtl-red-500 px-0"><strong class="m-0">{publication.title}</strong>
+        </f:link.action>
+    </f:then>
+    <f:else>
+        <strong class="m-0">{publication.title}</strong>
+    </f:else>
+</f:if>
+
+</html>
