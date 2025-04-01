@@ -26,14 +26,12 @@
                 </f:link.action>
             </p>
             <f:if condition="{publication.details.persons}">
-                <div class="mt-1 flex items-center gap-x-2 text-xs leading-5 text-gray-500">
-                    <p class="py-0 truncate">
-                        <f:for each="{publication.details.persons}" as="person" key="personIndex">
-                            <f:if condition="{personIndex} > 0"><f:then><span>, </span></f:then></f:if>
-                            <f:render partial="Publication/List/Person" arguments="{person: person}" />
-                        </f:for>
-                    </p>
-                </div>
+                <p class="flex items-left py-0 leading-5 mt-1">
+                    <f:for each="{publication.details.persons}" as="person" key="personIndex">
+                        <f:if condition="{personIndex} > 0"><f:then><span class="pr-4">,</span></f:then></f:if>
+                        <f:render partial="Publication/List/Person" arguments="{person: person}" />
+                    </f:for>
+                </p>
             </f:if>
         </div>
     </li>

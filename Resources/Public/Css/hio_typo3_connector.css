@@ -774,11 +774,6 @@ select {
   margin-right: 0.5rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .-mb-px {
   margin-bottom: -1px;
 }
@@ -1068,10 +1063,6 @@ select {
   padding: 1rem;
 }
 
-.p-8 {
-  padding: 2rem;
-}
-
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -1163,6 +1154,10 @@ select {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .text-2xl {
@@ -1378,10 +1373,6 @@ select {
 
 .focus\:-outline-offset-2:focus {
   outline-offset: -2px;
-}
-
-.focus\:outline-indigo-600:focus {
-  outline-color: #4f46e5;
 }
 
 .focus\:outline-wtl-red:focus {
