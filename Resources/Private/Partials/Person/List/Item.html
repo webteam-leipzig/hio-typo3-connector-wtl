@@ -15,10 +15,13 @@
                 </f:link.action>
             </p>
             <p class="text-sm py-0">
-                <f:if condition="{person.publications && person.publications -> f:count()} > 0">
+                <f:if condition="{person.publications -> f:count()} > 0">
                     <span class="text-gray-700"><f:translate key="person.publications.count" />:&nbsp;{person.publications -> f:count()}</span>
+                    <f:if condition="{person.projects -> f:count()} > 0">
+                        <span>,$nbsp;</span>
+                    </f:if>
                 </f:if>
-                <f:if condition="{person.projects && person.projects -> f:count()} > 0">
+                <f:if condition="{person.projects -> f:count()} > 0">
                     <span class="text-gray-700"><f:translate key="person.projects.count" />:&nbsp;{person.projects -> f:count()}</span>
                 </f:if>
             </p>
