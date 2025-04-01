@@ -16,7 +16,8 @@
                     <f:render partial="Publication/List/Person" arguments="{person: person}"/>
                 </f:for>
                 <f:if condition="{publication.details.journal}">
-                    <span class="m-0">,&nbsp;
+                    <span class="m-0">,&nbsp;</span>
+                    <span class="m-0">
                         {publication.details.journal.title}, {publication.details.journal.releaseYear}, S. {publication.details.journal.pageRange}
                     </span>
                 </f:if>
