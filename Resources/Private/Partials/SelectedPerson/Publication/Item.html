@@ -9,15 +9,15 @@
                       arguments="{citations: publication.details.citations, selectedCitationStyle: selectedCitationStyle}"/>
         </f:then>
         <f:else>
-            <p class="flex items-left text-gray-700">
+            <p class="text-gray-700">
                 <f:for each="{publication.details.persons}" as="person" key="personIndex">
                     <f:render partial="Publication/List/Person" arguments="{person: person}"/>
                     <span>,&nbsp;</span>
                 </f:for>
-                <strong>{publication.title}</strong><br/>
+                <strong>"{publication.title}"</strong><br/>
                 <f:if condition="{publication.details.journal}">
                     <span>,&nbsp;</span>
-                    <span class="text-gray-700">
+                    <span>
                     {publication.details.journal.title}, {publication.details.journal.releaseYear}, S. {publication.details.journal.pageRange}
                    </span>
                 </f:if>
