@@ -10,7 +10,7 @@
         </f:then>
         <f:else>
             <p class="flex flex-wrap items-left text-gray-700">
-                <f:render partial="SelectedPerson/Publication/Title" arguments="{_all}"/>
+                <strong class="m-0">{publication.title}</strong>
                 <f:for each="{publication.details.persons}" as="person" key="personIndex">
                     <span class="m-0">,&nbsp;</span>
                     <f:render partial="Publication/List/Person" arguments="{person: person}"/>
