@@ -9,7 +9,7 @@
                       arguments="{citations: publication.details.citations, selectedCitationStyle: selectedCitationStyle}"/>
         </f:then>
         <f:else>
-            <p class="flex items-left text-gray-700">
+            <p class="flex flex-wrap items-left text-gray-700">
                 <strong class="m-0">{publication.title}</strong>
                 <f:for each="{publication.details.persons}" as="person" key="personIndex">
                     <span class="m-0">,&nbsp;</span>
