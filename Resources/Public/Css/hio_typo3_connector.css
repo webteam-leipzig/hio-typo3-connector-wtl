@@ -1474,3 +1474,9 @@ select {
     padding-right: 2rem;
   }
 }
+
+@media (min-width: 1280px) {
+  .xl\:max-w-5xl {
+    max-width: 64rem;
+  }
+}

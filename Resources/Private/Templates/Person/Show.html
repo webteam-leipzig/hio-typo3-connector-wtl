@@ -8,21 +8,21 @@
     <f:flashMessages/>
     <f:if condition="{person}">
         <div class="bg-white px-6 py-6 lg:px-8">
-            <div class="max-w-3xl text-base/7 text-gray-700">
+            <div class="max-w-3xl xl:max-w-5xl text-base/7 text-gray-700">
                 <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight sm:text-5xl">{person.name}</h1>
-                <div class="mt-10 max-w-2xl">
+                <div class="mt-10">
                     <f:if condition="{person.publications}">
                         <h2 class="font-semibold">Meine Veröffentlichungen</h2>
                         <f:render partial="SelectedPerson/PublicationList" arguments="{publications: person.publications}"/>
                     </f:if>
                 </div>
-                <div class="mt-10 max-w-2xl">
+                <div class="mt-10">
                     <f:if condition="{person.projects}">
                         <h2 class="font-semibold">Meine Projekte</h2>
                         <f:render partial="SelectedPerson/ProjectList" arguments="{projects: person.projects}"/>
                     </f:if>
                 </div>
-                <div class="mt-10 max-w-2xl">
+                <div class="mt-10">
                     <f:if condition="{person.patents}">
                         <h2 class="font-semibold">Meine Patente</h2>
                         <f:render partial="SelectedPerson/PatentList" arguments="{patents: person.patents}"/>
@@ -31,7 +31,7 @@
 
                 <f:if condition="{person.details.dynamicObjects}">
                     <f:then>
-                        <div class="mt-10 max-w-2xl">
+                        <div class="mt-10">
                             <f:render partial="DynamicObjects" arguments="{dynamicObjects: person.details.dynamicObjects}" />
                         </div>
                     </f:then>
