@@ -6,8 +6,8 @@
     <div class="max-w-3xl text-base/7">
         <ul class="list-none">
             <f:for each="{projects}" as="project">
-                <li>
-                    {project.title}
+                <li class="py-1">
+                    <f:render partial="SelectedPerson/Project/Item" arguments="{_all}"/>
                 </li>
             </f:for>
         </ul>
