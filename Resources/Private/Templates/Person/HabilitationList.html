@@ -7,14 +7,11 @@
 <f:section name="Main">
     <f:if condition="{person}">
         <div class="bg-white px-6 py-6 lg:px-8">
-            <div class="max-w-3xl text-base/7 text-gray-700">
-                <f:for each="{person.habilitations}" as="habilitation">
-                    <div>{habilitation.title}</div>
-                </f:for>
-            </div>
+            <f:if condition="{habilitations}">
+                <f:render partial="SelectedPerson/HabilitationList" arguments="{habilitations: habilitations}"/>
+            </f:if>
         </div>
     </f:if>
-
 </f:section>
 
 </html>
