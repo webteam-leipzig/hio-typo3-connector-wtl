@@ -7,6 +7,7 @@
             <f:if condition="{pagination.previousPageNumber}">
                 <f:then>
                     <f:link.action
+                            action="{action}"
                             arguments="{currentPageNumber:pagination.previousPageNumber, searchWord:searchWord}"
                             class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                     >
@@ -28,6 +29,7 @@
                     <f:if condition="{currentPageNumber}=={page}">
                         <f:then>
                             <f:link.action
+                                    action="{action}"
                                     arguments="{currentPageNumber:page, searchWord:searchWord}"
                                     class="inline-flex items-center border-t-2 border-indigo-500 px-4 pt-4 text-sm font-medium text-indigo-600"
                             >
@@ -36,6 +38,7 @@
                         </f:then>
                         <f:else>
                             <f:link.action
+                                    action="{action}"
                                     arguments="{currentPageNumber:page, searchWord:searchWord}"
                                     class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                             >
@@ -51,6 +54,7 @@
             <f:if condition="{pagination.nextPageNumber}">
                 <f:then>
                     <f:link.action
+                            action="{action}"
                             arguments="{currentPageNumber:pagination.nextPageNumber, searchWord:searchWord}"
                             class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                     >
