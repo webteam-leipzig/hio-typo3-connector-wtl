@@ -14,7 +14,7 @@
                 <f:if condition="{pagination}">
                     <f:then>
                         <div class="py-4">
-                            <f:render partial="Pagination/Pagination" arguments="{pagination: pagination}" />
+                            <f:render partial="Pagination/Pagination" arguments="{pagination: pagination, searchWord: searchWord}" />
                         </div>
                     </f:then>
                 </f:if>
