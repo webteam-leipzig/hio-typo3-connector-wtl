@@ -8,7 +8,7 @@
             <p class="text-lg font-semibold leading-6 text-gray-900 py-0">
                 <f:link.action
                         action="show"
-                        arguments="{person: person.objectId, currentPageNumber: currentPageNumber}"
+                        arguments="{person: person.objectId, currentPageNumber: currentPageNumber, searchWord: searchWord, listAction:action}"
                         class="hover:underline"
                 >
                     {person.name}

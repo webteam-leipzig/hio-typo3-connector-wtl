@@ -6,7 +6,7 @@
     <f:flashMessages />
     <div class="tx-hio-typo3-connector">
         <f:render partial="List/SearchForm" arguments="{action:'search', controller:'Person', searchWord:searchWord}" />
-        <f:render partial="Person/List" arguments="{pagination:pagination, paginator:paginator}" />
+        <f:render partial="Person/List" arguments="{action:'index', pagination:pagination, paginator:paginator, searchWord:searchWord}" />
     </div>
 </f:section>
 
