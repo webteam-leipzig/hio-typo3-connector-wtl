@@ -6,80 +6,80 @@
 
 <f:section name="Main">
     <f:flashMessages/>
-    <f:if condition="{doctorate.details}">
+    <f:if condition="{doctoralProgram.details}">
         <div class="bg-white px-4 py-6 lg:p-8">
             <div class="text-base/7 text-gray-700">
                 <p class="font-semibold text-gray-600 py-0">
-                    <f:if condition="{doctorate.details.courseOfStudy}">
-                        <f:translate key="doctorate.courseOfStudy" />: {doctorate.details.courseOfStudy}
+                    <f:if condition="{doctoralProgram.details.courseOfStudy}">
+                        <f:translate key="doctoralProgram.courseOfStudy" />: {doctoralProgram.details.courseOfStudy}
                         &middot;
                     </f:if>
-                    <f:if condition="{doctorate.details.language}">
-                        <f:translate key="doctorate.language" />: {doctorate.details.language}
+                    <f:if condition="{doctoralProgram.details.language}">
+                        <f:translate key="doctoralProgram.language" />: {doctoralProgram.details.language}
                         &middot;
                     </f:if>
-                    <f:if condition="{doctorate.details.startDate}">
-                        <f:translate key="doctorate.startDate" />: <f:format.date format="d.m.Y" >{doctorate.details.startDate}</f:format.date>
+                    <f:if condition="{doctoralProgram.details.startDate}">
+                        <f:translate key="doctoralProgram.startDate" />: <f:format.date format="d.m.Y" >{doctoralProgram.details.startDate}</f:format.date>
                         &middot;
                     </f:if>
-                    <f:if condition="{doctorate.details.endDate}">
-                        <f:translate key="doctorate.endDate" />: <f:format.date format="d.m.Y" >{doctorate.details.endDate}</f:format.date>
+                    <f:if condition="{doctoralProgram.details.endDate}">
+                        <f:translate key="doctoralProgram.endDate" />: <f:format.date format="d.m.Y" >{doctoralProgram.details.endDate}</f:format.date>
                     </f:if>
                 </p>
-                <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{doctorate.title}</h1>
+                <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{doctoralProgram.title}</h1>
             </div>
 
             <div class="mt-6 border-t border-gray-100">
                 <dl class="divide-y divide-gray-100">
                     <div class="py-6 sm:grid sm:grid-cols-3 sm:gap-4">
-                        <dt class="text-sm/6 font-medium text-gray-900"><f:translate key="doctorate.persons" /></dt>
+                        <dt class="text-sm/6 font-medium text-gray-900"><f:translate key="doctoralProgram.persons" /></dt>
                         <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-                            <f:for each="{doctorate.details.persons}" as="person">
+                            <f:for each="{doctoralProgram.details.persons}" as="person">
                                 <span>
-                                    <f:render partial="Doctorate/Show/PersonLink" arguments="{person: person}" />
+                                    <f:render partial="DoctoralProgram/Show/PersonLink" arguments="{person: person}" />
                                 </span>
                             </f:for>
                         </dd>
                     </div>
                     <div class="py-6 sm:grid sm:grid-cols-3 sm:gap-4">
-                        <dt class="text-sm/6 font-medium text-gray-900"><f:translate key="doctorate.description" /></dt>
+                        <dt class="text-sm/6 font-medium text-gray-900"><f:translate key="doctoralProgram.description" /></dt>
                         <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-                                {doctorate.details.description}
+                                {doctoralProgram.details.description}
                         </dd>
                     </div>
                     <div class="py-6 sm:grid sm:grid-cols-3 sm:gap-4">
                         <dt class="text-sm/6 font-medium text-gray-900">
-                            <f:if condition="{doctorate.details.subjectAreas -> f:count()} == 1">
+                            <f:if condition="{doctoralProgram.details.subjectAreas -> f:count()} == 1">
                                 <f:then>
-                                    <f:translate key="doctorate.subjectArea" />
+                                    <f:translate key="doctoralProgram.subjectArea" />
                                 </f:then>
                                 <f:else>
-                                    <f:translate key="doctorate.subjectAreas" />
+                                    <f:translate key="doctoralProgram.subjectAreas" />
                                 </f:else>
                             </f:if>
                         </dt>
                         <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-                            <f:for each="{doctorate.details.subjectAreas}" as="subject" key="index">
+                            <f:for each="{doctoralProgram.details.subjectAreas}" as="subject" key="index">
                                 <p class="py-0">
                                     {subject}
                                 </p>
                             </f:for>
                         </dd>
                     </div>
-                    <f:if condition="{doctorate.details.researchAreas}">
+                    <f:if condition="{doctoralProgram.details.researchAreas}">
                         <div class="py-6 sm:grid sm:grid-cols-3 sm:gap-4">
                             <dt class="text-sm/6 font-medium text-gray-900">
-                                <f:if condition="{doctorate.details.researchAreas -> f:count()} == 1">
+                                <f:if condition="{doctoralProgram.details.researchAreas -> f:count()} == 1">
                                     <f:then>
-                                        <f:translate key="doctorate.researchArea" />
+                                        <f:translate key="doctoralProgram.researchArea" />
                                     </f:then>
                                     <f:else>
-                                        <f:translate key="doctorate.researchAreas" />
+                                        <f:translate key="doctoralProgram.researchAreas" />
                                     </f:else>
                                 </f:if>
                             </dt>
                             <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-                                <f:for each="{doctorate.details.researchAreas}" as="researchArea" key="index">
+                                <f:for each="{doctoralProgram.details.researchAreas}" as="researchArea" key="index">
                                     <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mb-2 mr-1 text-sm font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">{researchArea}</span>
                                 </f:for>
                             </dd>
@@ -88,9 +88,9 @@
                 </dl>
             </div>
 
-            <f:if condition="{doctorate.details.dynamicObjects}">
+            <f:if condition="{doctoralProgram.details.dynamicObjects}">
                 <f:then>
-                    <f:render partial="DynamicObjects" arguments="{dynamicObjects: doctorate.details.dynamicObjects}" />
+                    <f:render partial="DynamicObjects" arguments="{dynamicObjects: doctoralProgram.details.dynamicObjects}" />
                 </f:then>
             </f:if>
 
