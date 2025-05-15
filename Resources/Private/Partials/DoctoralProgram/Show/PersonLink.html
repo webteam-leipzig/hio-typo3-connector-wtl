@@ -3,10 +3,10 @@
         data-namespace-typo3-fluid="true" lang="en">
 
 <f:if condition="{person}">
-    <f:if condition="{person.id} && {settings.doctorates.personTargetPageUid}">
+    <f:if condition="{person.id} && {settings.doctoralPrograms.personTargetPageUid}">
         <f:then>
             <f:link.action action="show"
-                           pageUid="{settings.doctorates.personTargetPageUid}"
+                           pageUid="{settings.doctoralPrograms.personTargetPageUid}"
                            controller="Person"
                            arguments="{person: person.id}"
                            class="text-gray-700 hover:underline hover:text-wtl-red-500 px-0">{person.name}</f:link.action><br />
