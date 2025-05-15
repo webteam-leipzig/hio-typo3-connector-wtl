@@ -7,7 +7,7 @@
     ],
     "require": {
         "typo3/cms-core": "^12.4 || ^13.0",
-        "wtl/hio-typo3-connector": "dev-feat/hio-260_rename-doctorates"
+        "wtl/hio-typo3-connector": "^0.7"
     },
     "autoload": {
         "psr-4": {
