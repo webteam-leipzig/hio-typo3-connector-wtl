@@ -9,7 +9,7 @@ defined('TYPO3') or die();
 call_user_func(function () {
     $extensionKey = 'hio_typo3_connector_wtl';
     $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
-    if ($versionInformation->getMajorVersion() < 13) {
+    if ($versionInformation->getMajorVersion() >= 12) {
         ExtensionManagementUtility::addStaticFile(
             $extensionKey,
             'Configuration/TypoScript',
