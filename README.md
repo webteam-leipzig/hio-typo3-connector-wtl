@@ -1,4 +1,4 @@
-# HISinOne TYPO3 Connector - WTL Frontend Theme
+# HISinOne TYPO3 Connector - Frontend Theme
 ## Frontend der HIO-Publisher Demoseite
 
 Diese TYPO3-Extension stellt das Frontend-Theme für die HIO-Publisher Demoseite bereit. Es enthält grundlegende Layouts und Stile, die für die Präsentation von Forschungsdaten aus HISinOne optimiert sind.
