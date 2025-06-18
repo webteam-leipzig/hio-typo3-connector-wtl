@@ -2,13 +2,13 @@
         xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
         data-namespace-typo3-fluid="true" lang="en">
 
-<f:if condition="{orgunit.details}">
+<f:if condition="{orgUnit.details}">
     <li class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 py-5 sm:flex-nowrap">
         <div>
             <p class="text-lg font-semibold leading-6 text-gray-900 py-0">
                 <f:link.action
                         action="show"
-                        arguments="{orgunit: orgunit.uid, currentPageNumber: currentPageNumber, searchWord: searchWord, listAction:action}"
+                        arguments="{orgUnit: orgUnit.uid, currentPageNumber: currentPageNumber, searchWord: searchWord, listAction:action}"
                         class="hover:underline"
                 >
                     {orgunit.title}
