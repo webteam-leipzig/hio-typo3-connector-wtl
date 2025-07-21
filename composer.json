@@ -26,11 +26,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/webteam-leipzig/typo3-ext-hio-typo3-connector.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/webteam-leipzig/hio-typo3-connector-wtl.git"
+            "url": "https://github.com/wtl-public/hio-typo3-connector.git"
         }
     ]
 }
