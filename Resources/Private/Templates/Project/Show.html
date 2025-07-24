@@ -30,7 +30,7 @@
                         <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
                             <f:for each="{project.details.persons}" as="person">
                                 <span>
-                                    <f:if condition="{person.role} == 'Projektleiter/-in'">
+                                    <f:if condition="{person.role} == {settings.projectDetails.person.filterProjectLead}">
                                         <f:render partial="Project/Show/PersonLink" arguments="{person: person}" />
                                     </f:if>
                                 </span>
