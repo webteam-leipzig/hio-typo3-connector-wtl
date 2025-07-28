@@ -12,18 +12,21 @@
             <p class="flex flex-wrap items-left text-gray-700">
                 <strong class="m-0">
                     <f:if condition="{publication.uid} && {settings.persons.publicationTargetPageUid}">
-                        <f:link.action
-                                action="show"
-                                controller="Publication"
-                                pageUid="{settings.persons.publicationTargetPageUid}"
-                                arguments="{publication: publication.uid}"
-                                plugInName="Publicationlist"
-                                class="text-gray-700 hover:underline hover:text-wtl-red-dark-500 px-0">
+                        <f:then>
+                            <f:link.action
+                                    action="show"
+                                    controller="Publication"
+                                    pageUid="{settings.persons.publicationTargetPageUid}"
+                                    arguments="{publication: publication.uid}"
+                                    plugInName="Publicationlist"
+                                    class="text-gray-700 hover:underline hover:text-wtl-red-dark-500 px-0">
+                                {publication.title}
+                            </f:link.action>
+                        </f:then>
+                        <f:else>
                             {publication.title}
-                        </f:link.action>
-                    <f:else>
-                        {publication.title}
-                    </f:else>
+                        </f:else>
+                    </f:if>
                 </strong>
                 <f:for each="{publication.details.persons}" as="person" key="personIndex">
                     <span class="m-0">,&nbsp;</span>
