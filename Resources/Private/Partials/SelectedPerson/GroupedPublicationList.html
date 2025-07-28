@@ -11,7 +11,7 @@
                 <ul class="list-none">
                     <f:for each="{publicationsOfThisType}" as="publication">
                         <li class="py-1">
-                            <f:render partial="SelectedPerson/Publication/Item" arguments="{_all}"/>
+                            <f:render partial="SelectedPerson/Publication/Item" arguments="{publication: publication, settings: settings}"/>
                         </li>
                     </f:for>
                 </ul>
