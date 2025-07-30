@@ -8,19 +8,19 @@
     <f:if condition="{publications}">
         <div class="bg-white px-6 py-6 lg:px-8">
             <f:if condition="{statistics}">
+                <f:debug>{statistics}</f:debug>
                 <f:render partial="SelectedPerson/Publication/Statistics" arguments="{statistics: statistics}"/>
             </f:if>
-            <f:debug>{statistics}</f:debug>
             <f:if condition="{settings.groupBy}  == none">
                 <f:then>
                     <f:render partial="SelectedPerson/PublicationList" arguments="{publications: publications, selectedCitationStyle: selectedCitationStyle}"/>
                 </f:then>
                 <f:else>
-                    <f:if condition="{groupedPublications}}">
+                    <f:if condition="{groupedPublications}">
                         <f:render partial="SelectedPerson/GroupedPublicationList"
                                   arguments="{publications: groupedPublications, selectedCitationStyle: selectedCitationStyle}"/>
                     </f:if>
-                    <f:if condition="{ungroupedPublications}}">
+                    <f:if condition="{ungroupedPublications}">
                         <h4 class="mt-2 text-wtl-red-dark font-semibold">
                             <f:translate key="hio.show.person.ungroupedPublications" extensionName="HioTypo3Connector" />
                         </h4>
