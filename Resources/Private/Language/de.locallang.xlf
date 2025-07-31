@@ -6,7 +6,7 @@
 
             <trans-unit id="hio.show.person.coauthors" resname="hio.show.person.coauthors">
                 <source>Coauthor(s)</source>
-                <target>Co-Autor*innen</target>
+                <target>Mitautor*innen</target>
             </trans-unit>
 
         </body>
