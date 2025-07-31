@@ -7,8 +7,11 @@
 <f:section name="Main">
     <f:if condition="{publications}">
         <div class="bg-white px-6 py-6 lg:px-8">
-            <f:if condition="{statistics}">
-                <f:render partial="SelectedPerson/Publication/TypeStats" arguments="{typeStats: statistics}"/>
+            <f:if condition="{coAuthorshipStatistics}">
+                <f:render partial="SelectedPerson/Publication/CoAuthorshipStats" arguments="{coAuthorshipStats: coAuthorshipStatistics}"/>
+            </f:if>
+            <f:if condition="{typeStatistics}">
+                <f:render partial="SelectedPerson/Publication/TypeStats" arguments="{typeStats: typeStatistics}"/>
             </f:if>
             <f:if condition="{settings.groupBy}  == none">
                 <f:then>
