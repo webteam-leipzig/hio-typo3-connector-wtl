@@ -929,6 +929,10 @@ select {
   max-width: 20rem;
 }
 
+.max-w-lg {
+  max-width: 32rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1479,6 +1483,10 @@ select {
 
   .sm\:w-auto {
     width: auto;
+  }
+
+  .sm\:max-w-full {
+    max-width: 100%;
   }
 
   .sm\:grid-cols-3 {
