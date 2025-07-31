@@ -5,7 +5,8 @@
 <f:layout name="Default"/>
 
 <f:section name="Main">
-    <f:if condition="{publications}">
+    <f:debug>{settings}}</f:debug>
+    <f:if condition="{publications} && {settings.showPublicationList}">
         <div class="bg-white mx-auto w-full grow lg:flex xl:px-2">
             <div class="flex-1 xl:flex">
                 <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
