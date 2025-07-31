@@ -33,11 +33,13 @@
                 </div>
             </div>
 
+            <f:if condition="{settings.showCoAuthorshipStatistics}">
             <div class="shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-96 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
-                <f:if condition="{coAuthorshipStatistics} && {settings.showCoAuthorshipStatistics}">
+                <f:if condition="{coAuthorshipStatistics}">
                     <f:render partial="SelectedPerson/Publication/CoAuthorshipStats" arguments="{coAuthorshipStats: coAuthorshipStatistics}"/>
                 </f:if>
             </div>
+            </f:if>
         </div>
     </f:if>
 </f:section>
