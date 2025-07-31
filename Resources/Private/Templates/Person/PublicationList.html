@@ -6,6 +6,40 @@
 
 <f:section name="Main">
     <f:if condition="{publications}">
+        <div class="mx-auto w-full max-w-7xl grow lg:flex xl:px-2">
+            <div class="flex-1 xl:flex">
+                <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
+                    <f:if condition="{typeStatistics}">
+                        <f:render partial="SelectedPerson/Publication/TypeStats" arguments="{typeStats: typeStatistics}"/>
+                    </f:if>
+                    <f:if condition="{settings.groupBy}  == none">
+                        <f:then>
+                            <f:render partial="SelectedPerson/PublicationList" arguments="{publications: publications, selectedCitationStyle: selectedCitationStyle}"/>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{groupedPublications}">
+                                <f:render partial="SelectedPerson/GroupedPublicationList"
+                                          arguments="{publications: groupedPublications, selectedCitationStyle: selectedCitationStyle}"/>
+                            </f:if>
+                            <f:if condition="{ungroupedPublications}">
+                                <h4 class="mt-2 text-wtl-red-dark font-semibold">
+                                    <f:translate key="hio.show.person.ungroupedPublications" extensionName="HioTypo3Connector" />
+                                </h4>
+                                <f:render partial="SelectedPerson/PublicationList"
+                                          arguments="{publications: ungroupedPublications, selectedCitationStyle: selectedCitationStyle}"/>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                </div>
+            </div>
+
+            <div class="shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-96 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
+                <f:if condition="{coAuthorshipStatistics}">
+                    <f:render partial="SelectedPerson/Publication/CoAuthorshipStats" arguments="{coAuthorshipStats: coAuthorshipStatistics}"/>
+                </f:if>
+            </div>
+        </div>
+
         <div class="bg-white px-6 py-6 lg:px-8">
             <f:if condition="{coAuthorshipStatistics}">
                 <f:render partial="SelectedPerson/Publication/CoAuthorshipStats" arguments="{coAuthorshipStats: coAuthorshipStatistics}"/>
