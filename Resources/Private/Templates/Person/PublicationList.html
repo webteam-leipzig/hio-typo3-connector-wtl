@@ -9,7 +9,7 @@
         <div class="bg-white mx-auto w-full grow lg:flex xl:px-2">
             <div class="flex-1 xl:flex">
                 <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-                    <f:if condition="{typeStatistics} && {settings.showPublicationList} == 1">
+                    <f:if condition="{typeStatistics} && {settings.showTypeStatistics}">
                         <f:render partial="SelectedPerson/Publication/TypeStats" arguments="{typeStats: typeStatistics}"/>
                     </f:if>
                     <f:if condition="{settings.groupBy}  == none">
