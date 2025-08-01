@@ -26,6 +26,10 @@
                     <div class="mt-10">
                         <f:if condition="{person.projects}">
                             <h3 class="text-2xl xl:text-3xl  font-semibold">Meine Projekte</h3>
+                            <f:if condition="{projectStatusStatistics} && {settings.showProjectStatusStatistics}">
+                                <f:render partial="SelectedPerson/Project/StatusStats"
+                                          arguments="{projectStatusStatistics: projectStatusStatistics}"/>
+                            </f:if>
                             <f:render partial="SelectedPerson/ProjectList" arguments="{projects: person.projects}"/>
                         </f:if>
                     </div>
