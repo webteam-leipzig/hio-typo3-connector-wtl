@@ -8,6 +8,7 @@
     <f:if condition="{person}">
         <div class="bg-white px-6 py-6 lg:px-8">
             <div class="max-w-3xl xl:max-w-5xl text-base/7 text-gray-700">
+                <f:render partial="SelectedPerson/ProjectList" arguments="{projects: person.projects}"/>
                 <f:for each="{person.projects}" as="project">
                     <f:render partial="SelectedPerson/Project/Item" arguments="{_all}"/>
                 </f:for>
