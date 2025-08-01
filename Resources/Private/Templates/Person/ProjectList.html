@@ -6,12 +6,18 @@
 
 <f:section name="Main">
     <f:if condition="{person}">
-        <div class="bg-white px-6 py-6 lg:px-8">
-            <div class="max-w-3xl xl:max-w-5xl text-base/7 text-gray-700">
-                <f:if condition="{projectStatusStatistics} && {settings.showProjectStatusStatistics}">
-                    <f:render partial="SelectedPerson/Project/StatusStats" arguments="{projectStatusStatistics: projectStatusStatistics}"/>
-                </f:if>
-                <f:render partial="SelectedPerson/ProjectList" arguments="{projects: person.projects}"/>
+        <div class="bg-white mx-auto w-full grow lg:flex xl:px-2">
+            <div class="flex-1 xl:flex">
+                <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
+                    <f:if condition="{projectStatusStatistics} && {settings.showProjectStatusStatistics}">
+                        <f:render partial="SelectedPerson/Project/StatusStats"
+                                  arguments="{projectStatusStatistics: projectStatusStatistics}"/>
+                    </f:if>
+                    <f:render partial="SelectedPerson/ProjectList" arguments="{projects: person.projects}"/>
+                </div>
+            </div>
+
+            <div class="shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-96 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
             </div>
         </div>
     </f:if>
