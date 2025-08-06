@@ -7,7 +7,7 @@
     ],
     "require": {
         "typo3/cms-core": "^12.4 || ^13.0",
-        "wtl/hio-typo3-connector": "dev-main"
+        "wtl/hio-typo3-connector": "^0.8.0"
     },
     "autoload": {
         "psr-4": {
@@ -23,10 +23,6 @@
         {
             "type": "path",
             "url": "src/extensions/*"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/wtl-public/hio-typo3-connector.git"
         }
     ]
 }
