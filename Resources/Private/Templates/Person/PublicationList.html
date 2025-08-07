@@ -6,7 +6,7 @@
 
 <f:section name="Main">
     <f:if condition="{publications}">
-        <div class="mx-auto w-full grow flex lg:flex gap-4">
+        <div class="mx-auto w-full grow lg:flex gap-4">
             <div class="bg-white flex-1 xl:flex rounded">
                 <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
                     <f:if condition="{settings.groupBy}  == none">
@@ -19,9 +19,9 @@
                                           arguments="{publications: groupedPublications, selectedCitationStyle: selectedCitationStyle}"/>
                             </f:if>
                             <f:if condition="{ungroupedPublications}">
-                                <h4 class="mt-2 text-wtl-red-dark font-semibold">
+                                <h3 class="text-2xl xl:text-3xl mb-6 font-semibold text-left">
                                     <f:translate key="hio.show.person.ungroupedPublications" extensionName="HioTypo3Connector" />
-                                </h4>
+                                </h3>
                                 <f:render partial="SelectedPerson/PublicationList"
                                           arguments="{publications: ungroupedPublications, selectedCitationStyle: selectedCitationStyle}"/>
                             </f:if>

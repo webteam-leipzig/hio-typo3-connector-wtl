@@ -4,6 +4,9 @@
         <header/>
         <body>
 
+            <trans-unit id="hio.show.person.publicationTypeStats" resname="hio.show.person.publicationTypeStats">
+                <source>Publication type</source>
+            </trans-unit>
             <trans-unit id="hio.show.person.coauthors" resname="hio.show.person.coauthors">
                 <source>Coauthor(s)</source>
             </trans-unit>
