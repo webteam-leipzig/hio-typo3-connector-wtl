@@ -6,8 +6,8 @@
 
 <f:section name="Main">
     <f:if condition="{publications}">
-        <div class="mx-auto w-full grow lg:flex xl:px-2 gap-4">
-            <div class="bg-white flex-1 xl:flex">
+        <div class="mx-auto w-full grow lg:flex gap-4">
+            <div class="bg-white flex-1 xl:flex rounded">
                 <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
                     <f:if condition="{settings.groupBy}  == none">
                         <f:then>
@@ -31,7 +31,7 @@
             </div>
 
             <f:if condition="{settings.showTypeStatistics} || {settings.showCoAuthorshipStatistics}">
-            <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6">
+            <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded">
                 <f:if condition="{typeStatistics}">
                     <f:render partial="SelectedPerson/Publication/TypeStats" arguments="{typeStats: typeStatistics}"/>
                 </f:if>
