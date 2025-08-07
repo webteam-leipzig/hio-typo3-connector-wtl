@@ -36,9 +36,6 @@
                     <f:render partial="SelectedPerson/Publication/TypeStats" arguments="{typeStats: typeStatistics}"/>
                 </f:if>
                 <f:if condition="{coAuthorshipStatistics}">
-                    <h3 class="text-2xl xl:text-3xl  font-semibold text-center">
-                        <f:translate key="hio.show.person.coauthors" extensionName="HioTypo3ConnectorWtl" />
-                    </h3>
                     <f:render partial="SelectedPerson/Publication/CoAuthorshipStats" arguments="{coAuthorshipStats: coAuthorshipStatistics}"/>
                 </f:if>
             </div>
