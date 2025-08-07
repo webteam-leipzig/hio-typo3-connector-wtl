@@ -799,6 +799,10 @@ select {
   visibility: visible;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .order-first {
   order: -9999;
 }
@@ -1498,6 +1502,10 @@ select {
 @media (min-width: 640px) {
   .sm\:visible {
     visibility: visible;
+  }
+
+  .sm\:invisible {
+    visibility: hidden;
   }
 
   .sm\:order-last {
