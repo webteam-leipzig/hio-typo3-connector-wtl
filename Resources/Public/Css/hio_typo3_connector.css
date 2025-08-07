@@ -913,6 +913,10 @@ select {
   display: none;
 }
 
+.h-0 {
+  height: 0px;
+}
+
 .h-0\.5 {
   height: 0.125rem;
 }
@@ -1526,6 +1530,10 @@ select {
 
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:h-auto {
+    height: auto;
   }
 
   .sm\:w-auto {
