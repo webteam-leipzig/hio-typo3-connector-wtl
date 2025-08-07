@@ -1504,10 +1504,6 @@ select {
     visibility: visible;
   }
 
-  .sm\:collapse {
-    visibility: collapse;
-  }
-
   .sm\:order-last {
     order: 9999;
   }
