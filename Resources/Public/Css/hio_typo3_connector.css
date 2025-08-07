@@ -1504,10 +1504,6 @@ select {
     visibility: visible;
   }
 
-  .sm\:invisible {
-    visibility: hidden;
-  }
-
   .sm\:order-last {
     order: 9999;
   }
