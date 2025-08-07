@@ -4,6 +4,9 @@
         <header/>
         <body>
 
+            <trans-unit id="hio.show.person.publications" resname="hio.show.person.publications">
+                <source>Publications</source>
+            </trans-unit>
             <trans-unit id="hio.show.person.publicationTypeStats" resname="hio.show.person.publicationTypeStats">
                 <source>Publication type</source>
             </trans-unit>
