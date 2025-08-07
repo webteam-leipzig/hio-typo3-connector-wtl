@@ -795,6 +795,10 @@ select {
   border-width: 0;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .order-first {
   order: -9999;
 }
@@ -1523,6 +1527,10 @@ select {
 }
 
 @media (min-width: 640px) {
+  .sm\:visible {
+    visibility: visible;
+  }
+
   .sm\:order-first {
     order: -9999;
   }
@@ -1620,6 +1628,10 @@ select {
 }
 
 @media (min-width: 768px) {
+  .md\:visible {
+    visibility: visible;
+  }
+
   .md\:order-last {
     order: 9999;
   }
@@ -1630,6 +1642,10 @@ select {
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:flex-row {
