@@ -799,6 +799,14 @@ select {
   order: -9999;
 }
 
+.order-2 {
+  order: 2;
+}
+
+.order-last {
+  order: 9999;
+}
+
 .col-start-1 {
   grid-column-start: 1;
 }
@@ -1497,6 +1505,10 @@ select {
 }
 
 @media (min-width: 640px) {
+  .sm\:order-first {
+    order: -9999;
+  }
+
   .sm\:col-span-2 {
     grid-column: span 2 / span 2;
   }
