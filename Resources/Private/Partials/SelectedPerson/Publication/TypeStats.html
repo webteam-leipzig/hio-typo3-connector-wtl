@@ -7,8 +7,9 @@
         <div class="flex flex-wrap -m-4 text-center">
             <f:for each="{typeStats}" as="typeStatistic">
             <div class="p-4 sm:w-auto w-1/2 sm:max-w-full max-w-xs">
-                <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">{typeStatistic.count}</h2>
-                <p class="leading-relaxed">{typeStatistic.type}</p>
+                <p class="leading-relaxed font-normal">
+                    {typeStatistic.type} ({typeStatistic.count})
+                </p>
             </div>
             </f:for>
         </div>
