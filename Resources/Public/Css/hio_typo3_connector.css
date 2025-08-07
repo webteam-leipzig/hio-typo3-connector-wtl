@@ -795,6 +795,14 @@ select {
   border-width: 0;
 }
 
+.visible {
+  visibility: visible;
+}
+
+.collapse {
+  visibility: collapse;
+}
+
 .order-first {
   order: -9999;
 }
@@ -1492,6 +1500,14 @@ select {
 }
 
 @media (min-width: 640px) {
+  .sm\:visible {
+    visibility: visible;
+  }
+
+  .sm\:collapse {
+    visibility: collapse;
+  }
+
   .sm\:order-last {
     order: 9999;
   }

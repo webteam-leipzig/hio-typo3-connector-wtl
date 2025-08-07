@@ -9,7 +9,7 @@
         <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4">
             <div class="bg-white grow flex-1 xl:flex rounded">
                 <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 hidden sm:block">
+                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse sm:visible">
                         <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
                     </h2>
                     <f:if condition="{settings.groupBy}  == none">
@@ -35,7 +35,7 @@
 
             <f:if condition="{settings.showTypeStatistics} || {settings.showCoAuthorshipStatistics}">
             <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
-                <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 block sm:hidden">
+                <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 visible sm:collapse">
                     <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
                 </h2>
                 <f:if condition="{typeStatistics}">
