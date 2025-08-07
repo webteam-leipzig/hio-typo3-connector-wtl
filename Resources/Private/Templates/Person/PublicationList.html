@@ -6,8 +6,8 @@
 
 <f:section name="Main">
     <f:if condition="{publications}">
-        <div class="bg-white mx-auto w-full grow lg:flex xl:px-2 lg:gap-4">
-            <div class="flex-1 xl:flex">
+        <div class="mx-auto w-full grow lg:flex xl:px-2 gap-4">
+            <div class="bg-white flex-1 xl:flex">
                 <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
                     <f:if condition="{typeStatistics} && {settings.showTypeStatistics}">
                         <f:render partial="SelectedPerson/Publication/TypeStats" arguments="{typeStats: typeStatistics}"/>
@@ -34,7 +34,7 @@
             </div>
 
             <f:if condition="{settings.showTypeStatistics} || {settings.showCoAuthorshipStatistics}">
-            <div class="shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-96 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
+            <div class="bg-white shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-96 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
                 <f:if condition="{typeStatistics}">
                     <f:render partial="SelectedPerson/Publication/TypeStats" arguments="{typeStats: typeStatistics}"/>
                 </f:if>
