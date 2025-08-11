@@ -8,7 +8,7 @@
     <f:flashMessages/>
     <f:if condition="{person}">
         <h1 class="mt-2 font-semibold text-3xl sm:text-5xl xl:text-4xl">{person.name}</h1>
-        <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4">
+        <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4 mb-4">
             <div class="bg-white grow flex-1 xl:flex rounded">
                 <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
                     <f:if condition="{person.publications}">
@@ -35,7 +35,7 @@
             </f:if>
         </div>
 
-        <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4">
+        <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4 mb-4">
             <div class="bg-white grow flex-1 xl:flex rounded">
                 <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
                     <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
@@ -60,7 +60,7 @@
 
         <f:if condition="{person.patents}">
             <f:then>
-                <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4">
+                <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4 mb-4">
                     <div class="bg-white grow flex-1 xl:flex rounded">
                         <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
                             <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
