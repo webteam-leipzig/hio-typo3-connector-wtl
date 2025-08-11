@@ -38,10 +38,10 @@
                 <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 visible sm:hidden">
                     <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
                 </h2>
-                <f:if condition="{typeStatistics}">
+                <f:if condition="{typeStatistics} && {settings.showTypeStatistics}">
                     <f:render partial="SelectedPerson/Publication/TypeStats" arguments="{typeStats: typeStatistics}"/>
                 </f:if>
-                <f:if condition="{coAuthorshipStatistics}">
+                <f:if condition="{coAuthorshipStatistics} && {settings.showCoAuthorshipStatistics}">
                     <f:render partial="SelectedPerson/Publication/CoAuthorshipStats" arguments="{coAuthorshipStats: coAuthorshipStatistics}"/>
                 </f:if>
             </div>
