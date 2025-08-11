@@ -1531,6 +1531,10 @@ select {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
   .sm\:flex-nowrap {
     flex-wrap: nowrap;
   }
@@ -1598,6 +1602,10 @@ select {
 }
 
 @media (min-width: 1024px) {
+  .lg\:order-last {
+    order: 9999;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -1616,10 +1624,6 @@ select {
 
   .lg\:flex-1 {
     flex: 1 1 0%;
-  }
-
-  .lg\:flex-row {
-    flex-direction: row;
   }
 
   .lg\:p-8 {
