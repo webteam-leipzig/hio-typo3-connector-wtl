@@ -14,10 +14,19 @@
                 <source>Coauthor(s)</source>
             </trans-unit>
 
+            <trans-unit id="hio.show.person.projects" resname="hio.show.person.projects">
+                <source>Projects</source>
+            </trans-unit>
             <trans-unit id="hio.show.person.projectStatusStats" resname="hio.show.person.projectStatusStats">
                 <source>Project status</source>
             </trans-unit>
 
+            <trans-unit id="hio.show.person.patents" resname="hio.show.person.patents">
+                <source>Patents</source>
+            </trans-unit>
+            <trans-unit id="hio.show.person.dynamicObjects" resname="hio.show.person.dynamicObjects">
+                <source>Additional information</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

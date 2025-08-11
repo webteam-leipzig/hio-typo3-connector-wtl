@@ -26,6 +26,14 @@
                 <target>Projektstatus</target>
             </trans-unit>
 
+            <trans-unit id="hio.show.person.patents" resname="hio.show.person.patents">
+                <source>Patents</source>
+                <target>Patente</target>
+            </trans-unit>
+            <trans-unit id="hio.show.person.dynamicObjects" resname="hio.show.person.dynamicObjects">
+                <source>Additional information</source>
+                <target>Zusätzliche Informationen</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

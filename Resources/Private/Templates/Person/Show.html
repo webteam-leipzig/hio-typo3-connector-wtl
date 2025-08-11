@@ -7,63 +7,91 @@
 <f:section name="Main">
     <f:flashMessages/>
     <f:if condition="{person}">
-        <div class="bg-white mx-auto w-full grow lg:flex xl:px-2">
-            <div class="flex-1 xl:flex">
+        <h1 class="mt-2 font-semibold text-3xl sm:text-5xl xl:text-4xl">{person.name}</h1>
+        <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4">
+            <div class="bg-white grow flex-1 xl:flex rounded">
                 <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-
-                    <h2 class="mt-2 font-semibold text-3xl sm:text-5xl xl:text-4xl">{person.name}</h2>
-                    <div class="mt-10">
-                        <f:if condition="{person.publications}">
-                            <h3 class="text-2xl xl:text-3xl  font-semibold">Meine Veröffentlichungen</h3>
-                            <f:if condition="{typeStatistics} && {settings.showTypeStatistics}">
-                                <f:render partial="SelectedPerson/Publication/TypeStats"
-                                          arguments="{typeStats: typeStatistics}"/>
-                            </f:if>
-                            <f:render partial="SelectedPerson/PublicationList"
-                                      arguments="{publications: person.publications}"/>
-                        </f:if>
-                    </div>
-                    <div class="mt-10">
-                        <f:if condition="{person.projects}">
-                            <h3 class="text-2xl xl:text-3xl  font-semibold">Meine Projekte</h3>
-                            <f:if condition="{projectStatusStatistics} && {settings.showProjectStatusStatistics}">
-                                <f:render partial="SelectedPerson/Project/StatusStats"
-                                          arguments="{projectStatusStatistics: projectStatusStatistics}"/>
-                            </f:if>
-                            <f:render partial="SelectedPerson/ProjectList" arguments="{projects: person.projects}"/>
-                        </f:if>
-                    </div>
-                    <div class="mt-10">
-                        <f:if condition="{person.patents}">
-                            <h3 class="text-2xl xl:text-3xl  font-semibold">Meine Patente</h3>
-                            <f:render partial="SelectedPerson/PatentList" arguments="{patents: person.patents}"/>
-                        </f:if>
-                    </div>
-
-                    <f:if condition="{person.details.dynamicObjects}">
-                        <f:then>
-                            <div class="mt-10">
-                                <f:render partial="DynamicObjects"
-                                          arguments="{dynamicObjects: person.details.dynamicObjects}"/>
-                            </div>
-                        </f:then>
+                    <f:if condition="{person.publications}">
+                        <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
+                            <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
+                        </h2>
+                        <f:render partial="SelectedPerson/PublicationList" arguments="{publications: person.publications}"/>
                     </f:if>
                 </div>
             </div>
 
-            <f:if condition="{settings.showCoAuthorshipStatistics}">
-                <div class="shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-96 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
-                    <f:if condition="{coAuthorshipStatistics}">
-                        <h3 class="text-2xl xl:text-3xl  font-semibold text-center">
-                            <f:translate key="hio.show.person.coauthors" extensionName="HioTypo3ConnectorWtl" />
-                        </h3>
-                        <f:render partial="SelectedPerson/Publication/CoAuthorshipStats"
-                                  arguments="{coAuthorshipStats: coAuthorshipStatistics}"/>
+            <f:if condition="{settings.showTypeStatistics} || {settings.showCoAuthorshipStatistics}">
+                <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
+                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 visible sm:hidden">
+                        <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
+                    </h2>
+                    <f:if condition="{typeStatistics} && {settings.showTypeStatistics}">
+                        <f:render partial="SelectedPerson/Publication/TypeStats" arguments="{typeStats: typeStatistics}"/>
+                    </f:if>
+                    <f:if condition="{coAuthorshipStatistics} && {settings.showCoAuthorshipStatistics}">
+                        <f:render partial="SelectedPerson/Publication/CoAuthorshipStats" arguments="{coAuthorshipStats: coAuthorshipStatistics}"/>
                     </f:if>
                 </div>
             </f:if>
         </div>
+
+        <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4">
+            <div class="bg-white grow flex-1 xl:flex rounded">
+                <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
+                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
+                        <f:translate key="hio.show.person.projects" extensionName="HioTypo3ConnectorWtl" />
+                    </h2>
+                    <f:render partial="SelectedPerson/ProjectList" arguments="{projects: person.projects}"/>
+                </div>
+            </div>
+
+            <f:if condition="{settings.projectStatusStatistics}">
+                <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
+                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 visible sm:hidden">
+                        <f:translate key="hio.show.person.projects" extensionName="HioTypo3ConnectorWtl" />
+                    </h2>
+                    <f:if condition="{projectStatusStatistics} && {settings.showProjectStatusStatistics}">
+                        <f:render partial="SelectedPerson/Project/StatusStats"
+                                  arguments="{projectStatusStatistics: projectStatusStatistics}"/>
+                    </f:if>
+                </div>
+            </f:if>
+        </div>
+
+        <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4">
+            <div class="bg-white grow flex-1 xl:flex rounded">
+                <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
+                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
+                        <f:translate key="hio.show.person.patents" extensionName="HioTypo3ConnectorWtl" />
+                    </h2>
+                    <f:render partial="SelectedPerson/PatentList" arguments="{patents: person.patents}"/>
+                </div>
+            </div>
+
+            <f:if condition="{settings.projectStatusStatistics}">
+                <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
+                </div>
+            </f:if>
+        </div>
+
+        <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4">
+            <div class="bg-white grow flex-1 xl:flex rounded">
+                <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
+                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
+                        <f:translate key="hio.show.person.dynamicObjects" extensionName="HioTypo3ConnectorWtl" />
+                    </h2>
+                    <f:render partial="DynamicObjects" arguments="{dynamicObjects: person.details.dynamicObjects}"/>
+                </div>
+            </div>
+
+            <f:if condition="{settings.projectStatusStatistics}">
+                <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
+                </div>
+            </f:if>
+        </div>
+
     </f:if>
+
     <div class="px-4 py-5 sm:p-6">
         <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
             <div class="-mt-px flex w-0 flex-1">
