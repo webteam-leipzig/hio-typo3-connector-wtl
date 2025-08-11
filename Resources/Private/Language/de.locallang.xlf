@@ -4,6 +4,11 @@
         <header/>
         <body>
 
+            <trans-unit id="hio.show.person.profilePage" resname="hio.show.person.profilePage">
+                <source>Profile page</source>
+                <target>Profilseite</target>
+            </trans-unit>
+
             <trans-unit id="hio.show.person.publications" resname="hio.show.person.publications">
                 <source>Publications</source>
                 <target>Publikationen</target>
