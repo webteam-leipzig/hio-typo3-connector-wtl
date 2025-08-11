@@ -1588,16 +1588,8 @@ select {
     margin-top: -1px;
   }
 
-  .md\:block {
-    display: block;
-  }
-
   .md\:flex {
     display: flex;
-  }
-
-  .md\:hidden {
-    display: none;
   }
 
   .md\:flex-row {
@@ -1606,6 +1598,14 @@ select {
 }
 
 @media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:w-96 {
     width: 24rem;
   }
