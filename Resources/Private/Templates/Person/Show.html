@@ -7,59 +7,67 @@
 <f:section name="Main">
     <f:flashMessages/>
     <f:if condition="{person}">
-        <h1 class="mt-2 font-semibold text-3xl sm:text-5xl xl:text-4xl p-4 pb-6">
+        <h1 class="mt-2 font-semibold text-3xl sm:text-5xl xl:text-4xl p-4 pb-8">
             <span class="uppercase text-sm block mb-2 font-normal">Profilseite</span>
             {person.name}
         </h1>
-        <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4 mb-4">
-            <div class="bg-white grow flex-1 xl:flex rounded">
-                <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-                    <f:if condition="{person.publications}">
-                        <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
-                            <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
-                        </h2>
-                        <f:render partial="SelectedPerson/PublicationList" arguments="{publications: person.publications}"/>
-                    </f:if>
-                </div>
-            </div>
+        <f:if condition="{person.publications}">
+            <f:then>
+                <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4 mb-4">
+                    <div class="bg-white grow flex-1 xl:flex rounded">
+                        <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
+                            <f:if condition="{person.publications}">
+                                <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
+                                    <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
+                                </h2>
+                                <f:render partial="SelectedPerson/PublicationList" arguments="{publications: person.publications}"/>
+                            </f:if>
+                        </div>
+                    </div>
 
-            <f:if condition="{settings.showTypeStatistics} || {settings.showCoAuthorshipStatistics}">
-                <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
-                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 visible sm:hidden">
-                        <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
-                    </h2>
-                    <f:if condition="{typeStatistics} && {settings.showTypeStatistics}">
-                        <f:render partial="SelectedPerson/Publication/TypeStats" arguments="{typeStats: typeStatistics}"/>
-                    </f:if>
-                    <f:if condition="{coAuthorshipStatistics} && {settings.showCoAuthorshipStatistics}">
-                        <f:render partial="SelectedPerson/Publication/CoAuthorshipStats" arguments="{coAuthorshipStats: coAuthorshipStatistics}"/>
+                    <f:if condition="{settings.showTypeStatistics} || {settings.showCoAuthorshipStatistics}">
+                        <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
+                            <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 visible sm:hidden">
+                                <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
+                            </h2>
+                            <f:if condition="{typeStatistics} && {settings.showTypeStatistics}">
+                                <f:render partial="SelectedPerson/Publication/TypeStats" arguments="{typeStats: typeStatistics}"/>
+                            </f:if>
+                            <f:if condition="{coAuthorshipStatistics} && {settings.showCoAuthorshipStatistics}">
+                                <f:render partial="SelectedPerson/Publication/CoAuthorshipStats" arguments="{coAuthorshipStats: coAuthorshipStatistics}"/>
+                            </f:if>
+                        </div>
                     </f:if>
                 </div>
-            </f:if>
-        </div>
+            </f:then>
+        </f:if>
 
-        <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4 mb-4">
-            <div class="bg-white grow flex-1 xl:flex rounded">
-                <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
-                        <f:translate key="hio.show.person.projects" extensionName="HioTypo3ConnectorWtl" />
-                    </h2>
-                    <f:render partial="SelectedPerson/ProjectList" arguments="{projects: person.projects}"/>
-                </div>
-            </div>
+        <f:if condition="person.projects">
+            <f:then>
+                <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4 mb-4">
+                    <div class="bg-white grow flex-1 xl:flex rounded">
+                        <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
+                            <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
+                                <f:translate key="hio.show.person.projects" extensionName="HioTypo3ConnectorWtl" />
+                            </h2>
+                            <f:render partial="SelectedPerson/ProjectList" arguments="{projects: person.projects}"/>
+                        </div>
+                    </div>
 
-            <f:if condition="{settings.showProjectStatusStatistics}">
-                <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
-                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 visible sm:hidden">
-                        <f:translate key="hio.show.person.projects" extensionName="HioTypo3ConnectorWtl" />
-                    </h2>
-                    <f:if condition="{projectStatusStatistics} && {settings.showProjectStatusStatistics}">
-                        <f:render partial="SelectedPerson/Project/StatusStats"
-                                  arguments="{projectStatusStatistics: projectStatusStatistics}"/>
+                    <f:if condition="{settings.showProjectStatusStatistics}">
+                        <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
+                            <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 visible sm:hidden">
+                                <f:translate key="hio.show.person.projects" extensionName="HioTypo3ConnectorWtl" />
+                            </h2>
+                            <f:if condition="{projectStatusStatistics} && {settings.showProjectStatusStatistics}">
+                                <f:render partial="SelectedPerson/Project/StatusStats"
+                                          arguments="{projectStatusStatistics: projectStatusStatistics}"/>
+                            </f:if>
+                        </div>
                     </f:if>
                 </div>
-            </f:if>
-        </div>
+            </f:then>
+        </f:if>
 
         <f:if condition="{person.patents}">
             <f:then>
