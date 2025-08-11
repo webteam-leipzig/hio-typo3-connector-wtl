@@ -17,6 +17,15 @@
                 <target>Mitautor*innen</target>
             </trans-unit>
 
+            <trans-unit id="hio.show.person.projects" resname="hio.show.person.projects">
+                <source>Projects</source>
+                <target>Projekte</target>
+            </trans-unit>
+            <trans-unit id="hio.show.person.projectStatusStats" resname="hio.show.person.projectStatusStats">
+                <source>Project status</source>
+                <target>Projektstatus</target>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

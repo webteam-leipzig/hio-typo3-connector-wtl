@@ -3,13 +3,17 @@
         data-namespace-typo3-fluid="true" lang="en">
 
 <f:if condition="{projectStatusStatistics}">
-    <div class="container px-5 py-6 border-b border-gray-200 mx-auto">
-        <div class="flex flex-wrap -m-4 text-center">
+    <div class="container border-b border-gray-200 mx-auto pb-4">
+        <h3 class="text-2xl xl:text-3xl mb-6 font-semibold text-left">
+            <f:translate key="hio.show.person.projectStatusStats" extensionName="HioTypo3ConnectorWtl" />
+        </h3>
+        <div class="flex flex-wrap -m-4 mb-3 text-left">
             <f:for each="{projectStatusStatistics}" as="statusValue" key="statusName">
-            <div class="p-4 sm:w-auto w-1/2 sm:max-w-full max-w-xs">
-                <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">{statusValue}</h2>
-                <p class="leading-relaxed">{statusName}</p>
-            </div>
+                <div class="px-4 w-1/2">
+                    <p class="leading-relaxed font-normal py-1">
+                        {statusName} ({statusValue})
+                    </p>
+                </div>
             </f:for>
         </div>
     </div>

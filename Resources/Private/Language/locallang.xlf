@@ -14,6 +14,10 @@
                 <source>Coauthor(s)</source>
             </trans-unit>
 
+            <trans-unit id="hio.show.person.projectStatusStats" resname="hio.show.person.projectStatusStats">
+                <source>Project status</source>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>
