@@ -58,40 +58,39 @@
             </f:if>
         </div>
 
-        <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4">
-            <div class="bg-white grow flex-1 xl:flex rounded">
-                <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
-                        <f:translate key="hio.show.person.patents" extensionName="HioTypo3ConnectorWtl" />
-                    </h2>
-                    <f:render partial="SelectedPerson/PatentList" arguments="{patents: person.patents}"/>
-                </div>
-            </div>
+        <f:if condition="{person.patents}">
+            <f:then>
+                <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4">
+                    <div class="bg-white grow flex-1 xl:flex rounded">
+                        <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
+                            <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
+                                <f:translate key="hio.show.person.patents" extensionName="HioTypo3ConnectorWtl" />
+                            </h2>
+                            <f:render partial="SelectedPerson/PatentList" arguments="{patents: person.patents}"/>
+                        </div>
+                    </div>
 
-            <f:if condition="{settings.projectStatusStatistics}">
-                <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
-                    &nbsp;
+                    <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last"></div>
                 </div>
-            </f:if>
-        </div>
+            </f:then>
+        </f:if>
 
-        <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4">
-            <div class="bg-white grow flex-1 xl:flex rounded">
-                <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
-                        <f:translate key="hio.show.person.dynamicObjects" extensionName="HioTypo3ConnectorWtl" />
-                    </h2>
-                    <f:render partial="DynamicObjects" arguments="{dynamicObjects: person.details.dynamicObjects}"/>
+        <f:if condition="{person.details.dynamicObjects}">
+            <f:then>
+                <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4">
+                    <div class="bg-white grow flex-1 xl:flex rounded">
+                        <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
+                            <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
+                                <f:translate key="hio.show.person.dynamicObjects" extensionName="HioTypo3ConnectorWtl" />
+                            </h2>
+                            <f:render partial="DynamicObjects" arguments="{dynamicObjects: person.details.dynamicObjects}"/>
+                        </div>
+                    </div>
+
+                    <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last"></div>
                 </div>
-            </div>
-
-            <f:if condition="{settings.projectStatusStatistics}">
-                <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
-                    &nbsp;
-                </div>
-            </f:if>
-        </div>
-
+            </f:then>
+        </f:if>
     </f:if>
 
     <div class="px-4 py-5 sm:p-6">
