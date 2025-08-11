@@ -1329,6 +1329,10 @@ select {
   font-weight: 600;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .leading-5 {
   line-height: 1.25rem;
 }
@@ -1603,6 +1607,10 @@ select {
 @media (min-width: 768px) {
   .md\:-mt-px {
     margin-top: -1px;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:flex {
