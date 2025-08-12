@@ -3,32 +3,59 @@
     <file source-language="en" datatype="plaintext" original="EXT:hio_typo3_connector_wtl/Resources/Private/Language/locallang.xlf" date="2025-07-31T00:00:00Z" product-name="hio_typo3_connector_wtl">
         <header/>
         <body>
-            <trans-unit id="hio.publication.index.title" resname="hio.publication.index.title">
+            <trans-unit id="publication.index.title" resname="publication.index.title">
                 <source>Publications</source>
             </trans-unit>
-            <trans-unit id="hio.project.index.title" resname="hio.project.index.title">
+            <trans-unit id="publication.show.title" resname="publication.show.title">
+                <source>Publication details</source>
+            </trans-unit>
+            <trans-unit id="project.index.title" resname="project.index.title">
                 <source>Projects</source>
             </trans-unit>
-            <trans-unit id="hio.person.index.title" resname="hio.person.index.title">
+            <trans-unit id="project.show.title" resname="project.show.title">
+                <source>Project details</source>
+            </trans-unit>
+            <trans-unit id="person.index.title" resname="person.index.title">
                 <source>Persons</source>
             </trans-unit>
-            <trans-unit id="hio.patent.index.title" resname="hio.patent.index.title">
+            <trans-unit id="person.show.title" resname="person.show.title">
+                <source>Person profile</source>
+            </trans-unit>
+            <trans-unit id="patent.index.title" resname="patent.index.title">
                 <source>Patents</source>
             </trans-unit>
-            <trans-unit id="hio.doctoralProgram.index.title" resname="hio.doctoralProgram.index.title">
+            <trans-unit id="patent.show.title" resname="patent.show.title">
+                <source>Patent information</source>
+            </trans-unit>
+            <trans-unit id="doctoralProgram.index.title" resname="doctoralProgram.index.title">
                 <source>Doctoral programs</source>
             </trans-unit>
-            <trans-unit id="hio.habilitation.index.title" resname="hio.habilitation.index.title">
+            <trans-unit id="doctoralProgram.show.title" resname="doctoralProgram.show.title">
+                <source>Doctoral program details</source>
+            </trans-unit>
+            <trans-unit id="habilitation.index.title" resname="habilitation.index.title">
                 <source>Habilitations</source>
             </trans-unit>
-            <trans-unit id="hio.orgUnit.index.title" resname="hio.orgUnit.index.title">
+            <trans-unit id="habilitation.show.title" resname="habilitation.show.title">
+                <source>Habilitation details</source>
+            </trans-unit>
+            <trans-unit id="orgUnit.index.title" resname="orgUnit.index.title">
                 <source>Organization units</source>
             </trans-unit>
-            <trans-unit id="hio.spinOff.index.title" resname="hio.spinOff.index.title">
+            <trans-unit id="orgUnit.show.title" resname="orgUnit.show.title">
+                <source>Organization unit details</source>
+            </trans-unit>
+            <trans-unit id="spinOff.index.title" resname="spinOff.index.title">
                 <source>Spin-offs</source>
             </trans-unit>
-            <trans-unit id="hio.researchInfrastructure.index.title" resname="hio.researchInfrastructure.index.title">
+            <trans-unit id="spinOff.show.title" resname="spinOff.show.title">
+                <source>Spin-off details</source>
+            </trans-unit>
+            <trans-unit id="researchInfrastructure.index.title" resname="researchInfrastructure.index.title">
                 <source>Research infrastructures</source>
+            </trans-unit>
+            <trans-unit id="researchInfrastructure.show.title" resname="researchInfrastructure.show.title">
+                <source>Research infrastructure details</source>
             </trans-unit>
 
             <trans-unit id="hio.show.person.profilePage" resname="hio.show.person.profilePage">

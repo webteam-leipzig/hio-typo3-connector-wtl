@@ -7,37 +7,73 @@
                 <source>Publications</source>
                 <target>Publikationen</target>
             </trans-unit>
+            <trans-unit id="publication.show.title" resname="publication.show.title">
+                <source>Publication details</source>
+                <target>Publikationsdetails</target>
+            </trans-unit>
             <trans-unit id="project.index.title" resname="project.index.title">
                 <source>Projects</source>
                 <target>Projekte</target>
+            </trans-unit>
+            <trans-unit id="project.show.title" resname="project.show.title">
+                <source>Project details</source>
+                <target>Projektdetails</target>
             </trans-unit>
             <trans-unit id="person.index.title" resname="person.index.title">
                 <source>Persons</source>
                 <target>Personen</target>
             </trans-unit>
+            <trans-unit id="person.show.title" resname="person.show.title">
+                <source>Person profile</source>
+                <target>Personenprofil</target>
+            </trans-unit>
             <trans-unit id="patent.index.title" resname="patent.index.title">
                 <source>Patents</source>
                 <target>Patente</target>
+            </trans-unit>
+            <trans-unit id="patent.show.title" resname="patent.show.title">
+                <source>Patent information</source>
+                <target>Patentinformationen</target>
             </trans-unit>
             <trans-unit id="doctoralProgram.index.title" resname="doctoralProgram.index.title">
                 <source>Doctoral programs</source>
                 <target>Promotionen</target>
             </trans-unit>
+            <trans-unit id="doctoralProgram.show.title" resname="doctoralProgram.show.title">
+                <source>Doctoral program details</source>
+                <target>Details zur Promotion</target>
+            </trans-unit>
             <trans-unit id="habilitation.index.title" resname="habilitation.index.title">
                 <source>Habilitations</source>
                 <target>Habilitationen</target>
+            </trans-unit>
+            <trans-unit id="habilitation.show.title" resname="habilitation.show.title">
+                <source>Habilitation details</source>
+                <target>Habilitationsdetails</target>
             </trans-unit>
             <trans-unit id="orgUnit.index.title" resname="orgUnit.index.title">
                 <source>Organization units</source>
                 <target>Organisationseinheiten</target>
             </trans-unit>
+            <trans-unit id="orgUnit.show.title" resname="orgUnit.show.title">
+                <source>Organization unit details</source>
+                <target>Details zur Organisationseinheit</target>
+            </trans-unit>
             <trans-unit id="spinOff.index.title" resname="spinOff.index.title">
                 <source>Spin-offs</source>
                 <target>Ausgründungen</target>
             </trans-unit>
+            <trans-unit id="spinOff.show.title" resname="spinOff.show.title">
+                <source>Spin-off details</source>
+                <target>Details zur Ausgründung</target>
+            </trans-unit>
             <trans-unit id="researchInfrastructure.index.title" resname="researchInfrastructure.index.title">
                 <source>Research infrastructures</source>
                 <target>Forschungseinrichtungen</target>
+            </trans-unit>
+            <trans-unit id="researchInfrastructure.show.title" resname="researchInfrastructure.show.title">
+                <source>Research infrastructure details</source>
+                <target>Details zur Forschungseinrichtung</target>
             </trans-unit>
 
             <trans-unit id="hio.show.person.profilePage" resname="hio.show.person.profilePage">
