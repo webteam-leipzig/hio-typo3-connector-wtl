@@ -1539,6 +1539,10 @@ select {
     width: 50%;
   }
 
+  .sm\:w-1\/4 {
+    width: 25%;
+  }
+
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
