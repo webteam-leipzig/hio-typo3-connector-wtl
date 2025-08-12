@@ -1614,10 +1614,6 @@ select {
     width: 24rem;
   }
 
-  .lg\:flex-1 {
-    flex: 1 1 0%;
-  }
-
   .lg\:p-8 {
     padding: 2rem;
   }
