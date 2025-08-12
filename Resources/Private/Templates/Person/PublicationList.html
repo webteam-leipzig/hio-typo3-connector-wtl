@@ -8,23 +8,9 @@
     <f:if condition="{publications}">
         <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4 mb-4">
 
-            <f:if condition="{settings.showTypeStatistics} || {settings.showCoAuthorshipStatistics}">
-                <div class="bg-white grow-0 shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
-                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 block sm:hidden">
-                        <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
-                    </h2>
-                    <f:if condition="{typeStatistics} && {settings.showTypeStatistics}">
-                        <f:render partial="SelectedPerson/Publication/TypeStats" arguments="{typeStats: typeStatistics}"/>
-                    </f:if>
-                    <f:if condition="{coAuthorshipStatistics} && {settings.showCoAuthorshipStatistics}">
-                        <f:render partial="SelectedPerson/Publication/CoAuthorshipStats" arguments="{coAuthorshipStats: coAuthorshipStatistics}"/>
-                    </f:if>
-                </div>
-            </f:if>
-
-            <div class="bg-white grow shrink flex-1 lg:flex rounded">
-                <div class="px-4 py-6 sm:px-6 lg:pl-8 lg:flex-1 xl:pl-6">
-                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 hidden sm:block">
+            <div class="bg-white grow flex-1 lg:flex rounded">
+                <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
+                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 h-0 sm:h-auto collapse sm:visible">
                         <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
                     </h2>
                     <f:if condition="{settings.groupBy}  == none">
@@ -47,6 +33,20 @@
                     </f:if>
                 </div>
             </div>
+
+            <f:if condition="{settings.showTypeStatistics} || {settings.showCoAuthorshipStatistics}">
+                <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
+                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 visible sm:hidden">
+                        <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
+                    </h2>
+                    <f:if condition="{typeStatistics} && {settings.showTypeStatistics}">
+                        <f:render partial="SelectedPerson/Publication/TypeStats" arguments="{typeStats: typeStatistics}"/>
+                    </f:if>
+                    <f:if condition="{coAuthorshipStatistics} && {settings.showCoAuthorshipStatistics}">
+                        <f:render partial="SelectedPerson/Publication/CoAuthorshipStats" arguments="{coAuthorshipStats: coAuthorshipStatistics}"/>
+                    </f:if>
+                </div>
+            </f:if>
 
         </div>
     </f:if>
