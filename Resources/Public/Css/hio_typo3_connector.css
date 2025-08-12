@@ -1606,10 +1606,6 @@ select {
 }
 
 @media (min-width: 1024px) {
-  .lg\:order-last {
-    order: 9999;
-  }
-
   .lg\:flex {
     display: flex;
   }
