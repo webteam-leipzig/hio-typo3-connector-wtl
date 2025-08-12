@@ -981,10 +981,6 @@ select {
   flex-wrap: wrap;
 }
 
-.place-items-end {
-  place-items: end;
-}
-
 .items-end {
   align-items: flex-end;
 }
