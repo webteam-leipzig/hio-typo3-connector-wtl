@@ -3,6 +3,33 @@
     <file source-language="en" datatype="plaintext" original="EXT:hio_typo3_connector_wtl/Resources/Private/Language/locallang.xlf" date="2025-07-31T00:00:00Z" product-name="hio_typo3_connector_wtl">
         <header/>
         <body>
+            <trans-unit id="hio.publication.index.title" resname="hio.publication.index.title">
+                <source>Publications</source>
+            </trans-unit>
+            <trans-unit id="hio.project.index.title" resname="hio.project.index.title">
+                <source>Projects</source>
+            </trans-unit>
+            <trans-unit id="hio.person.index.title" resname="hio.person.index.title">
+                <source>Persons</source>
+            </trans-unit>
+            <trans-unit id="hio.patent.index.title" resname="hio.patent.index.title">
+                <source>Patents</source>
+            </trans-unit>
+            <trans-unit id="hio.doctoralProgram.index.title" resname="hio.doctoralProgram.index.title">
+                <source>Doctoral programs</source>
+            </trans-unit>
+            <trans-unit id="hio.habilitation.index.title" resname="hio.habilitation.index.title">
+                <source>Habilitations</source>
+            </trans-unit>
+            <trans-unit id="hio.orgUnit.index.title" resname="hio.orgUnit.index.title">
+                <source>Organization units</source>
+            </trans-unit>
+            <trans-unit id="hio.spinOff.index.title" resname="hio.spinOff.index.title">
+                <source>Spin-offs</source>
+            </trans-unit>
+            <trans-unit id="hio.researchInfrastructure.index.title" resname="hio.researchInfrastructure.index.title">
+                <source>Research infrastructures</source>
+            </trans-unit>
 
             <trans-unit id="hio.show.person.profilePage" resname="hio.show.person.profilePage">
                 <source>Profile page</source>
