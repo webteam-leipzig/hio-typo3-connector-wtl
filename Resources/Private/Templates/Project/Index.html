@@ -6,7 +6,7 @@
     <f:flashMessages />
     <div class="tx-hio-typo3-connector">
        <div class="flex items-stretch justify-between py-4 px-0">
-            <h1 class="mt-2 font-semibold text-3xl sm:text-5xl xl:text-4xl px-4">Projekte</h1>
+            <h1 class="mt-2 font-semibold text-3xl px-4">Projekte</h1>
             <f:render partial="List/SearchForm" arguments="{action:'search', controller:'Project', searchTerm:searchTerm}" />
         </div>
         <f:render partial="Project/List" arguments="{action:'index', pagination:pagination, paginator:paginator, searchTerm:searchTerm}" />
