@@ -27,6 +27,10 @@
                 <source>Person profile</source>
                 <target>Personenprofil</target>
             </trans-unit>
+            <trans-unit id="filter.person.searchTerm.label" resname="filter.person.searchTerm.label">
+                <source>Search for persons</source>
+                <target>Nach Personen suchen</target>
+            </trans-unit>
             <trans-unit id="patent.index.title" resname="patent.index.title">
                 <source>Patents</source>
                 <target>Patente</target>

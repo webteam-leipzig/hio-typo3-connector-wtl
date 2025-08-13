@@ -21,6 +21,9 @@
             <trans-unit id="person.show.title" resname="person.show.title">
                 <source>Person profile</source>
             </trans-unit>
+            <trans-unit id="filter.person.searchTerm.label" resname="filter.person.searchTerm.label">
+                <source>Search for persons</source>
+            </trans-unit>
             <trans-unit id="patent.index.title" resname="patent.index.title">
                 <source>Patents</source>
             </trans-unit>
