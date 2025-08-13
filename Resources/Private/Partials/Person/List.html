@@ -3,23 +3,21 @@
         data-namespace-typo3-fluid="true" lang="en">
 
 <f:if condition="{paginator.paginatedItems}">
-        <f:then>
-            <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
-                <div class="px-4 py-5 sm:p-6">
-                    <ul role="list" class="divide-y divide-gray-100">
-                    <f:for each="{paginator.paginatedItems}" as="person">
-                        <f:render partial="Person/List/Item" arguments="{person:person, currentPageNumber: paginator.currentPageNumber, action:action, searchTerm: searchTerm}" />
-                    </f:for>
-                    </ul>
-                    <f:if condition="{pagination}">
-                        <f:then>
-                            <div class="py-4">
-                                <f:render partial="Pagination/Pagination" arguments="{pagination: pagination, action:action, searchTerm: searchTerm}" />
-                            </div>
-                        </f:then>
-                    </f:if>
-                </div>
-            </div>
+    <f:then>
+        <div class="divide-y divide-gray-200 overflow-hidden">
+            <ul role="list" class="divide-y divide-gray-100">
+            <f:for each="{paginator.paginatedItems}" as="person">
+                <f:render partial="Person/List/Item" arguments="{person:person, currentPageNumber: paginator.currentPageNumber, action:action, searchTerm: searchTerm}" />
+            </f:for>
+            </ul>
+            <f:if condition="{pagination}">
+                <f:then>
+                    <div class="py-4">
+                        <f:render partial="Pagination/Pagination" arguments="{pagination: pagination, action:action, searchTerm: searchTerm}" />
+                    </div>
+                </f:then>
+            </f:if>
+        </div>
     </f:then>
 
     <f:else>
