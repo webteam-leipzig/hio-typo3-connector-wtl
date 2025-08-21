@@ -3,18 +3,32 @@
     <file source-language="en" datatype="plaintext" original="EXT:hio_typo3_connector_wtl/Resources/Private/Language/locallang.xlf" date="2025-07-31T00:00:00Z" product-name="hio_typo3_connector_wtl">
         <header/>
         <body>
+            <trans-unit id="filter.button.apply" resname="filter.button.apply">
+                <source>Apply filter</source>
+            </trans-unit>
+            <trans-unit id="filter.button.reset" resname="filter.button.reset">
+                <source>Reset filter</source>
+            </trans-unit>
             <trans-unit id="publication.index.title" resname="publication.index.title">
                 <source>Publications</source>
             </trans-unit>
             <trans-unit id="publication.show.title" resname="publication.show.title">
                 <source>Publication details</source>
             </trans-unit>
+            <trans-unit id="filter.publication.searchTerm.label" resname="filter.publication.searchTerm.label">
+                <source>Search for publications</source>
+            </trans-unit>
+
             <trans-unit id="project.index.title" resname="project.index.title">
                 <source>Projects</source>
             </trans-unit>
             <trans-unit id="project.show.title" resname="project.show.title">
                 <source>Project details</source>
             </trans-unit>
+            <trans-unit id="filter.project.searchTerm.label" resname="filter.project.searchTerm.label">
+                <source>Search for projects</source>
+            </trans-unit>
+
             <trans-unit id="person.index.title" resname="person.index.title">
                 <source>Persons</source>
             </trans-unit>
@@ -24,42 +38,67 @@
             <trans-unit id="filter.person.searchTerm.label" resname="filter.person.searchTerm.label">
                 <source>Search for persons</source>
             </trans-unit>
+
             <trans-unit id="patent.index.title" resname="patent.index.title">
                 <source>Patents</source>
             </trans-unit>
             <trans-unit id="patent.show.title" resname="patent.show.title">
                 <source>Patent information</source>
             </trans-unit>
+            <trans-unit id="filter.patent.searchTerm.label" resname="filter.patent.searchTerm.label">
+                <source>Search for patents</source>
+            </trans-unit>
+
             <trans-unit id="doctoralProgram.index.title" resname="doctoralProgram.index.title">
                 <source>Doctoral programs</source>
             </trans-unit>
             <trans-unit id="doctoralProgram.show.title" resname="doctoralProgram.show.title">
                 <source>Doctoral program details</source>
             </trans-unit>
+            <trans-unit id="filter.doctoralProgram.searchTerm.label" resname="filter.doctoralProgram.searchTerm.label">
+                <source>Search for doctoral programs</source>
+            </trans-unit>
+
             <trans-unit id="habilitation.index.title" resname="habilitation.index.title">
                 <source>Habilitations</source>
             </trans-unit>
             <trans-unit id="habilitation.show.title" resname="habilitation.show.title">
                 <source>Habilitation details</source>
             </trans-unit>
+            <trans-unit id="filter.habilitation.searchTerm.label" resname="filter.habilitation.searchTerm.label">
+                <source>Search for habilitations</source>
+            </trans-unit>
+
             <trans-unit id="orgUnit.index.title" resname="orgUnit.index.title">
                 <source>Organization units</source>
             </trans-unit>
             <trans-unit id="orgUnit.show.title" resname="orgUnit.show.title">
                 <source>Organization unit details</source>
             </trans-unit>
+            <trans-unit id="filter.orgUnit.searchTerm.label" resname="filter.orgUnit.searchTerm.label">
+                <source>Search for organization units</source>
+            </trans-unit>
+
             <trans-unit id="spinOff.index.title" resname="spinOff.index.title">
                 <source>Spin-offs</source>
             </trans-unit>
             <trans-unit id="spinOff.show.title" resname="spinOff.show.title">
                 <source>Spin-off details</source>
             </trans-unit>
+            <trans-unit id="filter.spinOff.searchTerm.label" resname="filter.spinOff.searchTerm.label">
+                <source>Search for spin offs</source>
+            </trans-unit>
+
             <trans-unit id="researchInfrastructure.index.title" resname="researchInfrastructure.index.title">
                 <source>Research infrastructures</source>
             </trans-unit>
             <trans-unit id="researchInfrastructure.show.title" resname="researchInfrastructure.show.title">
                 <source>Research infrastructure details</source>
             </trans-unit>
+            <trans-unit id="filter.researchInfrastructure.searchTerm.label" resname="filter.researchInfrastructure.searchTerm.label">
+                <source>Search for research infrastructures</source>
+            </trans-unit>
+
 
             <trans-unit id="hio.show.person.profilePage" resname="hio.show.person.profilePage">
                 <source>Profile page</source>

@@ -3,6 +3,15 @@
     <file source-language="en" target-language="de" datatype="plaintext" original="EXT:hio_typo3_connector_wtl/Resources/Private/Language/locallang.xlf" date="2025-07-31T00:00:00Z" product-name="hio_typo3_connector_wtl">
         <header/>
         <body>
+            <trans-unit id="filter.button.apply" resname="filter.button.apply">
+                <source>Apply filter</source>
+                <target>Filter anwenden</target>
+            </trans-unit>
+            <trans-unit id="filter.button.reset" resname="filter.button.reset">
+                <source>Reset filter</source>
+                <target>Zurücksetzen</target>
+            </trans-unit>
+
             <trans-unit id="publication.index.title" resname="publication.index.title">
                 <source>Publications</source>
                 <target>Publikationen</target>
@@ -11,6 +20,11 @@
                 <source>Publication details</source>
                 <target>Publikationsdetails</target>
             </trans-unit>
+            <trans-unit id="filter.publication.searchTerm.label" resname="filter.publication.searchTerm.label">
+                <source>Search for publications</source>
+                <target>Nach Publikationen suchen</target>
+            </trans-unit>
+
             <trans-unit id="project.index.title" resname="project.index.title">
                 <source>Projects</source>
                 <target>Projekte</target>
@@ -19,6 +33,11 @@
                 <source>Project details</source>
                 <target>Projektdetails</target>
             </trans-unit>
+            <trans-unit id="filter.project.searchTerm.label" resname="filter.project.searchTerm.label">
+                <source>Search for projects</source>
+                <target>Nach Projekten suchen</target>
+            </trans-unit>
+
             <trans-unit id="person.index.title" resname="person.index.title">
                 <source>Persons</source>
                 <target>Personen</target>
@@ -31,6 +50,7 @@
                 <source>Search for persons</source>
                 <target>Nach Personen suchen</target>
             </trans-unit>
+
             <trans-unit id="patent.index.title" resname="patent.index.title">
                 <source>Patents</source>
                 <target>Patente</target>
@@ -39,6 +59,11 @@
                 <source>Patent information</source>
                 <target>Patentinformationen</target>
             </trans-unit>
+            <trans-unit id="filter.patent.searchTerm.label" resname="filter.patent.searchTerm.label">
+                <source>Search for patents</source>
+                <target>Nach Patenten suchen</target>
+            </trans-unit>
+
             <trans-unit id="doctoralProgram.index.title" resname="doctoralProgram.index.title">
                 <source>Doctoral programs</source>
                 <target>Promotionen</target>
@@ -47,6 +72,11 @@
                 <source>Doctoral program details</source>
                 <target>Details zur Promotion</target>
             </trans-unit>
+            <trans-unit id="filter.doctoralProgram.searchTerm.label" resname="filter.doctoralProgram.searchTerm.label">
+                <source>Search for doctoral programs</source>
+                <target>Nach Promotionen suchen</target>
+            </trans-unit>
+
             <trans-unit id="habilitation.index.title" resname="habilitation.index.title">
                 <source>Habilitations</source>
                 <target>Habilitationen</target>
@@ -55,6 +85,11 @@
                 <source>Habilitation details</source>
                 <target>Habilitationsdetails</target>
             </trans-unit>
+            <trans-unit id="filter.habilitation.searchTerm.label" resname="filter.habilitation.searchTerm.label">
+                <source>Search for habilitations</source>
+                <target>Nach Habilitationen suchen</target>
+            </trans-unit>
+
             <trans-unit id="orgUnit.index.title" resname="orgUnit.index.title">
                 <source>Organization units</source>
                 <target>Organisationseinheiten</target>
@@ -63,6 +98,11 @@
                 <source>Organization unit details</source>
                 <target>Details zur Organisationseinheit</target>
             </trans-unit>
+            <trans-unit id="filter.orgUnit.searchTerm.label" resname="filter.orgUnit.searchTerm.label">
+                <source>Search for organization units</source>
+                <target>Nach Organisationseinheiten suchen</target>
+            </trans-unit>
+
             <trans-unit id="spinOff.index.title" resname="spinOff.index.title">
                 <source>Spin-offs</source>
                 <target>Ausgründungen</target>
@@ -71,6 +111,11 @@
                 <source>Spin-off details</source>
                 <target>Details zur Ausgründung</target>
             </trans-unit>
+            <trans-unit id="filter.spinOff.searchTerm.label" resname="filter.spinOff.searchTerm.label">
+                <source>Search for spin offs</source>
+                <target>Nach Ausgründungen suchen</target>
+            </trans-unit>
+
             <trans-unit id="researchInfrastructure.index.title" resname="researchInfrastructure.index.title">
                 <source>Research infrastructures</source>
                 <target>Forschungseinrichtungen</target>
@@ -78,6 +123,10 @@
             <trans-unit id="researchInfrastructure.show.title" resname="researchInfrastructure.show.title">
                 <source>Research infrastructure details</source>
                 <target>Details zur Forschungseinrichtung</target>
+            </trans-unit>
+            <trans-unit id="filter.researchInfrastructure.searchTerm.label" resname="filter.researchInfrastructure.searchTerm.label">
+                <source>Search for research infrastructures</source>
+                <target>Nach Forschungseinrichtungen suchen</target>
             </trans-unit>
 
             <trans-unit id="hio.show.person.profilePage" resname="hio.show.person.profilePage">

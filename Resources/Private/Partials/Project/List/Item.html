@@ -18,7 +18,8 @@
             <p class="text-lg font-semibold leading-6 text-gray-900 py-0">
                 <f:link.action
                         action="show"
-                        arguments="{project: project.uid, currentPageNumber: currentPageNumber, searchTerm: searchTerm, listAction:action}"
+                        addQueryString="untrusted"
+                        arguments="{project: project.uid, currentPageNumber: currentPageNumber, filter:filter}"
                         class="hover:underline"
                 >
                     {project.title}
