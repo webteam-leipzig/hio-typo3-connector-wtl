@@ -24,6 +24,18 @@
                 <source>Search for publications</source>
                 <target>Nach Publikationen suchen</target>
             </trans-unit>
+            <trans-unit id="filter.publication.releaseYear.label" resname="filter.publication.releaseYear.label">
+                <source>Release year</source>
+                <target>Veröffentlichungsjahr</target>
+            </trans-unit>
+            <trans-unit id="filter.publication.releaseYear.from" resname="filter.publication.releaseYear.from">
+                <source>from</source>
+                <target>von</target>
+            </trans-unit>
+            <trans-unit id="filter.publication.releaseYear.to" resname="filter.publication.releaseYear.to">
+                <source>to</source>
+                <target>bis</target>
+            </trans-unit>
 
             <trans-unit id="project.index.title" resname="project.index.title">
                 <source>Projects</source>

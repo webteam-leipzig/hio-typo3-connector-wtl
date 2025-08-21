@@ -18,6 +18,15 @@
             <trans-unit id="filter.publication.searchTerm.label" resname="filter.publication.searchTerm.label">
                 <source>Search for publications</source>
             </trans-unit>
+            <trans-unit id="filter.publication.releaseYear.label" resname="filter.publication.releaseYear.label">
+                <source>Release year</source>
+            </trans-unit>
+            <trans-unit id="filter.publication.releaseYear.from" resname="filter.publication.releaseYear.from">
+                <source>from</source>
+            </trans-unit>
+            <trans-unit id="filter.publication.releaseYear.to" resname="filter.publication.releaseYear.to">
+                <source>to</source>
+            </trans-unit>
 
             <trans-unit id="project.index.title" resname="project.index.title">
                 <source>Projects</source>
