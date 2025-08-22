@@ -27,6 +27,9 @@
             <trans-unit id="filter.publication.releaseYear.to" resname="filter.publication.releaseYear.to">
                 <source>to</source>
             </trans-unit>
+            <trans-unit id="filter.publication.type.label" resname="filter.publication.type.label">
+                <source>Publication type</source>
+            </trans-unit>
 
             <trans-unit id="project.index.title" resname="project.index.title">
                 <source>Projects</source>

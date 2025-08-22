@@ -19,6 +19,21 @@
                 </div>
             </div>
 
+            <div class="flex flex-col mb-4">
+                <label for="type" class="block text-sm/6 font-medium text-gray-900 dark:text-white">
+                    <f:translate key="filter.publication.type.label" extensionName="HioTypo3ConnectorWtl"/>
+                </label>
+                <div class="mt-2">
+                    <f:form.select
+                            id="type"
+                            name="type"
+                            property="type"
+                            options="{typeValues}"
+                            optionLabelField="label"
+                            optionValueField="value"
+                            class="col-start-1 row-start-1 block w-full rounded-md bg-white py-1.5 pl-10 pr-3 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-wtl-red sm:pl-9 sm:text-sm/6"/>
+                </div>
+            </div>
 
             <div class="flex flex-col mb-4">
                 <fieldset>

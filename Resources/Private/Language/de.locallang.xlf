@@ -36,6 +36,10 @@
                 <source>to</source>
                 <target>bis</target>
             </trans-unit>
+            <trans-unit id="filter.publication.type.label" resname="filter.publication.type.label">
+                <source>Publication type</source>
+                <target>Publikationstyp</target>
+            </trans-unit>
 
             <trans-unit id="project.index.title" resname="project.index.title">
                 <source>Projects</source>
