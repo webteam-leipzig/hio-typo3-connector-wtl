@@ -27,10 +27,19 @@
                 </f:link.action>
             </p>
             <f:if condition="{publication.details.persons}">
-                <p class="flex items-left py-0 leading-5 mt-1">
+                <p class="py-0 mt-1">
                     <f:for each="{publication.details.persons}" as="person" key="personIndex">
-                        <f:if condition="{personIndex} > 0"><f:then><span>,&nbsp;</span></f:then></f:if>
-                        <f:render partial="Publication/List/Person" arguments="{person: person}" />
+                        <f:if condition="{personIndex} > 0">
+                            <f:then>
+                                <span class="p-0">,&nbsp;<f:render partial="Publication/List/Person" arguments="{person: person}" /></span>
+                            </f:then>
+                            <f:else>
+                                <span class="p-0">
+                                    <f:render partial="Publication/List/Person" arguments="{person: person}" />
+                                </span>
+                            </f:else>
+                        </f:if>
+
                     </f:for>
                 </p>
             </f:if>
