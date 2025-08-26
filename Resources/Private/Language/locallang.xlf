@@ -40,6 +40,27 @@
             <trans-unit id="filter.project.searchTerm.label" resname="filter.project.searchTerm.label">
                 <source>Search for projects</source>
             </trans-unit>
+            <trans-unit id="filter.project.startDate.label" resname="filter.project.startDate.label">
+                <source>Start date</source>
+            </trans-unit>
+            <trans-unit id="filter.project.startDate.from" resname="filter.project.startDate.from">
+                <source>from</source>
+            </trans-unit>
+            <trans-unit id="filter.project.startDate.to" resname="filter.project.startDate.to">
+                <source>to</source>
+            </trans-unit>
+            <trans-unit id="filter.project.endDate.label" resname="filter.project.endDate.label">
+                <source>End date</source>
+            </trans-unit>
+            <trans-unit id="filter.project.endDate.from" resname="filter.project.endDate.from">
+                <source>from</source>
+            </trans-unit>
+            <trans-unit id="filter.project.endDate.to" resname="filter.project.endDate.to">
+                <source>to</source>
+            </trans-unit>
+            <trans-unit id="filter.project.type.label" resname="filter.project.type.label">
+                <source>Project type</source>
+            </trans-unit>
 
             <trans-unit id="person.index.title" resname="person.index.title">
                 <source>Persons</source>
