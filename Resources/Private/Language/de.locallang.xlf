@@ -77,6 +77,10 @@
                 <source>to</source>
                 <target>bis</target>
             </trans-unit>
+            <trans-unit id="filter.project.status.label" resname="filter.project.status.label">
+                <source>Project status</source>
+                <target>Projektstatus</target>
+            </trans-unit>
             <trans-unit id="filter.project.type.label" resname="filter.project.type.label">
                 <source>Project type</source>
                 <target>Projekttyp</target>

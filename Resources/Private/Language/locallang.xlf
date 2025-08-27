@@ -58,6 +58,9 @@
             <trans-unit id="filter.project.endDate.to" resname="filter.project.endDate.to">
                 <source>to</source>
             </trans-unit>
+            <trans-unit id="filter.project.status.label" resname="filter.project.status.label">
+                <source>Project status</source>
+            </trans-unit>
             <trans-unit id="filter.project.type.label" resname="filter.project.type.label">
                 <source>Project type</source>
             </trans-unit>
