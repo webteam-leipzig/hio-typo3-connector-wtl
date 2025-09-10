@@ -11,6 +11,15 @@
             <span class="uppercase text-sm block mb-2 font-normal"><f:translate key="hio.show.person.profilePage" extensionName="HioTypo3ConnectorWtl" /></span>
             {person.name}
         </h1>
+        <f:if condition="{person.orgUnits}">
+            <div class="mx-auto w-full mb-4">
+                <div class="bg-white rounded">
+                    <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:pl-6">
+                        <f:render partial="Person/OrgUnit" arguments="{person: person}"/>
+                    </div>
+                </div>
+            </div>
+        </f:if>
         <f:if condition="{person.publications}">
             <f:then>
                 <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4 mb-4">
