@@ -1082,11 +1082,6 @@ select {
   border-radius: 0.375rem;
 }
 
-.rounded-l-md {
-  border-top-left-radius: 0.375rem;
-  border-bottom-left-radius: 0.375rem;
-}
-
 .border-b {
   border-bottom-width: 1px;
 }
