@@ -12,6 +12,12 @@
         </h1>
     </div>
     <f:if condition="{orgUnit.details}">
+
+        <f:variable name="childCount" value="{orgUnit.details.children -> f:count()}" />
+        <f:variable name="personCount" value="0" />
+        <f:variable name="projectCount" value="{orgUnit.projects -> f:count()}" />
+        <f:variable name="publicationCount" value="{orgUnit.publications -> f:count()}" />
+
         <div class="bg-white px-4 py-6 lg:p-8">
             <div class="text-base/7 text-gray-700">
                 <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
@@ -20,13 +26,31 @@
 
             <div class="mx-auto mt-4">
                 <div class="max-sm:grid grid-cols-1 sm:hidden">
-                    <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
-                    <select aria-label="Select a tab" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-2 pl-3 pr-8 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:bg-white/5 dark:text-gray-100 dark:outline-white/10 dark:*:bg-gray-800 dark:focus:outline-indigo-500">
-                        <option>Applied</option>
-                        <option>Phone Screening</option>
-                        <option selected>Interview</option>
-                        <option>Offer</option>
-                        <option>Disqualified</option>
+                    <select aria-label="Select a tab" id="tabs-mobile" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-2 pl-3 pr-8 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-wtl-red-dark">
+                        <option selected value="orgUnitChildren">
+                            Organisationseinheiten
+                            <f:if condition="{childCount} > 0">
+                                ({childCount})
+                            </f:if>
+                        </option>
+                        <option value="orgUnitPersons">
+                            Personen
+                            <f:if condition="{personCount} > 0">
+                                ({personCount})
+                            </f:if>
+                        </option>
+                        <option value="orgUnitProjects">
+                            Projekte
+                            <f:if condition="{projectCount} > 0">
+                                ({projectCount})
+                            </f:if>
+                        </option>
+                        <option value="orgUnitPublications">
+                            Publikationen
+                            <f:if condition="{publicationCount} > 0">
+                                ({publicationCount})
+                            </f:if>
+                        </option>
                     </select>
                     <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end fill-gray-500 dark:fill-gray-400">
                         <path d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
@@ -38,21 +62,19 @@
                         <nav aria-label="Tabs" id="tabs" class="-mb-px flex space-x-8">
                             <a href="#orgUnitChildren" aria-current="page" class="flex whitespace-nowrap border-b-2 px-1 py-4 text-sm font-medium border-wtl-red text-wtl-red hover:text-wtl-red-dark hover:border-wtl-red">
                                 Organisationseinheiten
-                                <f:variable name="childCount" value="{orgUnit.details.children -> f:count()}" />
                                 <f:render partial="Element/Badge" arguments="{label: childCount}" />
                             </a>
                             <a href="#orgUnitPersons" class="flex whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-sm font-medium text-gray-600 hover:text-gray-700 hover:border-gray-300">
                                 Personen
+                                <f:render partial="Element/Badge" arguments="{label: personCount}" />
                             </a>
                             <a href="#orgUnitProjects" class="flex whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-sm font-medium text-gray-600 hover:text-gray-700 hover:border-gray-300">
                                 Projekte
-                                <f:variable name="childCount" value="{orgUnit.projects -> f:count()}" />
-                                <f:render partial="Element/Badge" arguments="{label: childCount}" />
+                                <f:render partial="Element/Badge" arguments="{label: projectCount}" />
                             </a>
                             <a href="#orgUnitPublications" class="flex whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-sm font-medium text-gray-600 hover:text-gray-700 hover:border-gray-300">
                                 Publikationen
-                                <f:variable name="childCount" value="{orgUnit.publications -> f:count()}" />
-                                <f:render partial="Element/Badge" arguments="{label: childCount}" />
+                                <f:render partial="Element/Badge" arguments="{label: publicationCount}" />
                             </a>
                         </nav>
                     </div>
@@ -98,6 +120,25 @@
                         }
                         e.target.classList.add("border-b-2", "-mb-px", "bg-white", "border-wtl-red", "text-wtl-red", "hover:text-wtl-red-dark", "hover:border-wtl-red");
                     });
+                });
+
+                let tabsMobileContainer = document.querySelector("#tabs-mobile");
+                let tabOptions = tabsMobileContainer.querySelectorAll("#tabs-mobile option");
+                tabsMobileContainer.addEventListener("change", function (e) {
+                    e.preventDefault();
+
+                    let tabName = this.value;
+                    let tabContents = document.querySelector("#tab-contents");
+
+                    tabOptions.forEach(option => option.removeAttribute("selected"));
+                    for (let i = 0; i < tabContents.children.length; i++) {
+                        tabContents.children[i].classList.remove("hidden");
+                        if (tabContents.children[i].id === tabName) {
+                            continue;
+                        }
+                        tabContents.children[i].classList.add("hidden");
+                    }
+                    e.target.setAttribute("selected", "selected");
                 });
             </f:asset.script>
 
