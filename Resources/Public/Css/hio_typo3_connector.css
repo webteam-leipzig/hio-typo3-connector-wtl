@@ -795,6 +795,10 @@ select {
   border-width: 0;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .visible {
   visibility: visible;
 }
@@ -865,12 +869,20 @@ select {
   margin-bottom: 1.5rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .ml-3 {
   margin-left: 0.75rem;
 }
 
 .mr-1 {
   margin-right: 0.25rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .mr-3 {
@@ -901,6 +913,10 @@ select {
   display: block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -915,6 +931,11 @@ select {
 
 .hidden {
   display: none;
+}
+
+.size-5 {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .h-0 {
@@ -971,6 +992,12 @@ select {
 
 .list-none {
   list-style-type: none;
+}
+
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .grid-cols-1 {
@@ -1058,6 +1085,14 @@ select {
   border-color: rgb(243 244 246 / var(--tw-divide-opacity));
 }
 
+.self-center {
+  align-self: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1076,6 +1111,10 @@ select {
 
 .rounded-2xl {
   border-radius: 1rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-md {
@@ -1132,6 +1171,16 @@ select {
   border-color: transparent;
 }
 
+.border-wtl-red {
+  --tw-border-opacity: 1;
+  border-color: rgb(204 0 51 / var(--tw-border-opacity));
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
@@ -1144,6 +1193,10 @@ select {
 
 .fill-current {
   fill: currentColor;
+}
+
+.fill-gray-500 {
+  fill: #6b7280;
 }
 
 .p-0 {
@@ -1173,6 +1226,11 @@ select {
   padding-right: 0.5rem;
 }
 
+.px-2\.5 {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1191,6 +1249,11 @@ select {
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+.py-0\.5 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
 }
 
 .py-1 {
@@ -1253,6 +1316,10 @@ select {
 
 .pr-3 {
   padding-right: 0.75rem;
+}
+
+.pr-8 {
+  padding-right: 2rem;
 }
 
 .pt-4 {
@@ -1385,6 +1452,11 @@ select {
   color: rgb(79 70 229 / var(--tw-text-opacity));
 }
 
+.text-wtl-red {
+  --tw-text-opacity: 1;
+  color: rgb(204 0 51 / var(--tw-text-opacity));
+}
+
 .text-wtl-red-dark {
   --tw-text-opacity: 1;
   color: rgb(170 0 51 / var(--tw-text-opacity));
@@ -1438,9 +1510,18 @@ select {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
+.hover\:border-b-2:hover {
+  border-bottom-width: 2px;
+}
+
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.hover\:border-wtl-red:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(204 0 51 / var(--tw-border-opacity));
 }
 
 .hover\:bg-gray-50:hover {
@@ -1498,6 +1579,10 @@ select {
   outline-offset: -2px;
 }
 
+.focus\:outline-indigo-600:focus {
+  outline-color: #4f46e5;
+}
+
 .focus\:outline-wtl-red:focus {
   outline-color: #CC0033;
 }
@@ -1510,6 +1595,16 @@ select {
 .active\:border-gray-500:active {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+
+@media not all and (min-width: 640px) {
+  .max-sm\:grid {
+    display: grid;
+  }
+
+  .max-sm\:hidden {
+    display: none;
+  }
 }
 
 @media (min-width: 640px) {
@@ -1619,6 +1714,10 @@ select {
     margin-top: -1px;
   }
 
+  .md\:inline-block {
+    display: inline-block;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1717,12 +1816,42 @@ select {
     border-color: rgb(255 255 255 / 0.1);
   }
 
+  .dark\:border-white\/10 {
+    border-color: rgb(255 255 255 / 0.1);
+  }
+
   .dark\:bg-gray-800\/50 {
     background-color: rgb(31 41 55 / 0.5);
+  }
+
+  .dark\:bg-white\/5 {
+    background-color: rgb(255 255 255 / 0.05);
+  }
+
+  .dark\:fill-gray-400 {
+    fill: #9ca3af;
+  }
+
+  .dark\:text-gray-100 {
+    --tw-text-opacity: 1;
+    color: rgb(243 244 246 / var(--tw-text-opacity));
   }
 
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .dark\:outline-white\/10 {
+    outline-color: rgb(255 255 255 / 0.1);
+  }
+
+  .dark\:\*\:bg-gray-800 > * {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  }
+
+  .dark\:focus\:outline-indigo-500:focus {
+    outline-color: #6366f1;
   }
 }
