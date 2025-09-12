@@ -2,29 +2,29 @@
         xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
         data-namespace-typo3-fluid="true">
 
-    <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
-        <div class="-mt-px flex w-0 flex-1">
+    <nav class="wtl-hio-flex wtl-hio-items-center wtl-hio-justify-between wtl-hio-border-t wtl-hio-border-gray-200 wtl-hio-px-4 sm:wtl-hio-px-0">
+        <div class="wtl-hio--mt-px wtl-hio-flex wtl-hio-w-0 wtl-hio-flex-1">
             <f:if condition="{pagination.previousPageNumber}">
                 <f:then>
                     <f:link.action
                             action="{action}"
                             arguments="{currentPageNumber:pagination.previousPageNumber, filter:filter}"
                             addQueryString="untrusted"
-                            class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                            class="wtl-hio-inline-flex wtl-hio-items-center wtl-hio-border-t-2 wtl-hio-border-transparent wtl-hio-pr-1 wtl-hio-pt-4 wtl-hio-text-sm wtl-hio-font-medium wtl-hio-text-gray-500 hover:wtl-hio-border-gray-300 hover:wtl-hio-text-gray-700"
                     >
-                        <svg class="mr-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                        <svg class="wtl-hio-mr-3 wtl-hio-h-5 wtl-hio-w-5 wtl-hio-text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                             <path fill-rule="evenodd" d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z" clip-rule="evenodd" />
                         </svg>
                         <f:translate key="ListPaginationPrevious" extensionName="HioTypo3Connector" />
                     </f:link.action>
                 </f:then>
                 <f:else>
-                    <div class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"></div>
+                    <div class="wtl-hio-inline-flex wtl-hio-items-center wtl-hio-border-t-2 wtl-hio-border-transparent wtl-hio-pr-1 wtl-hio-pt-4 wtl-hio-text-sm wtl-hio-font-medium wtl-hio-text-gray-500 hover:wtl-hio-border-gray-300 hover:wtl-hio-text-gray-700"></div>
                 </f:else>
             </f:if>
         </div>
 
-        <div class="hidden md:-mt-px md:flex">
+        <div class="wtl-hio-hidden md:wtl-hio--mt-px md:wtl-hio-flex">
 
                 <f:for each="{pagination.allPageNumbers}" as="page">
                     <f:if condition="{currentPageNumber}=={page}">
@@ -33,7 +33,7 @@
                                     action="{action}"
                                     arguments="{currentPageNumber:page, filter:filter}"
                                     addQueryString="untrusted"
-                                    class="inline-flex items-center border-t-2 border-indigo-500 px-4 pt-4 text-sm font-medium text-indigo-600"
+                                    class="wtl-hio-inline-flex wtl-hio-items-center wtl-hio-border-t-2 wtl-hio-border-indigo-500 wtl-hio-px-4 wtl-hio-pt-4 wtl-hio-text-sm wtl-hio-font-medium wtl-hio-text-indigo-600"
                             >
                                 {page}
                             </f:link.action>
@@ -43,7 +43,7 @@
                                     action="{action}"
                                     arguments="{currentPageNumber:page, filter:filter}"
                                     addQueryString="untrusted"
-                                    class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                                    class="wtl-hio-inline-flex wtl-hio-items-center wtl-hio-border-t-2 wtl-hio-border-transparent wtl-hio-px-4 wtl-hio-pt-4 wtl-hio-text-sm wtl-hio-font-medium wtl-hio-text-gray-500 hover:wtl-hio-border-gray-300 hover:wtl-hio-text-gray-700"
                             >
                                 {page}
                             </f:link.action>
@@ -53,23 +53,23 @@
                 </f:for>
 
         </div>
-        <div class="-mt-px flex w-0 flex-1 justify-end">
+        <div class="wtl-hio--mt-px wtl-hio-flex wtl-hio-w-0 wtl-hio-flex-1 wtl-hio-justify-end">
             <f:if condition="{pagination.nextPageNumber}">
                 <f:then>
                     <f:link.action
                             action="{action}"
                             arguments="{currentPageNumber:pagination.nextPageNumber, filter:filter}"
                             addQueryString="untrusted"
-                            class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                            class="wtl-hio-inline-flex wtl-hio-items-center wtl-hio-border-t-2 wtl-hio-border-transparent wtl-hio-pl-1 wtl-hio-pt-4 wtl-hio-text-sm wtl-hio-font-medium wtl-hio-text-gray-500 hover:wtl-hio-border-gray-300 hover:wtl-hio-text-gray-700"
                     >
                         <f:translate key="ListPaginationNext" extensionName="HioTypo3Connector" />
-                        <svg class="ml-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                        <svg class="wtl-hio-ml-3 wtl-hio-h-5 wtl-hio-w-5 wtl-hio-text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                             <path fill-rule="evenodd" d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />
                         </svg>
                     </f:link.action>
                 </f:then>
                 <f:else>
-                    <div class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"></div>
+                    <div class="wtl-hio-inline-flex wtl-hio-items-center wtl-hio-border-t-2 wtl-hio-border-transparent wtl-hio-pl-1 wtl-hio-pt-4 wtl-hio-text-sm wtl-hio-font-medium wtl-hio-text-gray-500 hover:wtl-hio-border-gray-300 hover:wtl-hio-text-gray-700"></div>
                 </f:else>
             </f:if>
 

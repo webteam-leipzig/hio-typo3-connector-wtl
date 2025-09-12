@@ -3,14 +3,14 @@
         data-namespace-typo3-fluid="true" lang="en">
 
 <f:if condition="{orgUnit.details}">
-    <li class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 py-5 sm:flex-nowrap">
+    <li class="wtl-hio-flex wtl-hio-flex-wrap wtl-hio-items-center wtl-hio-justify-between wtl-hio-gap-x-6 wtl-hio-gap-y-4 wtl-hio-py-5 sm:wtl-hio-flex-nowrap">
         <div>
-            <p class="text-lg font-semibold leading-6 text-gray-900 py-0">
+            <p class="wtl-hio-text-lg wtl-hio-font-semibold wtl-hio-leading-6 wtl-hio-text-gray-900 wtl-hio-py-0">
                 <f:link.action
                         action="show"
                         arguments="{orgUnit: orgUnit.uid, currentPageNumber: currentPageNumber, filter:filter}"
                         addQueryString="untrusted"
-                        class="hover:underline"
+                        class="hover:wtl-hio-underline"
                 >
                     {orgUnit.title}
                 </f:link.action>

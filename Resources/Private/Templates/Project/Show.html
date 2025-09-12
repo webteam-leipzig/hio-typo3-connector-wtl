@@ -7,14 +7,14 @@
 <f:section name="Main">
     <f:flashMessages/>
     <f:if condition="{project.details}">
-        <div class="flex items-stretch justify-between py-4 px-0">
-            <h1 class="mt-2 font-normal text-3xl sm:text-4xl px-4">
+        <div class="wtl-hio-flex wtl-hio-items-stretch wtl-hio-justify-between wtl-hio-py-4 wtl-hio-px-0">
+            <h1 class="wtl-hio-mt-2 wtl-hio-font-normal wtl-hio-text-3xl sm:wtl-hio-text-4xl wtl-hio-px-4">
                 <f:translate key="project.show.title" extensionName="HioTypo3ConnectorWtl"/>
             </h1>
         </div>
-        <div class="bg-white px-4 py-6 lg:p-8">
-            <div class="text-base/7 text-gray-700">
-                <p class="font-semibold text-gray-600 py-0">
+        <div class="wtl-hio-bg-white wtl-hio-px-4 wtl-hio-py-6 lg:wtl-hio-p-8">
+            <div class="wtl-hio-text-base/7 wtl-hio-text-gray-700">
+                <p class="wtl-hio-font-semibold wtl-hio-text-gray-600 wtl-hio-py-0">
                     <f:if condition="{project.details.type}">
                         {project.details.type}
                         &middot;
@@ -25,14 +25,14 @@
                     </f:if>
                     <f:format.date format="d.m.Y" >{project.details.startDate}</f:format.date> - <f:format.date format="d.m.Y" >{project.details.endDate}</f:format.date>
                 </p>
-                <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{project.title}</h1>
+                <h1 class="wtl-hio-mt-2 wtl-hio-text-pretty wtl-hio-text-4xl wtl-hio-font-semibold wtl-hio-tracking-tight wtl-hio-text-gray-900 sm:wtl-hio-text-5xl">{project.title}</h1>
             </div>
 
-            <div class="mt-6 border-t border-gray-100">
-                <dl class="divide-y divide-gray-100">
-                    <div class="py-6 sm:grid sm:grid-cols-3 sm:gap-4">
-                        <dt class="text-sm/6 font-medium text-gray-900"><f:translate key="hio.show.project.projectLead" /></dt>
-                        <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
+            <div class="wtl-hio-mt-6 wtl-hio-border-t wtl-hio-border-gray-100">
+                <dl class="wtl-hio-divide-y wtl-hio-divide-gray-100">
+                    <div class="wtl-hio-py-6 sm:wtl-hio-grid sm:wtl-hio-grid-cols-3 sm:wtl-hio-gap-4">
+                        <dt class="wtl-hio-text-sm/6 wtl-hio-font-medium wtl-hio-text-gray-900"><f:translate key="hio.show.project.projectLead" /></dt>
+                        <dd class="wtl-hio-mt-1 wtl-hio-text-sm/6 wtl-hio-text-gray-700 sm:wtl-hio-col-span-2 sm:wtl-hio-mt-0">
                             <f:for each="{project.details.persons}" as="person">
                                 <span>
                                     <f:if condition="{person.role} == {settings.projectDetails.persons.filterProjectLead}">
@@ -42,14 +42,14 @@
                             </f:for>
                         </dd>
                     </div>
-                    <div class="py-6 sm:grid sm:grid-cols-3 sm:gap-4">
-                        <dt class="text-sm/6 font-medium text-gray-900"><f:translate key="hio.show.project.objective" /></dt>
-                        <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
+                    <div class="wtl-hio-py-6 sm:wtl-hio-grid sm:wtl-hio-grid-cols-3 sm:wtl-hio-gap-4">
+                        <dt class="wtl-hio-text-sm/6 wtl-hio-font-medium wtl-hio-text-gray-900"><f:translate key="hio.show.project.objective" /></dt>
+                        <dd class="wtl-hio-mt-1 wtl-hio-text-sm/6 wtl-hio-text-gray-700 sm:wtl-hio-col-span-2 sm:wtl-hio-mt-0">
                                 {project.details.objective}
                         </dd>
                     </div>
-                    <div class="py-6 sm:grid sm:grid-cols-3 sm:gap-4">
-                        <dt class="text-sm/6 font-medium text-gray-900">
+                    <div class="wtl-hio-py-6 sm:wtl-hio-grid sm:wtl-hio-grid-cols-3 sm:wtl-hio-gap-4">
+                        <dt class="wtl-hio-text-sm/6 wtl-hio-font-medium wtl-hio-text-gray-900">
                             <f:if condition="{project.details.subjectAreas -> f:count()} == 1">
                                 <f:then>
                                     <f:translate key="hio.show.project.subjectArea" />
@@ -59,17 +59,17 @@
                                 </f:else>
                             </f:if>
                         </dt>
-                        <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
+                        <dd class="wtl-hio-mt-1 wtl-hio-text-sm/6 wtl-hio-text-gray-700 sm:wtl-hio-col-span-2 sm:wtl-hio-mt-0">
                             <f:for each="{project.details.subjectAreas}" as="subject" key="index">
-                                <p class="py-0">
+                                <p class="wtl-hio-py-0">
                                     {subject}
                                 </p>
                             </f:for>
                         </dd>
                     </div>
                     <f:if condition="{project.details.researchAreas}">
-                        <div class="py-6 sm:grid sm:grid-cols-3 sm:gap-4">
-                            <dt class="text-sm/6 font-medium text-gray-900">
+                        <div class="wtl-hio-py-6 sm:wtl-hio-grid sm:wtl-hio-grid-cols-3 sm:wtl-hio-gap-4">
+                            <dt class="wtl-hio-text-sm/6 wtl-hio-font-medium wtl-hio-text-gray-900">
                                 <f:if condition="{project.details.researchAreas -> f:count()} == 1">
                                     <f:then>
                                         <f:translate key="hio.show.project.researchArea" />
@@ -79,9 +79,9 @@
                                     </f:else>
                                 </f:if>
                             </dt>
-                            <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
+                            <dd class="wtl-hio-mt-1 wtl-hio-text-sm/6 wtl-hio-text-gray-700 sm:wtl-hio-col-span-2 sm:wtl-hio-mt-0">
                                 <f:for each="{project.details.researchAreas}" as="researchArea" key="index">
-                                    <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mb-2 mr-1 text-sm font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">{researchArea}</span>
+                                    <span class="wtl-hio-inline-flex wtl-hio-items-center wtl-hio-rounded-md wtl-hio-bg-gray-50 wtl-hio-px-2 wtl-hio-py-1 wtl-hio-mb-2 wtl-hio-mr-1 wtl-hio-text-sm wtl-hio-font-medium wtl-hio-text-gray-600 wtl-hio-ring-1 wtl-hio-ring-inset wtl-hio-ring-gray-500/10">{researchArea}</span>
                                 </f:for>
                             </dd>
                         </div>
@@ -97,37 +97,37 @@
             </div>
 
             <div>
-                <div class="sm:hidden">
-                    <label for="tabs" class="sr-only"><f:translate key="hio.show.project.selectTab" /></label>
+                <div class="sm:wtl-hio-hidden">
+                    <label for="tabs" class="wtl-hio-sr-only"><f:translate key="hio.show.project.selectTab" /></label>
                     <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
-                    <select onchange="openTab(event, this.value)" id="tabs" name="tabs" class="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                    <select onchange="openTab(event, this.value)" id="tabs" name="tabs" class="wtl-hio-block wtl-hio-w-full wtl-hio-rounded-md wtl-hio-border-gray-300 wtl-hio-py-2 wtl-hio-pl-3 wtl-hio-pr-10 wtl-hio-text-base focus:wtl-hio-border-indigo-500 focus:wtl-hio-outline-none focus:wtl-hio-ring-indigo-500 sm:wtl-hio-text-sm">
                         <option selected value="tab-project-abstract"><f:translate key="hio.show.project.abstract" /></option>
                         <option value="tab-project-cooperation"><f:translate key="hio.show.project.cooperation" /></option>
                         <option value="tab-project-downloads"><f:translate key="hio.show.project.downloads" /></option>
                     </select>
                 </div>
-                <div class="hidden sm:block">
-                    <div class="border-b border-gray-200">
-                        <nav class="-mb-px flex space-x-8" aria-label="Tabs">
-                            <a href="#" onclick="openTab(event, 'tab-project-abstract')"  class="tab-project whitespace-nowrap border-b-2 border-gray-400 px-1 py-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 active:border-gray-500"><f:translate key="hio.show.project.abstract" /></a>
-                            <a href="#" onclick="openTab(event, 'tab-project-cooperation')" class="tab-project whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"><f:translate key="hio.show.project.cooperation" /></a>
-                            <a href="#" onclick="openTab(event, 'tab-project-downloads')" class="tab-project whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"><f:translate key="hio.show.project.downloads" /></a>
+                <div class="wtl-hio-hidden sm:wtl-hio-block">
+                    <div class="wtl-hio-border-b wtl-hio-border-gray-200">
+                        <nav class="wtl-hio--mb-px wtl-hio-flex wtl-hio-space-x-8" aria-label="Tabs">
+                            <a href="#" onclick="openTab(event, 'tab-project-abstract')"  class="wtl-hio-tab-project wtl-hio-whitespace-nowrap wtl-hio-border-b-2 wtl-hio-border-gray-400 wtl-hio-px-1 wtl-hio-py-4 wtl-hio-text-sm wtl-hio-font-medium wtl-hio-text-gray-500 hover:wtl-hio-border-gray-300 hover:wtl-hio-text-gray-700 active:wtl-hio-border-gray-500"><f:translate key="hio.show.project.abstract" /></a>
+                            <a href="#" onclick="openTab(event, 'tab-project-cooperation')" class="wtl-hio-tab-project wtl-hio-whitespace-nowrap wtl-hio-border-b-2 wtl-hio-border-transparent wtl-hio-px-1 wtl-hio-py-4 wtl-hio-text-sm wtl-hio-font-medium wtl-hio-text-gray-500 hover:wtl-hio-border-gray-300 hover:wtl-hio-text-gray-700"><f:translate key="hio.show.project.cooperation" /></a>
+                            <a href="#" onclick="openTab(event, 'tab-project-downloads')" class="wtl-hio-tab-project wtl-hio-whitespace-nowrap wtl-hio-border-b-2 wtl-hio-border-transparent wtl-hio-px-1 wtl-hio-py-4 wtl-hio-text-sm wtl-hio-font-medium wtl-hio-text-gray-500 hover:wtl-hio-border-gray-300 hover:wtl-hio-text-gray-700"><f:translate key="hio.show.project.downloads" /></a>
                         </nav>
                     </div>
                 </div>
 
-                <div id="tab-project-abstract" class="tab-content p-4 px-0">
+                <div id="tab-project-abstract" class="wtl-hio-tab-content wtl-hio-p-4 wtl-hio-px-0">
                     <f:if condition="{project.abstract}">
-                        <div class="text-sm/6 text-gray-700">{project.abstract}</div>
+                        <div class="wtl-hio-text-sm/6 wtl-hio-text-gray-700">{project.abstract}</div>
                     </f:if>
                 </div>
 
-                <div id="tab-project-cooperation" class="tab-content p-4 hidden px-0">
-                    <div class="text-sm/6 text-gray-700"><f:translate key="hio.show.project.noCooperation" /></div>
+                <div id="tab-project-cooperation" class="wtl-hio-tab-content wtl-hio-p-4 wtl-hio-hidden wtl-hio-px-0">
+                    <div class="wtl-hio-text-sm/6 wtl-hio-text-gray-700"><f:translate key="hio.show.project.noCooperation" /></div>
                 </div>
 
-                <div id="tab-project-downloads" class="tab-content p-4 hidden px-0">
-                    <div class="text-sm/6 text-gray-700"><f:translate key="hio.show.project.noDownloads" /></div>
+                <div id="tab-project-downloads" class="wtl-hio-tab-content wtl-hio-p-4 wtl-hio-hidden wtl-hio-px-0">
+                    <div class="wtl-hio-text-sm/6 wtl-hio-text-gray-700"><f:translate key="hio.show.project.noDownloads" /></div>
                 </div>
 
 
@@ -153,16 +153,16 @@
 
         </div>
     </f:if>
-    <div class="px-4 py-5 sm:p-6">
-        <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
-            <div class="-mt-px flex w-0 flex-1">
+    <div class="wtl-hio-px-4 wtl-hio-py-5 sm:wtl-hio-p-6">
+        <nav class="wtl-hio-flex wtl-hio-items-center wtl-hio-justify-between wtl-hio-border-t wtl-hio-border-gray-200 wtl-hio-px-4 sm:wtl-hio-px-0">
+            <div class="wtl-hio--mt-px wtl-hio-flex wtl-hio-w-0 wtl-hio-flex-1">
                 <f:link.action
                         action="index"
                         addQueryString="untrusted"
                         arguments="{currentPageNumber:currentPageNumber, filter:filter}"
-                        class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                        class="wtl-hio-inline-flex wtl-hio-items-center wtl-hio-border-t-2 wtl-hio-border-transparent wtl-hio-pr-1 wtl-hio-pt-4 wtl-hio-text-sm wtl-hio-font-medium wtl-hio-text-gray-500 hover:wtl-hio-border-gray-300 hover:wtl-hio-text-gray-700"
                 >
-                    <svg class="mr-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                    <svg class="wtl-hio-mr-3 wtl-hio-h-5 wtl-hio-w-5 wtl-hio-text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                         <path fill-rule="evenodd" d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z" clip-rule="evenodd" />
                     </svg>
                     <f:translate key="ShowBackToList" extensionName="HioTypo3Connector" />
