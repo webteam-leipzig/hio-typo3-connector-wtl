@@ -5,18 +5,18 @@
 <f:section name="Main">
     <f:flashMessages />
 
-    <h1 class="mt-2 font-normal text-3xl sm:text-4xl px-4">
+    <h1 class="wtl-hio-mt-2 wtl-hio-font-normal wtl-hio-text-3xl sm:wtl-hio-text-4xl wtl-hio-px-4">
         <f:translate key="patent.index.title" extensionName="HioTypo3ConnectorWtl"/>
     </h1>
 
-    <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4 mb-4">
-        <div class="bg-white grow flex-1 xl:flex rounded">
-            <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
+    <div class="wtl-hio-mx-auto wtl-hio-w-full wtl-hio-grow wtl-hio-flex wtl-hio-flex-col md:wtl-hio-flex-row wtl-hio-gap-4 wtl-hio-mb-4">
+        <div class="wtl-hio-bg-white wtl-hio-grow wtl-hio-flex-1 xl:wtl-hio-flex wtl-hio-rounded">
+            <div class="wtl-hio-px-4 wtl-hio-py-6 sm:wtl-hio-px-6 lg:wtl-hio-pl-8 xl:wtl-hio-flex-1 xl:wtl-hio-pl-6">
                 <f:render partial="Patent/List" arguments="{action:'index', pagination:pagination, paginator:paginator, filter:filter}" />
             </div>
         </div>
 
-        <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
+        <div class="wtl-hio-bg-white wtl-hio-shrink-0 wtl-hio-px-4 wtl-hio-py-6 sm:wtl-hio-px-6 lg:wtl-hio-w-96 lg:wtl-hio-pr-8 xl:wtl-hio-pr-6 wtl-hio-rounded wtl-hio-order-first sm:wtl-hio-order-last">
             <f:render partial="Patent/List/Filter" arguments="{action:'index', controller:'Patent', filter:filter}" />
         </div>
     </div>

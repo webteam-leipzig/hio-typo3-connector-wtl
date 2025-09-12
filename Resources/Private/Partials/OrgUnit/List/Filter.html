@@ -2,20 +2,20 @@
 
 <f:layout name="Default"/>
 
-<div class="flex items-end justify-end py-4 px-0">
-    <div class="w-full">
+<div class="wtl-hio-flex wtl-hio-items-end wtl-hio-justify-end wtl-hio-py-4 wtl-hio-px-0">
+    <div class="wtl-hio-w-full">
         <f:form action="{action}" controller="{controller}" object="{filter}" name="filter">
-            <div class="flex flex-col mb-4">
-                <label for="searchTerm" class="block text-sm/6 font-medium text-gray-900 dark:text-white">
+            <div class="wtl-hio-flex wtl-hio-flex-col wtl-hio-mb-4">
+                <label for="searchTerm" class="wtl-hio-block wtl-hio-text-sm/6 wtl-hio-font-medium wtl-hio-text-gray-900 dark:wtl-hio-text-white">
                     <f:translate key="filter.orgUnit.searchTerm.label" extensionName="HioTypo3ConnectorWtl"/>
                 </label>
-                <div class="mt-2">
+                <div class="wtl-hio-mt-2">
                     <f:form.textfield
                             id="searchTerm"
                             name="searchTerm"
                             placeholder="{f:translate(key: 'search.placeholder')}"
                             property="searchTerm"
-                            class="col-start-1 row-start-1 block w-full bg-white py-1.5 pl-10 pr-3 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-wtl-red sm:pl-9 sm:text-sm/6"/>
+                            class="wtl-hio-col-start-1 wtl-hio-row-start-1 wtl-hio-block wtl-hio-w-full wtl-hio-bg-white wtl-hio-py-1.5 wtl-hio-pl-10 wtl-hio-pr-3 wtl-hio-text-base wtl-hio-text-gray-900 wtl-hio-outline wtl-hio-outline-1 wtl-hio--outline-offset-1 wtl-hio-outline-gray-300 placeholder:wtl-hio-text-gray-400 focus:wtl-hio-outline focus:wtl-hio-outline-2 focus:wtl-hio--outline-offset-2 focus:wtl-hio-outline-wtl-red sm:wtl-hio-pl-9 sm:wtl-hio-text-sm/6"/>
                 </div>
             </div>
 

@@ -3,10 +3,10 @@
         data-namespace-typo3-fluid="true" lang="en">
 
 <f:if condition="{projects}">
-    <div class="max-w-3xl xl:max-w-5xl text-base/7">
-        <ul class="list-none">
+    <div class="wtl-hio-max-w-3xl xl:wtl-hio-max-w-5xl wtl-hio-text-base/7">
+        <ul class="wtl-hio-list-none">
             <f:for each="{projects}" as="project">
-                <li class="py-1">
+                <li class="wtl-hio-py-1">
                     <f:render partial="SelectedPerson/Project/Item" arguments="{project:project, settings:settings}"/>
                 </li>
             </f:for>

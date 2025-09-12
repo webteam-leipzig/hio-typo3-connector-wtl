@@ -7,14 +7,14 @@
 <f:section name="Main">
     <f:flashMessages/>
     <f:if condition="{person}">
-        <h1 class="mt-2 font-semibold text-3xl sm:text-5xl xl:text-4xl p-4 mb-4">
-            <span class="uppercase text-sm block mb-2 font-normal"><f:translate key="hio.show.person.profilePage" extensionName="HioTypo3ConnectorWtl" /></span>
+        <h1 class="wtl-hio-mt-2 wtl-hio-font-semibold wtl-hio-text-3xl sm:wtl-hio-text-5xl xl:wtl-hio-text-4xl wtl-hio-p-4 wtl-hio-mb-4">
+            <span class="wtl-hio-uppercase wtl-hio-text-sm wtl-hio-block wtl-hio-mb-2 wtl-hio-font-normal"><f:translate key="hio.show.person.profilePage" extensionName="HioTypo3ConnectorWtl" /></span>
             {person.name}
         </h1>
         <f:if condition="{person.orgUnits}">
-            <div class="mx-auto w-full mb-4">
-                <div class="bg-white rounded">
-                    <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:pl-6">
+            <div class="wtl-hio-mx-auto wtl-hio-w-full wtl-hio-mb-4">
+                <div class="wtl-hio-bg-white wtl-hio-rounded">
+                    <div class="wtl-hio-px-4 wtl-hio-py-6 sm:wtl-hio-px-6 lg:wtl-hio-pl-8 xl:wtl-hio-pl-6">
                         <f:render partial="Person/OrgUnit" arguments="{person: person}"/>
                     </div>
                 </div>
@@ -22,10 +22,10 @@
         </f:if>
         <f:if condition="{person.publications}">
             <f:then>
-                <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4 mb-4">
-                    <div class="bg-white grow flex-1 xl:flex rounded">
-                        <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-                            <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
+                <div class="wtl-hio-mx-auto wtl-hio-w-full wtl-hio-grow wtl-hio-flex wtl-hio-flex-col md:wtl-hio-flex-row wtl-hio-gap-4 wtl-hio-mb-4">
+                    <div class="wtl-hio-bg-white wtl-hio-grow wtl-hio-flex-1 xl:wtl-hio-flex wtl-hio-rounded">
+                        <div class="wtl-hio-px-4 wtl-hio-py-6 sm:wtl-hio-px-6 lg:wtl-hio-pl-8 xl:wtl-hio-flex-1 xl:wtl-hio-pl-6">
+                            <h2 class="wtl-hio-font-normal wtl-hio-text-3xl sm:wtl-hio-text-4xl wtl-hio-border-b wtl-hio-border-gray-200 wtl-hio-pb-6 wtl-hio-mb-4 wtl-hio-collapse wtl-hio-h-0 sm:wtl-hio-visible sm:wtl-hio-h-auto">
                                 <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
                             </h2>
                             <f:render partial="SelectedPerson/PublicationList" arguments="{publications: person.publications}"/>
@@ -33,8 +33,8 @@
                     </div>
 
                     <f:if condition="{settings.showTypeStatistics} || {settings.showCoAuthorshipStatistics}">
-                        <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
-                            <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 visible sm:hidden">
+                        <div class="wtl-hio-bg-white wtl-hio-shrink-0 wtl-hio-px-4 wtl-hio-py-6 sm:wtl-hio-px-6 lg:wtl-hio-w-96 lg:wtl-hio-pr-8 xl:wtl-hio-pr-6 wtl-hio-rounded wtl-hio-order-first sm:wtl-hio-order-last">
+                            <h2 class="wtl-hio-font-normal wtl-hio-text-3xl sm:wtl-hio-text-4xl wtl-hio-border-b wtl-hio-border-gray-200 wtl-hio-pb-6 wtl-hio-mb-4 wtl-hio-visible sm:wtl-hio-hidden">
                                 <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
                             </h2>
                             <f:if condition="{typeStatistics} && {settings.showTypeStatistics}">
@@ -51,10 +51,10 @@
 
         <f:if condition="{person.projects}">
             <f:then>
-                <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4 mb-4">
-                    <div class="bg-white grow flex-1 xl:flex rounded">
-                        <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-                            <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
+                <div class="wtl-hio-mx-auto wtl-hio-w-full wtl-hio-grow wtl-hio-flex wtl-hio-flex-col md:wtl-hio-flex-row wtl-hio-gap-4 wtl-hio-mb-4">
+                    <div class="wtl-hio-bg-white wtl-hio-grow wtl-hio-flex-1 xl:wtl-hio-flex wtl-hio-rounded">
+                        <div class="wtl-hio-px-4 wtl-hio-py-6 sm:wtl-hio-px-6 lg:wtl-hio-pl-8 xl:wtl-hio-flex-1 xl:wtl-hio-pl-6">
+                            <h2 class="wtl-hio-font-normal wtl-hio-text-3xl sm:wtl-hio-text-4xl wtl-hio-border-b wtl-hio-border-gray-200 wtl-hio-pb-6 wtl-hio-mb-4 wtl-hio-collapse wtl-hio-h-0 sm:wtl-hio-visible sm:wtl-hio-h-auto">
                                 <f:translate key="hio.show.person.projects" extensionName="HioTypo3ConnectorWtl" />
                             </h2>
                             <f:render partial="SelectedPerson/ProjectList" arguments="{projects: person.projects}"/>
@@ -62,8 +62,8 @@
                     </div>
 
                     <f:if condition="{settings.showProjectStatusStatistics}">
-                        <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
-                            <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 visible sm:hidden">
+                        <div class="wtl-hio-bg-white wtl-hio-shrink-0 wtl-hio-px-4 wtl-hio-py-6 sm:wtl-hio-px-6 lg:wtl-hio-w-96 lg:wtl-hio-pr-8 xl:wtl-hio-pr-6 wtl-hio-rounded wtl-hio-order-first sm:wtl-hio-order-last">
+                            <h2 class="wtl-hio-font-normal wtl-hio-text-3xl sm:wtl-hio-text-4xl wtl-hio-border-b wtl-hio-border-gray-200 wtl-hio-pb-6 wtl-hio-mb-4 wtl-hio-visible sm:wtl-hio-hidden">
                                 <f:translate key="hio.show.person.projects" extensionName="HioTypo3ConnectorWtl" />
                             </h2>
                             <f:if condition="{projectStatusStatistics} && {settings.showProjectStatusStatistics}">
@@ -78,49 +78,49 @@
 
         <f:if condition="{person.patents}">
             <f:then>
-                <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4 mb-4">
-                    <div class="bg-white grow flex-1 xl:flex rounded">
-                        <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-                            <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
+                <div class="wtl-hio-mx-auto wtl-hio-w-full wtl-hio-grow wtl-hio-flex wtl-hio-flex-col md:wtl-hio-flex-row wtl-hio-gap-4 wtl-hio-mb-4">
+                    <div class="wtl-hio-bg-white wtl-hio-grow wtl-hio-flex-1 xl:wtl-hio-flex wtl-hio-rounded">
+                        <div class="wtl-hio-px-4 wtl-hio-py-6 sm:wtl-hio-px-6 lg:wtl-hio-pl-8 xl:wtl-hio-flex-1 xl:wtl-hio-pl-6">
+                            <h2 class="wtl-hio-font-normal wtl-hio-text-3xl sm:wtl-hio-text-4xl wtl-hio-border-b wtl-hio-border-gray-200 wtl-hio-pb-6 wtl-hio-mb-4 wtl-hio-collapse wtl-hio-h-0 sm:wtl-hio-visible sm:wtl-hio-h-auto">
                                 <f:translate key="hio.show.person.patents" extensionName="HioTypo3ConnectorWtl" />
                             </h2>
                             <f:render partial="SelectedPerson/PatentList" arguments="{patents: person.patents}"/>
                         </div>
                     </div>
 
-                    <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last"></div>
+                    <div class="wtl-hio-bg-white wtl-hio-shrink-0 wtl-hio-px-4 wtl-hio-py-6 sm:wtl-hio-px-6 lg:wtl-hio-w-96 lg:wtl-hio-pr-8 xl:wtl-hio-pr-6 wtl-hio-rounded wtl-hio-order-first sm:wtl-hio-order-last"></div>
                 </div>
             </f:then>
         </f:if>
 
         <f:if condition="{person.details.dynamicObjects}">
             <f:then>
-                <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4">
-                    <div class="bg-white grow flex-1 xl:flex rounded">
-                        <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-                            <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 collapse h-0 sm:visible sm:h-auto">
+                <div class="wtl-hio-mx-auto wtl-hio-w-full wtl-hio-grow wtl-hio-flex wtl-hio-flex-col md:wtl-hio-flex-row wtl-hio-gap-4">
+                    <div class="wtl-hio-bg-white wtl-hio-grow wtl-hio-flex-1 xl:wtl-hio-flex wtl-hio-rounded">
+                        <div class="wtl-hio-px-4 wtl-hio-py-6 sm:wtl-hio-px-6 lg:wtl-hio-pl-8 xl:wtl-hio-flex-1 xl:wtl-hio-pl-6">
+                            <h2 class="wtl-hio-font-normal wtl-hio-text-3xl sm:wtl-hio-text-4xl wtl-hio-border-b wtl-hio-border-gray-200 wtl-hio-pb-6 wtl-hio-mb-4 wtl-hio-collapse wtl-hio-h-0 sm:wtl-hio-visible sm:wtl-hio-h-auto">
                                 <f:translate key="hio.show.person.dynamicObjects" extensionName="HioTypo3ConnectorWtl" />
                             </h2>
                             <f:render partial="DynamicObjects" arguments="{dynamicObjects: person.details.dynamicObjects}"/>
                         </div>
                     </div>
 
-                    <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last"></div>
+                    <div class="wtl-hio-bg-white wtl-hio-shrink-0 wtl-hio-px-4 wtl-hio-py-6 sm:wtl-hio-px-6 lg:wtl-hio-w-96 lg:wtl-hio-pr-8 xl:wtl-hio-pr-6 wtl-hio-rounded wtl-hio-order-first sm:wtl-hio-order-last"></div>
                 </div>
             </f:then>
         </f:if>
     </f:if>
 
-    <div class="px-4 py-5 sm:p-6">
-        <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
-            <div class="-mt-px flex w-0 flex-1">
+    <div class="wtl-hio-px-4 wtl-hio-py-5 sm:wtl-hio-p-6">
+        <nav class="wtl-hio-flex wtl-hio-items-center wtl-hio-justify-between wtl-hio-border-t wtl-hio-border-gray-200 wtl-hio-px-4 sm:wtl-hio-px-0">
+            <div class="wtl-hio--mt-px wtl-hio-flex wtl-hio-w-0 wtl-hio-flex-1">
                 <f:link.action
                         action="index"
                         addQueryString="untrusted"
                         arguments="{currentPageNumber:currentPageNumber, filter: filter}"
-                        class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                        class="wtl-hio-inline-flex wtl-hio-items-center wtl-hio-border-t-2 wtl-hio-border-transparent wtl-hio-pr-1 wtl-hio-pt-4 wtl-hio-text-sm wtl-hio-font-medium wtl-hio-text-gray-500 hover:wtl-hio-border-gray-300 hover:wtl-hio-text-gray-700"
                 >
-                    <svg class="mr-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                    <svg class="wtl-hio-mr-3 wtl-hio-h-5 wtl-hio-w-5 wtl-hio-text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
                          data-slot="icon">
                         <path fill-rule="evenodd"
                               d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z"

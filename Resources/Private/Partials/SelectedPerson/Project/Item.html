@@ -3,8 +3,8 @@
         data-namespace-typo3-fluid="true" lang="en">
 
 <f:if condition="{project}">
-    <p class="flex flex-wrap items-left text-gray-700">
-        <strong class="m-0">
+    <p class="wtl-hio-flex wtl-hio-flex-wrap wtl-hio-items-left wtl-hio-text-gray-700">
+        <strong class="wtl-hio-m-0">
             <f:if condition="{project.uid} && {settings.persons.projectTargetPageUid}">
                 <f:then>
                     <f:link.action
@@ -13,7 +13,7 @@
                             pageUid="{settings.persons.projectTargetPageUid}"
                             arguments="{project: project.uid}"
                             plugInName="Projectlist"
-                            class="text-gray-700 hover:underline hover:text-wtl-red-dark-500 px-0">
+                            class="wtl-hio-text-gray-700 hover:wtl-hio-underline hover:wtl-hio-text-wtl-red-dark-500 wtl-hio-px-0">
                        {project.title}
                     </f:link.action>
                 </f:then>
@@ -23,7 +23,7 @@
             </f:if>
         </strong>
         <f:for each="{project.details.persons}" as="person" key="personIndex">
-            <span class="m-0">,&nbsp;</span>
+            <span class="wtl-hio-m-0">,&nbsp;</span>
             <f:render partial="Project/List/Person" arguments="{person: person}"/>
         </f:for>
     </p>

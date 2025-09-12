@@ -7,14 +7,14 @@
 <f:section name="Main">
     <f:flashMessages/>
     <f:if condition="{habilitation.details}">
-        <div class="flex items-stretch justify-between py-4 px-0">
-            <h1 class="mt-2 font-normal text-3xl sm:text-4xl px-4">
+        <div class="wtl-hio-flex wtl-hio-items-stretch wtl-hio-justify-between wtl-hio-py-4 wtl-hio-px-0">
+            <h1 class="wtl-hio-mt-2 wtl-hio-font-normal wtl-hio-text-3xl sm:wtl-hio-text-4xl wtl-hio-px-4">
                 <f:translate key="habilitation.show.title" extensionName="HioTypo3ConnectorWtl"/>
             </h1>
         </div>
-        <div class="bg-white px-4 py-6 lg:p-8">
-            <div class="text-base/7 text-gray-700">
-                <p class="font-semibold text-gray-600 py-0">
+        <div class="wtl-hio-bg-white wtl-hio-px-4 wtl-hio-py-6 lg:wtl-hio-p-8">
+            <div class="wtl-hio-text-base/7 wtl-hio-text-gray-700">
+                <p class="wtl-hio-font-semibold wtl-hio-text-gray-600 wtl-hio-py-0">
                     <f:if condition="{habilitation.details.status}">
                         <f:translate key="LLL:EXT:hio_typo3_connector/Resources/Private/Language/habilitation.xlf:habilitation.status"  />: {habilitation.details.status}
                         &middot;
@@ -31,7 +31,7 @@
                         <f:translate key="LLL:EXT:hio_typo3_connector/Resources/Private/Language/habilitation.xlf:habilitation.endDate" />: <f:format.date format="d.m.Y" >{habilitation.details.endDate}</f:format.date>
                     </f:if>
                 </p>
-                <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{habilitation.title}</h1>
+                <h1 class="wtl-hio-mt-2 wtl-hio-text-pretty wtl-hio-text-4xl wtl-hio-font-semibold wtl-hio-tracking-tight wtl-hio-text-gray-900 sm:wtl-hio-text-5xl">{habilitation.title}</h1>
 
                 <f:if condition="{habilitation.details.dynamicObjects}">
                     <f:then>
@@ -42,16 +42,16 @@
             </div>
         </div>
     </f:if>
-    <div class="px-4 py-5 sm:p-6">
-        <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
-            <div class="-mt-px flex w-0 flex-1">
+    <div class="wtl-hio-px-4 wtl-hio-py-5 sm:wtl-hio-p-6">
+        <nav class="wtl-hio-flex wtl-hio-items-center wtl-hio-justify-between wtl-hio-border-t wtl-hio-border-gray-200 wtl-hio-px-4 sm:wtl-hio-px-0">
+            <div class="wtl-hio--mt-px wtl-hio-flex wtl-hio-w-0 wtl-hio-flex-1">
                 <f:link.action
                         action="index"
                         addQueryString="untrusted"
                         arguments="{currentPageNumber:currentPageNumber, filter:filter}"
-                        class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                        class="wtl-hio-inline-flex wtl-hio-items-center wtl-hio-border-t-2 wtl-hio-border-transparent wtl-hio-pr-1 wtl-hio-pt-4 wtl-hio-text-sm wtl-hio-font-medium wtl-hio-text-gray-500 hover:wtl-hio-border-gray-300 hover:wtl-hio-text-gray-700"
                 >
-                    <svg class="mr-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                    <svg class="wtl-hio-mr-3 wtl-hio-h-5 wtl-hio-w-5 wtl-hio-text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                         <path fill-rule="evenodd" d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z" clip-rule="evenodd" />
                     </svg>
                     <f:translate key="ShowBackToList" extensionName="HioTypo3Connector" />

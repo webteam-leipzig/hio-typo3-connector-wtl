@@ -4,8 +4,8 @@
 
 <f:if condition="{publications}">
     <f:then>
-        <div class="overflow-hidden">
-            <ul role="list" class="divide-y divide-gray-100">
+        <div class="wtl-hio-overflow-hidden">
+            <ul role="list" class="wtl-hio-divide-y wtl-hio-divide-gray-100">
             <f:for each="{publications}" as="publication">
                 <f:render
                     partial="Publication/List/Item"
@@ -16,7 +16,7 @@
     </f:then>
 
     <f:else>
-        <div class="no-comment alert alert-info">
+        <div class="wtl-hio-no-comment wtl-hio-alert wtl-hio-alert-info">
             <f:translate key="LLL:EXT:hio_typo3_connector/Resources/Private/Language/locallang.xlf:noPublications"/>
         </div>
     </f:else>

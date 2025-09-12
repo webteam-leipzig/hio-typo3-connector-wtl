@@ -6,11 +6,11 @@
 
 <f:section name="Main">
     <f:if condition="{publications}">
-        <div class="mx-auto w-full grow flex flex-col md:flex-row gap-4 mb-4">
+        <div class="wtl-hio-mx-auto wtl-hio-w-full wtl-hio-grow wtl-hio-flex wtl-hio-flex-col md:wtl-hio-flex-row wtl-hio-gap-4 wtl-hio-mb-4">
 
-            <div class="bg-white grow flex-1 lg:flex rounded">
-                <div class="px-4 py-6 sm:px-6 lg:pl-8 md:flex-1 xl:pl-6">
-                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 h-0 sm:h-auto collapse sm:visible">
+            <div class="wtl-hio-bg-white wtl-hio-grow wtl-hio-flex-1 lg:wtl-hio-flex wtl-hio-rounded">
+                <div class="wtl-hio-px-4 wtl-hio-py-6 sm:wtl-hio-px-6 lg:wtl-hio-pl-8 md:wtl-hio-flex-1 xl:wtl-hio-pl-6">
+                    <h2 class="wtl-hio-font-normal wtl-hio-text-3xl sm:wtl-hio-text-4xl wtl-hio-border-b wtl-hio-border-gray-200 wtl-hio-pb-6 wtl-hio-mb-4 wtl-hio-h-0 sm:wtl-hio-h-auto wtl-hio-collapse sm:wtl-hio-visible">
                         <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
                     </h2>
                     <f:if condition="{settings.groupBy}  == none">
@@ -23,7 +23,7 @@
                                           arguments="{publications: groupedPublications, selectedCitationStyle: selectedCitationStyle}"/>
                             </f:if>
                             <f:if condition="{ungroupedPublications}">
-                                <h3 class="text-2xl xl:text-3xl font-semibold text-left">
+                                <h3 class="wtl-hio-text-2xl xl:wtl-hio-text-3xl wtl-hio-font-semibold wtl-hio-text-left">
                                     <f:translate key="hio.show.person.ungroupedPublications" extensionName="HioTypo3Connector" />
                                 </h3>
                                 <f:render partial="SelectedPerson/PublicationList"
@@ -35,8 +35,8 @@
             </div>
 
             <f:if condition="{settings.showTypeStatistics} || {settings.showCoAuthorshipStatistics}">
-                <div class="bg-white shrink-0 px-4 py-6 sm:px-6 lg:w-96 lg:pr-8 xl:pr-6 rounded order-first sm:order-last">
-                    <h2 class="font-normal text-3xl sm:text-4xl border-b border-gray-200 pb-6 mb-4 visible sm:hidden">
+                <div class="wtl-hio-bg-white wtl-hio-shrink-0 wtl-hio-px-4 wtl-hio-py-6 sm:wtl-hio-px-6 lg:wtl-hio-w-96 lg:wtl-hio-pr-8 xl:wtl-hio-pr-6 wtl-hio-rounded wtl-hio-order-first sm:wtl-hio-order-last">
+                    <h2 class="wtl-hio-font-normal wtl-hio-text-3xl sm:wtl-hio-text-4xl wtl-hio-border-b wtl-hio-border-gray-200 wtl-hio-pb-6 wtl-hio-mb-4 wtl-hio-visible sm:wtl-hio-hidden">
                         <f:translate key="hio.show.person.publications" extensionName="HioTypo3ConnectorWtl" />
                     </h2>
                     <f:if condition="{typeStatistics} && {settings.showTypeStatistics}">
