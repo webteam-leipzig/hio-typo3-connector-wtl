@@ -11,6 +11,7 @@
             <f:translate key="orgUnit.show.title" extensionName="HioTypo3ConnectorWtl"/>
         </h1>
     </div>
+
     <f:if condition="{orgUnit.details}">
 
         <f:variable name="childCount" value="{orgUnit.details.children -> f:count()}" />
@@ -23,6 +24,8 @@
                 <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                     {orgUnit.title}</h1>
             </div>
+
+            <f:render partial="OrgUnit/Address" arguments="{orgUnit: orgUnit}" />
 
             <div class="mx-auto mt-4">
                 <div class="max-sm:grid grid-cols-1 sm:hidden">
