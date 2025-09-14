@@ -4,7 +4,7 @@
 
 <f:section name="Main">
     <f:flashMessages/>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="mt-6 mb-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <f:if condition="{projects -> f:count()} > 0">
             <f:for each="{projects}" as="project" key="index">
                 <f:variable name="projectImage" value="EXT:hio_typo3_connector_wtl/Resources/Public/Images/projects/{index % 6}.jpg"/>
