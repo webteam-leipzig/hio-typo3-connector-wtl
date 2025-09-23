@@ -12,7 +12,9 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <f:for each="{children_101}" as="child">
-                        {child.renderedContent -> f:format.raw()}
+                        <div class="swiper-slide">
+                            {child.renderedContent -> f:format.raw()}
+                        </div>
                     </f:for>
                 </div>
                 <!-- If we need pagination -->
@@ -25,7 +27,6 @@
                 <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
             </div>
-            Bitte die zugehörige Frontend Extension installieren und konfigurieren.
         </div>
     </div>
 </f:section>

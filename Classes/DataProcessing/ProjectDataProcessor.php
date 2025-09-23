@@ -20,7 +20,7 @@ class ProjectDataProcessor implements DataProcessorInterface
     {
         $fieldName = $processorConfiguration['fieldName'] ?? '';
         $as = $processorConfiguration['as'] ?? 'featuredProject';
-        $projectUid = $processedData[$fieldName] ?? null;
+        $projectUid = $processedData['data'][$fieldName] ?? null;
 
         if ($projectUid) {
             $project = $this->projectRepository->findByUid($projectUid);

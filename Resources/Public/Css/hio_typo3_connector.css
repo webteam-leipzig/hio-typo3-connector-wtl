@@ -1935,6 +1935,10 @@ select {
   max-width: 48rem;
 }
 
+.max-w-md {
+  max-width: 28rem;
+}
+
 .max-w-xl {
   max-width: 36rem;
 }
