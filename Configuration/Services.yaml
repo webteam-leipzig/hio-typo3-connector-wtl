@@ -3,3 +3,9 @@ services:
     autowire: true
     autoconfigure: true
     public: false
+  Wtl\HioTypo3ConnectorWtl\:
+    resource: '../Classes/*'
+  Wtl\HioTypo3ConnectorWtl\DataProcessing\ProjectDataProcessor:  
+    tags:
+      - name: 'data.processor'
+        identifier: 'featured-project'

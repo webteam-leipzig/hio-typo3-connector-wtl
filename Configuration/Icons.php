@@ -1,0 +1,12 @@
+<?php
+
+declare(strict_types=1);
+
+use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
+
+return [
+    'tx-hio_typo3_connector_wtl-featured-projects' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:hio_typo3_connector/Resources/Public/Icons/list-of-projects.svg',
+    ],
+];

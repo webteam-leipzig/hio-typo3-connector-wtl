@@ -1,0 +1,32 @@
+<html 
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        data-namespace-typo3-fluid="true" lang="en">
+<f:layout name="Default" />
+
+<f:flashMessages/>
+<f:section name="Main">
+    <div class="featured-projects">
+        <div class="tx-hio-typo3-connector-wtl-featured-projects">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <f:for each="{children_101}" as="child">
+                        {child.renderedContent -> f:format.raw()}
+                    </f:for>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+            Bitte die zugehörige Frontend Extension installieren und konfigurieren.
+        </div>
+    </div>
+</f:section>
+</html>

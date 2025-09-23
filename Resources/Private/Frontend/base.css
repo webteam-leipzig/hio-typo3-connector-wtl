@@ -1,3 +1,2 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './css/swiper-bundle.css';
+@import './css/tailwind.css';
