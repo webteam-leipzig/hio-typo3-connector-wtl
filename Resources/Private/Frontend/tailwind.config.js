@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    darkMode: 'selector',
     prefix: 'wtl-hio-',
     content: [
         '../Partials/**/*.html',
@@ -40,5 +41,8 @@ module.exports = {
     plugins: [
         require('@tailwindcss/forms'),
     ],
+    corePlugins: {
+        preflight: false,
+    }
 }
 
