@@ -29,7 +29,6 @@ export default class SwiperController {
             const swiperOptions = this.getSwiperOptions(swiperElement, uniqueId)
             if (!swiperOptions) return
 
-            console.log(swiperElement);
             const swiper = new Swiper(swiperElement, {
                 ...swiperOptions,
             })
@@ -59,8 +58,8 @@ export default class SwiperController {
                 onlyInViewport: true,
             },
             breakpoints,
-            slidesPerView: '1',
-            spaceBetween: 20,
+            slidesPerView: 1,
+            spaceBetween: 10,
         }
 
         return { ...defaultOptions, ...inlineOptions }
@@ -76,10 +75,14 @@ export default class SwiperController {
     breakPointsConfig () {
         return {
             // when window width is >= 1280px
-            1280: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-            }
+            1170: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+            },
+            800: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
         }
     }
 }

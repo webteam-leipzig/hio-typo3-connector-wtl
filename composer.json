@@ -6,6 +6,7 @@
         "GPL-2.0-or-later"
     ],
     "require": {
+        "b13/container": "^3.1.10",
         "typo3/cms-core": "^12.4 || ^13.0",
         "wtl/hio-typo3-connector": "^0.9.2"
     },

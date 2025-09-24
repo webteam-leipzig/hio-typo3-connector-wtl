@@ -5482,8 +5482,8 @@
               onlyInViewport: true
             },
             breakpoints: breakpoints2,
-            slidesPerView: "1",
-            spaceBetween: 20
+            slidesPerView: 1,
+            spaceBetween: 10
           };
           return { ...defaultOptions, ...inlineOptions };
         }
@@ -5496,9 +5496,13 @@
         breakPointsConfig() {
           return {
             // when window width is >= 1280px
-            1280: {
-              slidesPerView: 1,
-              spaceBetween: 20
+            1170: {
+              slidesPerView: 3,
+              spaceBetween: 10
+            },
+            800: {
+              slidesPerView: 2,
+              spaceBetween: 10
             }
           };
         }
