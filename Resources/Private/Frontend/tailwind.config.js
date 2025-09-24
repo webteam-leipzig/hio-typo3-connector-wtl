@@ -50,8 +50,8 @@ module.exports = {
     plugins: [
         require('@tailwindcss/forms'),
     ],
-    safelist: [
-        'swiper', 'swiper-slide', 'swiper-container', // add all Swiper classes you use
-    ],
+    corePlugins: {
+        preflight: false,
+    },
 }
 
