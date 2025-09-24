@@ -5459,7 +5459,6 @@
             }
             const swiperOptions = this.getSwiperOptions(swiperElement, uniqueId);
             if (!swiperOptions) return;
-            console.log(swiperElement);
             const swiper = new Swiper(swiperElement, {
               ...swiperOptions
             });
