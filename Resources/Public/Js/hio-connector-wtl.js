@@ -5497,11 +5497,11 @@
             // when window width is >= 1280px
             1170: {
               slidesPerView: 3,
-              spaceBetween: 10
+              spaceBetween: 24
             },
             800: {
               slidesPerView: 2,
-              spaceBetween: 10
+              spaceBetween: 24
             }
           };
         }

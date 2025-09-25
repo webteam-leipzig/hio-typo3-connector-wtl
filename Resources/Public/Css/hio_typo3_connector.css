@@ -94,7 +94,8 @@
 
 .swiper-backface-hidden .swiper-slide {
   transform: translateZ(0);
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 /* 3D Effects */
@@ -162,7 +163,8 @@
   }
   &.swiper-centered.swiper-horizontal {
     > .swiper-wrapper > .swiper-slide:first-child {
-      margin-inline-start: var(--swiper-centered-offset-before);
+      -webkit-margin-start: var(--swiper-centered-offset-before);
+              margin-inline-start: var(--swiper-centered-offset-before);
     }
     > .swiper-wrapper::before {
       height: 100%;
@@ -172,7 +174,8 @@
   }
   &.swiper-centered.swiper-vertical {
     > .swiper-wrapper > .swiper-slide:first-child {
-      margin-block-start: var(--swiper-centered-offset-before);
+      -webkit-margin-before: var(--swiper-centered-offset-before);
+              margin-block-start: var(--swiper-centered-offset-before);
     }
     > .swiper-wrapper::before {
       width: 100%;
@@ -777,7 +780,8 @@
 .swiper-cube {
   .swiper-slide {
     pointer-events: none;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     z-index: 1;
     visibility: hidden;
     transform-origin: 0 0;
@@ -835,7 +839,8 @@
   .swiper-slide-shadow-cube.swiper-slide-shadow-left,
   .swiper-slide-shadow-cube.swiper-slide-shadow-right {
     z-index: 0;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
 }
 
@@ -848,7 +853,8 @@
 .swiper-flip {
   .swiper-slide {
     pointer-events: none;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     z-index: 1;
     .swiper-slide {
       pointer-events: none;
@@ -870,7 +876,8 @@
   .swiper-slide-shadow-flip.swiper-slide-shadow-left,
   .swiper-slide-shadow-flip.swiper-slide-shadow-right {
     z-index: 0;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
 }
 
@@ -881,7 +888,8 @@
 
 .swiper-creative {
   .swiper-slide {
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     overflow: hidden;
     transition-property: transform, opacity, height;
   }
@@ -894,7 +902,8 @@
 .swiper-cards {
   .swiper-slide {
     transform-origin: center bottom;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     overflow: hidden;
   }
 }
@@ -1490,10 +1499,6 @@ select {
 
 .max-w-3xl {
   max-width: 48rem;
-}
-
-.max-w-md {
-  max-width: 28rem;
 }
 
 .max-w-xl {
