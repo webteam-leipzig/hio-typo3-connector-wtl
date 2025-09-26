@@ -10,21 +10,21 @@ if (! defined('TYPO3')) {
 }
 
 (static function (): void {
-    $lllPrefix = 'LLL:EXT:hio_typo3_connector_wtl/Resources/Private/Language/locallang_be.xlf:';
+    $lllPrefix = 'LLL:EXT:hio_typo3_connector_wtl/Resources/Private/Language/locallang_be.xlf:hio.';
 
     ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
         'CType',
         [
-            'label' => $lllPrefix . 'tt_content.type.hiotypo3connectorwtl_featured_project.title',
+            'label' => $lllPrefix . 'tt_content.type.featuredProject.title',
             'value' => 'tx_hiotypo3connectorwtl_featured_project',
-            'icon' => 'tx-hio_typo3_connectorwtl-featured-projects',
-        ],
+            'icon' => 'tx-hio_typo3_connector_wtl-featured-project',
+        ]
     );
 
     $GLOBALS['TCA']['tt_content']['palettes']['tx_hiotypo3connectorwtl_featured_project'] = [
-        'label' => $lllPrefix . 'tt_content.palette.tx_hiotypo3connectorwtl_featured_project.label',
-        'description' => $lllPrefix . 'tt_content.palette.tx_hiotypo3connectorwtl_featured_project.description',
+        'label' => $lllPrefix . 'tt_content.palette.featuredProject.image.label',
+        'description' => $lllPrefix . 'tt_content.palette.featuredProject.image.description',
         'showitem' => '
             image,
             --linebreak--,
@@ -33,8 +33,8 @@ if (! defined('TYPO3')) {
     ];
 
     $GLOBALS['TCA']['tt_content']['columns']['tx_hiotypo3connectorwtl_featured_project'] = [
-        'label' => 'Project',
-        'description' => 'Select a project to be featured (max. 1)',
+        'label' => $lllPrefix . 'tt_content.palette.featuredProject.project.label',
+        'description' => $lllPrefix . 'tt_content.palette.featuredProject.project.description',
         'config' => [
             'type' => 'select',
             'renderType' => 'selectMultipleSideBySide',
@@ -64,8 +64,7 @@ if (! defined('TYPO3')) {
         ',
     ];
 
-    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['tx_hiotypo3connectorwtl_featured_project'] = 'tx-hio_typo3_connectorwtl-featured-projects';
 
     $GLOBALS['TCA']['tt_content']['types']['tx_hiotypo3connectorwtl_featured_project']['previewRenderer']
-        = \Wtl\HioTypo3ConnectorWtl\Backend\Preview\FeaturedProjectPreviewRenderer::class;
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['tx_hiotypo3connectorwtl_featured_project'] = 'tx-hio_typo3_connector_wtl-featured-project';
 })();
