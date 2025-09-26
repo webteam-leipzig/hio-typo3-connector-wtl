@@ -3,3 +3,13 @@ services:
     autowire: true
     autoconfigure: true
     public: false
+  Wtl\HioTypo3ConnectorWtl\:
+    resource: '../Classes/*'
+  Wtl\HioTypo3ConnectorWtl\DataProcessing\ProjectDataProcessor:  
+    tags:
+      - name: 'data.processor'
+        identifier: 'featured-project'
+  Wtl\HioTypo3ConnectorWtl\Backend\Preview\FeaturedProjectPreviewRenderer:
+    tags:
+      - name: 'preview.renderer'
+        identifier: 'featured-project-renderer'
