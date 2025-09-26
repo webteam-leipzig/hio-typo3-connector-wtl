@@ -26,7 +26,7 @@ if (! defined('TYPO3')) {
                         'allowed' => [
                             'CType' => 'tx_hiotypo3connectorwtl_featured_project',
                         ],
-                        'maxitems' => 3,
+                        'maxitems' => 12,
                     ],
                 ],
             ]
