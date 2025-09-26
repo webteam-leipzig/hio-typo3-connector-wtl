@@ -22,7 +22,15 @@ class FeaturedProjectPreviewRenderer extends StandardContentPreviewRenderer
         $row = $item->getRecord();
         $uid = $row['tx_hiotypo3connectorwtl_featured_project'];
         
+        if (!$uid) {
+            return $otherContentPreview;
+        }
+        
         $project = $this->projectRepository->findByUid($uid);
+        
+        if (!$project) {
+            return $otherContentPreview;
+        }
 
         return $otherContentPreview . '<br /><p>' . htmlspecialchars($project->getTitle()) . '</p>';
         
