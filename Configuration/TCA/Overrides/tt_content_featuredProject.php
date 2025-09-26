@@ -18,7 +18,7 @@ if (! defined('TYPO3')) {
         [
             'label' => $lllPrefix . 'tt_content.type.featuredProject.title',
             'value' => 'tx_hiotypo3connectorwtl_featured_project',
-            'icon' => 'tx-hio_typo3_connectorwtl-featured-projects',
+            'icon' => 'tx-hio_typo3_connector_wtl-featured-project',
         ]
     );
 
@@ -64,5 +64,5 @@ if (! defined('TYPO3')) {
         ',
     ];
 
-    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['tx_hiotypo3connectorwtl_featured_project'] = 'tx-hio_typo3_connectorwtl-featured-projects';
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['tx_hiotypo3connectorwtl_featured_project'] = 'tx-hio_typo3_connector_wtl-featured-project';
 })();
