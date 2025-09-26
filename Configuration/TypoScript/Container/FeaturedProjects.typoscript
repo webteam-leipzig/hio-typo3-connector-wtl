@@ -4,8 +4,9 @@ tt_content.tx_hiotypo3connectorwtl_featured_projects {
     templateRootPaths.0 = EXT:hio_typo3_connector_wtl/Resources/Private/Templates/ContentElements/
     partialRootPaths.0 = EXT:hio_typo3_connector_wtl/Resources/Private/Partials/ContentElements/
     layoutRootPaths.0 = EXT:hio_typo3_connector/Resources/Private/Layouts/
-    
+
     dataProcessing {
         100 = B13\Container\DataProcessing\ContainerProcessor
     }
+    settings < plugin.tx_hiotypo3connector.settings
 }

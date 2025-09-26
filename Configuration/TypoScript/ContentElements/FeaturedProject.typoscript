@@ -16,4 +16,5 @@ tt_content.tx_hiotypo3connectorwtl_featured_project {
           as = featuredProject
         }
     }
+    settings < plugin.tx_hiotypo3connector.settings
 }
