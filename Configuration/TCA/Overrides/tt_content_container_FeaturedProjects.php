@@ -11,17 +11,17 @@ if (! defined('TYPO3')) {
 }
 
 (static function (Registry $containerRegistry): void {
-    $lllPrefix = 'LLL:EXT:hio_typo3_connector_wtl/Resources/Private/Language/locallang_be.xlf:';
+    $lllPrefix = 'LLL:EXT:hio_typo3_connector_wtl/Resources/Private/Language/locallang_be.xlf:hio.';
 
     $containerRegistry->configureContainer(
         (new ContainerConfiguration(
             'tx_hiotypo3connectorwtl_featured_projects',
-            $lllPrefix . 'FeaturedProjects.title',
-            $lllPrefix . 'FeaturedProjects.description',
+            $lllPrefix . 'featuredProjects.title',
+            $lllPrefix . 'featuredProjects.description',
             [
                 [
                     [
-                        'name' => $lllPrefix . 'FeaturedProjects.contentColumn',
+                        'name' => $lllPrefix . 'featuredProjects.contentColumn',
                         'colPos' => 101,
                         'allowed' => [
                             'CType' => 'tx_hiotypo3connectorwtl_featured_project',
