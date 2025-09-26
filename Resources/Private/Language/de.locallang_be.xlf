@@ -16,7 +16,6 @@
                 <source>Selected featured research projects</source>
                 <target>Ausgewählte Forschungsprojekte</target>
             </trans-unit>
-
             <trans-unit id="hio.tt_content.type.featuredProject.title" resname="hio.tt_content.type.featuredProject.title">
                 <source>Featured project</source>
                 <target>Ausgewähltes Projekt</target>
@@ -36,6 +35,10 @@
             <trans-unit id="hio.tt_content.palette.featuredProject.project.description" resname="hio.tt_content.palette.featuredProject.project.description">
                 <source>Please select a featured project (max 1)</source>
                 <target>Bitte wählen Sie ein ausgewähltes Projekt (max. 1)</target>
+            </trans-unit>
+            <trans-unit id="hio.tt_content.type.featuredProject.title" resname="hio.tt_content.type.featuredProject.title">
+                <source>Featured Project</source>
+                <target>Ausgewähltes Projekt</target>
             </trans-unit>
 
         </body>

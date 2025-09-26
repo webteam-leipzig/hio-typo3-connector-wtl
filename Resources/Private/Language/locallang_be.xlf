@@ -29,6 +29,9 @@
             <trans-unit id="hio.tt_content.palette.featuredProject.project.description" resname="hio.tt_content.palette.featuredProject.project.description">
                 <source>Please select a featured project (max 1)</source>
             </trans-unit>
+            <trans-unit id="hio.tt_content.type.featuredProject.title" resname="hio.tt_content.type.featuredProject.title">
+                <source>Featured Project</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
