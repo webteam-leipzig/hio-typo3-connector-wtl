@@ -9,3 +9,7 @@ services:
     tags:
       - name: 'data.processor'
         identifier: 'featured-project'
+  Wtl\HioTypo3ConnectorWtl\Backend\Preview\FeaturedProjectPreviewRenderer:
+    tags:
+      - name: 'preview.renderer'
+        identifier: 'featured-project-renderer'

@@ -67,5 +67,5 @@ if (! defined('TYPO3')) {
     $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['tx_hiotypo3connectorwtl_featured_project'] = 'tx-hio_typo3_connectorwtl-featured-projects';
 
     $GLOBALS['TCA']['tt_content']['types']['tx_hiotypo3connectorwtl_featured_project']['previewRenderer']
-        = \WTL\HioTypo3ConnectorWtl\Backend\Preview\FeaturedProjectPreviewRenderer::class;
+        = \Wtl\HioTypo3ConnectorWtl\Backend\Preview\FeaturedProjectPreviewRenderer::class;
 })();
