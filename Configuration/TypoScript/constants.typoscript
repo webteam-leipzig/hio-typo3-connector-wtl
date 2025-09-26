@@ -1,3 +1,5 @@
-plugin.tx_hiotypo3connector {
-  settings < plugin.tx_hiotypo3connectorwtl.settings
+plugin.tx_hiotypo3connectorwtl {
+    settings {
+
+    }
 }

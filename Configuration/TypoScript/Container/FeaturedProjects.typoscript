@@ -8,5 +8,5 @@ tt_content.tx_hiotypo3connectorwtl_featured_projects {
     dataProcessing {
         100 = B13\Container\DataProcessing\ContainerProcessor
     }
-    settings < plugin.tx_hiotypo3connector.settings
+    settings < plugin.tx_hiotypo3connectorwtl.settings
 }
