@@ -8,6 +8,7 @@
     "require": {
         "b13/container": "^3.1.10",
         "typo3/cms-core": "^12.4 || ^13.0",
+        "typo3/cms-fluid-styled-content": "^12.4 || ^13.4",
         "wtl/hio-typo3-connector": "^0.9.2"
     },
     "autoload": {
