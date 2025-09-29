@@ -6,9 +6,9 @@
     <li class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 py-5 sm:flex-nowrap">
         <div>
             <p class="text-sm font-semibold leading-6 text-gray-700 flex flex-1 items-center py-0">
-                <f:if condition="{publication.details.journal}">
+                <f:if condition="{publication.releaseYear}">
                     <f:then>
-                        {publication.details.journal.releaseYear}
+                        {publication.releaseYear}
                         <svg viewBox="0 0 2 2" class="h-0.5 w-0.5 fill-current mx-2">
                             <circle cx="1" cy="1" r="1"/>
                         </svg>
