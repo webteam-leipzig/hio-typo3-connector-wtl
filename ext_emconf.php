@@ -11,7 +11,7 @@ $EM_CONF["hio_typo3_connector_wtl"] = [
     ],
     'autoload' => [
         'psr-4' => [
-            'Wtl\\HioTypo3Connector\\' => 'Classes/',
+            'Wtl\\HioTypo3ConnectorWtl\\' => 'Classes/',
         ],
     ],
 ];
