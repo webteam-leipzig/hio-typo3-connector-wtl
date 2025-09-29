@@ -163,6 +163,14 @@
             <trans-unit id="hio.show.person.dynamicObjects" resname="hio.show.person.dynamicObjects">
                 <source>Additional information</source>
             </trans-unit>
+
+            <trans-unit id="hio.tt_content.type.featuredPublication.releaseYear" resname="hio.tt_content.type.featuredPublication.releaseYear">
+                <source>Release year</source>
+            </trans-unit>
+            <trans-unit id="hio.tt_content.type.featuredPublication.type" resname="hio.tt_content.type.featuredPublication.type">
+                <source>Type</source>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

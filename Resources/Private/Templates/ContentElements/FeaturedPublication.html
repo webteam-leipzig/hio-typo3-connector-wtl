@@ -29,7 +29,13 @@
                 <div class="flex justify-between items-start">
                     <div>
                         <h3 class="text-lg font-bold text-gray-800">{featuredPublication.title}</h3>
-                        <p class="text-gray-500 text-sm">{featuredPublication.type}</p>
+                        <p class="text-gray-500 text-sm">
+                            <span class="font-normal"><f:translate key="hio.tt_content.type.featuredPublication.type" extensionName="HioTypo3ConnectorWtl" />: </span>{featuredPublication.type}
+                            <f:if condition="{featuredPublication.releaseYear}">
+                                <br />
+                                <span class="font-normal"><f:translate key="hio.tt_content.type.featuredPublication.releaseYear" extensionName="HioTypo3ConnectorWtl" />: </span>{featuredPublication.releaseYear}
+                            </f:if>
+                        </p>
                     </div>
                 </div>
             </div>
