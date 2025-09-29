@@ -32,6 +32,35 @@
             <trans-unit id="hio.tt_content.type.featuredProject.title" resname="hio.tt_content.type.featuredProject.title">
                 <source>Featured Project</source>
             </trans-unit>
+
+            <trans-unit id="hio.featuredPublications.title" resname="hio.featuredPublications.title">
+                <source>Featured publications</source>
+            </trans-unit>
+            <trans-unit id="hio.featuredPublications.description" resname="hio.featuredPublications.description">
+                <source>A grid list of featured research publications</source>
+            </trans-unit>
+            <trans-unit id="hio.featuredPublications.contentColumn" resname="hio.featuredPublications.contentColumn">
+                <source>Selected featured publications</source>
+            </trans-unit>
+
+            <trans-unit id="hio.tt_content.type.featuredPublication.title" resname="hio.tt_content.type.featuredPublication.title">
+                <source>Featured publication</source>
+            </trans-unit>
+            <trans-unit id="hio.tt_content.palette.featuredPublication.image.label" resname="hio.tt_content.palette.featuredPublication.image.label">
+                <source>Featured Image</source>
+            </trans-unit>
+            <trans-unit id="hio.tt_content.palette.featuredPublication.image.description" resname="hio.tt_content.palette.featuredPublication.image.description">
+                <source>Please select an image for the featured publication</source>
+            </trans-unit>
+            <trans-unit id="hio.tt_content.palette.featuredPublication.publication.label" resname="hio.tt_content.palette.featuredPublication.publication.label">
+                <source>Featured Publication</source>
+            </trans-unit>
+            <trans-unit id="hio.tt_content.palette.featuredPublication.publication.description" resname="hio.tt_content.palette.featuredPublication.publication.description">
+                <source>Please select a featured publication (max 1)</source>
+            </trans-unit>
+            <trans-unit id="hio.tt_content.type.featuredPublication.title" resname="hio.tt_content.type.featuredPublication.title">
+                <source>Featured Publication</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
