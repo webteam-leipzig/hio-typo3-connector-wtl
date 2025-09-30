@@ -62,6 +62,45 @@ if (! defined('TYPO3')) {
                 rowDescription,
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
         ',
+        'columnsOverrides' => [
+            'image' => [
+                'config' => [
+                    'maxitems' => 1,
+                    'overrideChildTca' => [
+                        'columns' => [
+                            'crop' => [
+                                'config' => [
+                                    'cropVariants' => [
+                                        'default' => [
+                                            'title' => 'Default',
+                                            'selectedRatio' => '3:2',
+                                            'allowedAspectRatios' => [
+                                                '16:9' => [
+                                                    'title' => '16:9',
+                                                    'value' => 16 / 9,
+                                                ],
+                                                '3:2' => [
+                                                    'title' => '3:2',
+                                                    'value' => 3 / 2,
+                                                ],
+                                                '1:1' => [
+                                                    'title' => '1:1',
+                                                    'value' => 1 / 1,
+                                                ],
+                                                'NaN' => [
+                                                    'title' => 'Free',
+                                                    'value' => 0.0,
+                                                ],
+                                            ],
+                                        ],
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ],
     ];
 
 
