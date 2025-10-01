@@ -171,6 +171,12 @@
                 <source>Type</source>
             </trans-unit>
 
+
+            <trans-unit id="hio.show.orgUnit.publications" resname="hio.show.orgUnit.publications">
+                <source>Publications</source>
+            </trans-unit>
+
+
         </body>
     </file>
 </xliff>
