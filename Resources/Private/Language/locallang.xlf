@@ -175,6 +175,9 @@
             <trans-unit id="hio.show.orgUnit.publications" resname="hio.show.orgUnit.publications">
                 <source>Publications</source>
             </trans-unit>
+            <trans-unit id="hio.show.orgUnit.projects" resname="hio.show.orgUnit.projects">
+                <source>Projects</source>
+            </trans-unit>
 
 
         </body>
