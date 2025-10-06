@@ -222,6 +222,17 @@
                 <target>Publikationstyp</target>
             </trans-unit>
 
+
+            <trans-unit id="hio.show.orgUnit.publications" resname="hio.show.orgUnit.publications">
+                <source>Publications</source>
+                <target>Publikationen</target>
+            </trans-unit>
+            <trans-unit id="hio.show.orgUnit.projects" resname="hio.show.orgUnit.projects">
+                <source>Projects</source>
+                <target>Projekte</target>
+            </trans-unit>
+
+
         </body>
     </file>
 </xliff>
