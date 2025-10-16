@@ -19,7 +19,7 @@
                     &middot;
                     {publication.details.resource}
                     &middot;
-                    {publication.details.status}
+                    {publication.details.status.name}
                 </p>
                 <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{publication.details.title}</h1>
                 <f:if condition="{publication.details.subtitle}">
@@ -70,7 +70,7 @@
                             </dt>
                             <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
                                 <f:for each="{publication.details.keywords}" as="keyword" key="index">
-                                    <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mb-2 mr-1 text-sm font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">{keyword}</span>
+                                    <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mb-2 mr-1 text-sm font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">{keyword.name}</span>
                                 </f:for>
                             </dd>
                         </div>

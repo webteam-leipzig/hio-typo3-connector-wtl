@@ -15,7 +15,7 @@
     <f:if condition="{orgUnit.details}">
 
         <f:variable name="childCount" value="{orgUnit.details.children -> f:count()}" />
-        <f:variable name="personCount" value="0" />
+        <f:variable name="personCount" value="{orgUnit.details.persons -> f:count()}" />
         <f:variable name="projectCount" value="{orgUnit.projects -> f:count()}" />
         <f:variable name="publicationCount" value="{orgUnit.publications -> f:count()}" />
 
@@ -89,7 +89,7 @@
                         <f:render partial="OrgUnit/Show/Tabs/OrgUnitList" arguments="{children: orgUnit.details.children}"/>
                     </div>
                     <div id="orgUnitPersons" class="hidden py-4">
-                        Personendaten... Coming soon!
+                        <f:render partial="OrgUnit/Show/Tabs/PersonList" arguments="{persons: orgUnit.details.persons}"/>
                     </div>
                     <div id="orgUnitProjects" class="hidden py-4">
                         <f:render partial="OrgUnit/Show/Tabs/ProjectList" arguments="{projects: orgUnit.projects}"/>

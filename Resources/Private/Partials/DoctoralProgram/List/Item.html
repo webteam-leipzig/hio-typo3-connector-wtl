@@ -9,8 +9,8 @@
                 <f:for each="{doctoralProgram.details.researchAreas}" as="researchArea" key="index">
                     <span>
                         <f:if condition="{index} > 0">
-                            <f:then>, {researchArea}</f:then>
-                            <f:else>{researchArea}</f:else>
+                            <f:then>, {researchArea.name}</f:then>
+                            <f:else>{researchArea.name}</f:else>
                         </f:if>
                     </span>
                 </f:for>

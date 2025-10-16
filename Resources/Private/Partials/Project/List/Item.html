@@ -9,8 +9,8 @@
                 <f:for each="{project.details.researchAreas}" as="researchArea" key="index">
                     <span>
                         <f:if condition="{index} > 0">
-                            <f:then>, {researchArea}</f:then>
-                            <f:else>{researchArea}</f:else>
+                            <f:then>, {researchArea.name}</f:then>
+                            <f:else>{researchArea.name}</f:else>
                         </f:if>
                     </span>
                 </f:for>
@@ -33,13 +33,13 @@
                     <circle cx="1" cy="1" r="1" />
                 </svg>
                 <p class="py-0">
-                    <f:translate key="hio.list.project.status" />: {project.details.status}
+                    <f:translate key="hio.list.project.status" />: {project.details.status.name}
                 </p>
                 <svg viewBox="0 0 2 2" class="h-0.5 w-0.5 fill-current">
                     <circle cx="1" cy="1" r="1" />
                 </svg>
                 <p class="py-0">
-                    <f:translate key="hio.list.project.visibility" />: {project.details.visibility}
+                    <f:translate key="hio.list.project.visibility" />: {project.details.visibility.name}
                 </p>
             </div>
         </div>
