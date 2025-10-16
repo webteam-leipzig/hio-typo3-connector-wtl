@@ -20,7 +20,7 @@
                         &middot;
                     </f:if>
                     <f:if condition="{project.details.status}">
-                        {project.details.status}
+                        {project.details.status.name}
                         &middot;
                     </f:if>
                     <f:format.date format="d.m.Y" >{project.details.startDate}</f:format.date> - <f:format.date format="d.m.Y" >{project.details.endDate}</f:format.date>
@@ -62,7 +62,7 @@
                         <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
                             <f:for each="{project.details.subjectAreas}" as="subject" key="index">
                                 <p class="py-0">
-                                    {subject}
+                                    {subject.name}
                                 </p>
                             </f:for>
                         </dd>
@@ -81,7 +81,7 @@
                             </dt>
                             <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
                                 <f:for each="{project.details.researchAreas}" as="researchArea" key="index">
-                                    <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mb-2 mr-1 text-sm font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">{researchArea}</span>
+                                    <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 mb-2 mr-1 text-sm font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">{researchArea.name}</span>
                                 </f:for>
                             </dd>
                         </div>
