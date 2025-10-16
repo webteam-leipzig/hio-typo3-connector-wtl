@@ -125,6 +125,16 @@
                 <source>Search for spin offs</source>
             </trans-unit>
 
+            <trans-unit id="nomination.index.title" resname="nomination.index.title">
+                <source>Nominations</source>
+            </trans-unit>
+            <trans-unit id="nomination.show.title" resname="nomination.show.title">
+                <source>Nomination details</source>
+            </trans-unit>
+            <trans-unit id="filter.nomination.searchTerm.label" resname="filter.nomination.searchTerm.label">
+                <source>Search for nominations</source>
+            </trans-unit>
+
             <trans-unit id="researchInfrastructure.index.title" resname="researchInfrastructure.index.title">
                 <source>Research infrastructures</source>
             </trans-unit>
