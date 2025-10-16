@@ -9,8 +9,8 @@
                 <f:for each="{habilitation.details.researchAreas}" as="researchArea" key="index">
                     <span>
                         <f:if condition="{index} > 0">
-                            <f:then>, {researchArea}</f:then>
-                            <f:else>{researchArea}</f:else>
+                            <f:then>, {researchArea.name}</f:then>
+                            <f:else>{researchArea.name}</f:else>
                         </f:if>
                     </span>
                 </f:for>
@@ -27,7 +27,7 @@
             </p>
             <div class="mt-1 flex items-center gap-x-2 text-xs leading-5 text-gray-500">
                 <p class="py-0">
-                    <f:translate key="LLL:EXT:hio_typo3_connector/Resources/Private/Language/habilitation.xlf:habilitation.status" />: {habilitation.details.status}
+                    <f:translate key="LLL:EXT:hio_typo3_connector/Resources/Private/Language/habilitation.xlf:habilitation.status" />: {habilitation.details.status.name}
                 </p>
                 <svg viewBox="0 0 2 2" class="h-0.5 w-0.5 fill-current">
                     <circle cx="1" cy="1" r="1" />
