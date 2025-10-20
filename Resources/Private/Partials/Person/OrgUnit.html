@@ -12,12 +12,18 @@
                 <f:if condition="{person.details.orgUnits}">
                 <f:for each="{person.details.orgUnits}" as="personOrgUnit">
                     <f:if condition="{personOrgUnit.id} == {orgUnit.objectId}">
-                        <p class="font-semibold text-base text-gray-600"><span class="font-normal">Funktion:</span> {personOrgUnit.affiliation}</p>
+                        <p class="font-semibold text-base text-gray-600">
+                            <span class="font-normal">Funktion:</span>
+                            <f:for each="{personOrgUnit.affiliations}" as="affiliation" iteration="affiliationIterator">
+                                <f:if condition="{affiliationIterator.index} > 0"><f:then><span>,&nbsp;</span></f:then></f:if>
+                                {affiliation.affiliationType.name}
+                            </f:for>
+                        </p>
                     </f:if>
                 </f:for>
                 </f:if>
             </div>
-            <f:if condition="{orgUnit.details.address}">
+            <f:if condition="{orgUnit.details.postAddress}">
                 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-6 mb-6">
                     <div class="rounded-2xl bg-gray-50 p-6 dark:bg-gray-800/50">
                         <h3 class="text-base/7 font-semibold text-gray-900">Postanschrift</h3>
@@ -25,8 +31,8 @@
                             <div>
                                 <dt class="sr-only">Adresse</dt>
                                 <dd>
-                                    {orgUnit.details.address.street} <br>
-                                    {orgUnit.details.address.postcode} {orgUnit.details.address.city}
+                                    {orgUnit.details.postAddress.street} <br>
+                                    {orgUnit.details.postAddress.postcode} {orgUnit.details.postAddress.city}
                                 </dd>
                             </div>
                         </dl>

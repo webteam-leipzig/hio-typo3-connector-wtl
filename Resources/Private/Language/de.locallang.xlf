@@ -151,6 +151,19 @@
                 <target>Nach Organisationseinheiten suchen</target>
             </trans-unit>
 
+            <trans-unit id="nomination.index.title" resname="nomination.index.title">
+                <source>Nominations</source>
+                <target>Nominierungen</target>
+            </trans-unit>
+            <trans-unit id="nomination.show.title" resname="nomination.show.title">
+                <source>Nomination details</source>
+                <target>Details zur Nominierung</target>
+            </trans-unit>
+            <trans-unit id="filter.nomination.searchTerm.label" resname="filter.nomination.searchTerm.label">
+                <source>Search for nominations</source>
+                <target>Nach Nominierungen suchen</target>
+            </trans-unit>
+
             <trans-unit id="spinOff.index.title" resname="spinOff.index.title">
                 <source>Spin-offs</source>
                 <target>Ausgründungen</target>
