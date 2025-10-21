@@ -7,7 +7,7 @@ on:
 jobs:
   publish-release:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'webteam-leipzig/hio-typo3-connector-frontend' }} # Stellt sicher, dass die Action nur im Haupt-Repository ausgeführt wird
+    if: ${{ github.repository == 'webteam-leipzig/hio-typo3-connector-wtl' }} # Stellt sicher, dass die Action nur im Haupt-Repository ausgeführt wird
     steps:
       - name: 'Checkout Development Repo'
         uses: actions/checkout@v4
