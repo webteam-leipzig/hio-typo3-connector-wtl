@@ -130,19 +130,23 @@
                     (function () {
                         var btn = document.getElementById('hio-back-btn');
                         var referrer = document.referrer;
-                        if (referrer && referrer.startsWith(window.location.origin)) {
+                        var sameOrigin = referrer && referrer.startsWith(window.location.origin);
+                        if (sameOrigin) {
                             btn.href = referrer;
                         }
                         btn.addEventListener('click', function (e) {
                             e.preventDefault();
-                            var fallbackUrl = btn.href;
-                            var fallback = setTimeout(function () {
-                                window.location.href = fallbackUrl;
-                            }, 200);
-                            window.addEventListener('beforeunload', function () {
-                                clearTimeout(fallback);
-                            }, { once: true });
-                            history.back();
+                            if (sameOrigin) {
+                                var fallback = setTimeout(function () {
+                                    window.location.href = btn.href;
+                                }, 200);
+                                window.addEventListener('beforeunload', function () {
+                                    clearTimeout(fallback);
+                                }, { once: true });
+                                history.back();
+                            } else {
+                                window.location.href = btn.href;
+                            }
                         });
                     })();
                 </script>
