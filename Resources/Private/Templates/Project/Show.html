@@ -170,10 +170,9 @@
                 <script>
                     (function () {
                         var btn = document.getElementById('hio-back-btn');
-                        var referrer = document.referrer;
-                        var sameOrigin = referrer && referrer.startsWith(window.location.origin);
+                        var sameOrigin = document.referrer && document.referrer.startsWith(window.location.origin);
                         if (sameOrigin) {
-                            btn.href = referrer;
+                            btn.href = document.referrer;
                         }
                         btn.addEventListener('click', function (e) {
                             e.preventDefault();
