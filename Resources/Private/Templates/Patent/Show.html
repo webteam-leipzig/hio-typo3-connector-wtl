@@ -1,5 +1,6 @@
 <html
         xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        xmlns:hio="http://typo3.org/ns/Wtl/HioTypo3ConnectorWtl/ViewHelpers"
         data-namespace-typo3-fluid="true" lang="en">
 
 <f:layout name="Default"/>
@@ -39,9 +40,10 @@
                     <div class="py-6 sm:grid sm:grid-cols-3 sm:gap-4">
                         <dt class="text-sm/6 font-medium text-gray-900"><f:translate key="hio.patent.inventors" /></dt>
                         <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-                            <f:for each="{patent.details.persons}" as="person">
+                            <f:for each="{patent.details.persons}" as="detailPerson">
                                 <span>
-                                    <f:render partial="Patent/Show/PersonLink" arguments="{person: person}" />
+                                    <f:variable name="basePerson" value="{hio:findByProperty(haystack: patent.persons, property: 'objectId', value: detailPerson.id)}"/>
+                                    <f:render partial="Patent/Show/PersonLink" arguments="{person: detailPerson, uid: basePerson.uid}" />
                                 </span>
                             </f:for>
                         </dd>
