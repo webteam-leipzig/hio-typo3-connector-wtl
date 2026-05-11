@@ -86,7 +86,7 @@
                 <!-- Tab Contents -->
                 <div id="tab-contents">
                     <div id="orgUnitChildren" class="py-4">
-                        <f:render partial="OrgUnit/Show/Tabs/OrgUnitList" arguments="{children: orgUnit.details.children}"/>
+                        <f:render partial="OrgUnit/Show/Tabs/OrgUnitList" arguments="{children: orgUnit.details.children, orgUnits: children}"/>
                     </div>
                     <div id="orgUnitPersons" class="hidden py-4">
                         <f:render partial="OrgUnit/Show/Tabs/PersonList" arguments="{detailPersons: orgUnit.details.persons, persons: orgUnit.persons}"/>
