@@ -4,10 +4,10 @@
 
 <f:if condition="{person}">
     <f:variable name="personUid">{f:if(condition: uid, then: uid, else: person.uid)}</f:variable>
-    <f:if condition="{personUid} && {settings.publications.personTargetPageUid}">
+    <f:if condition="{personUid} && {settings.projects.personTargetPageUid}">
         <f:then>
             <f:link.action action="show"
-                           pageUid="{settings.publications.personTargetPageUid}"
+                           pageUid="{settings.projects.personTargetPageUid}"
                            controller="Person"
                            arguments="{person: personUid}"
                            class="text-gray-700 underline hover:text-wtl-red-dark px-0 m-0">{person.name}</f:link.action>
