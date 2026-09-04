@@ -8,6 +8,9 @@ $EM_CONF["hio_typo3_connector_wtl"] = [
         'depends' => [
             'typo3' => '12.4.0-14.3.99',
         ],
+        'suggests' => [
+            'content_defender' => '12.4.0-14.3.99',
+        ],
     ],
     'autoload' => [
         'psr-4' => [
