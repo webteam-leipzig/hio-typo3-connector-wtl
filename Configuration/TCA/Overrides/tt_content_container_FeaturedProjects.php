@@ -25,7 +25,7 @@ $gridConfiguration = [
 ];
 
 if (version_compare($typo3Version->getBranch(), '14.0', '>=')) {
-    $gridConfiguration[0][0]['allowedContentTypes'] = 'tx_hiotypo3connectorwtl_featured_project';
+    $gridConfiguration[0][0]['allowedContentTypes'] = ['tx_hiotypo3connectorwtl_featured_project'];
 } else {
     $gridConfiguration[0][0]['allowed'] = [
         'CType' => 'tx_hiotypo3connectorwtl_featured_project',
