@@ -119,8 +119,8 @@
                 </div>
 
                 <div id="tab-project-abstract" class="tab-content p-4 px-0">
-                    <f:if condition="{project.abstract}">
-                        <div class="text-sm/6 text-gray-700">{project.abstract}</div>
+                    <f:if condition="{project.details.description}">
+                        <div class="text-sm/6 text-gray-700"><hio:freeText>{project.details.description}</hio:freeText></div>
                     </f:if>
                 </div>
 
