@@ -12,35 +12,21 @@ Es stellt Fluid-Templates, Data Processors und Backend-Vorschau-Renderer bereit.
 
 ## [Unreleased]
 
-### Behoben – Die Projektbeschreibung erscheint wieder, und Absätze bleiben erhalten
+### Behoben – Freitext erscheint wieder, mit seinen Absätzen
 
-Die Projekt-Detailseite las die Beschreibung unter dem Namen `abstract`. Das Model kennt
-diese Eigenschaft nicht, und die API liefert das Feld als `description`. Der Tab blieb
-deshalb immer leer, gleich wie viel Text die Quelle trug.
+Die Projekt-Detailseite las die Beschreibung als `abstract`. Die API liefert das Feld als
+`description`, und das Model kennt keines von beiden — der Tab blieb immer leer.
 
-Absätze und Zeilenumbrüche aus der Quelle standen zwar im HTML, wurden vom Browser aber
-nicht dargestellt. Fünf Stellen auf vier Detailseiten geben Freitext aus, alle laufen jetzt
-durch den neuen ViewHelper `hio:freeText`: die Beschreibung von Projekt, Patent und
-Promotion sowie Abstract und Untertitel der Publikation.
+Absätze und Tabulatoren standen im HTML, wurden vom Browser aber nicht dargestellt. Der
+neue ViewHelper `hio:freeText` normalisiert CRLF zu LF, ersetzt einen Tabulator durch vier
+geschützte Leerzeichen und macht dann aus jedem Zeilenumbruch ein `<br />`. Der Inhalt
+wird zuerst escaped; HTML aus der Quelle erscheint als Text.
 
-### Neu – Der ViewHelper `hio:freeText`
-
-Er bereitet ein Klartext-Feld der API für die Ausgabe auf, in drei Schritten:
-
-| Eingabe | Ausgabe |
-|---|---|
-| CRLF und ein einzelnes CR | LF, damit hinter dem `<br />` kein Wagenrücklauf bleibt |
-| Tabulator | vier geschützte Leerzeichen |
-| jeder Zeilenumbruch | `<br />` |
-
-Der Tab wird zu geschützten Leerzeichen als **Zeichen**, nicht als Entity `&emsp;`. Eine
-Entity käme bereits escaped an und stünde als sichtbarer Text auf der Seite.
-
-Der Inhalt wird zuerst escaped und danach nicht erneut. HTML aus der Quelle erscheint
-deshalb als Text und wird nicht ausgeführt.
+Fünf Stellen laufen darüber: die Beschreibung von Projekt, Patent und Promotion sowie
+Abstract und Untertitel der Publikation.
 
 **Was zu tun ist:** nichts. Wer eines der vier Templates überschrieben hat, trägt den
-ViewHelper dort selbst nach — der Namespace `hio` ist in allen Templates bereits deklariert.
+ViewHelper dort selbst nach.
 
 ---
 
