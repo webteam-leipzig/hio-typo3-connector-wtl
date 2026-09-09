@@ -14,19 +14,11 @@ Es stellt Fluid-Templates, Data Processors und Backend-Vorschau-Renderer bereit.
 
 ### Behoben – Freitext erscheint wieder, mit seinen Absätzen
 
-Die Projekt-Detailseite las die Beschreibung als `abstract`. Die API liefert das Feld als
-`description`, und das Model kennt keines von beiden — der Tab blieb immer leer.
-
-Absätze und Tabulatoren standen im HTML, wurden vom Browser aber nicht dargestellt. Der
-neue ViewHelper `hio:freeText` normalisiert CRLF zu LF, ersetzt einen Tabulator durch vier
-geschützte Leerzeichen und macht dann aus jedem Zeilenumbruch ein `<br />`. Der Inhalt
-wird zuerst escaped; HTML aus der Quelle erscheint als Text.
-
-Fünf Stellen laufen darüber: die Beschreibung von Projekt, Patent und Promotion sowie
-Abstract und Untertitel der Publikation.
-
-**Was zu tun ist:** nichts. Wer eines der vier Templates überschrieben hat, trägt den
-ViewHelper dort selbst nach.
+Die Projekt-Detailseite las die Beschreibung als `abstract`; die API liefert sie als
+`description`. Der neue ViewHelper `hio:freeText` escaped den Inhalt, macht aus jedem
+Zeilenumbruch ein `<br />` und aus einem Tabulator vier geschützte Leerzeichen. Er greift
+an fünf Stellen: Beschreibung von Projekt, Patent und Promotion, Abstract und Untertitel
+der Publikation.
 
 ---
 
