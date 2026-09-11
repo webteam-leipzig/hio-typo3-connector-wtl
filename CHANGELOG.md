@@ -10,6 +10,18 @@ Es stellt Fluid-Templates, Data Processors und Backend-Vorschau-Renderer bereit.
 
 ---
 
+## [Unreleased]
+
+### Behoben – Freitext erscheint wieder, mit seinen Absätzen
+
+Die Projekt-Detailseite las die Beschreibung als `abstract`; die API liefert sie als
+`description`. Der neue ViewHelper `hio:freeText` escaped den Inhalt, macht aus jedem
+Zeilenumbruch ein `<br />` und aus einem Tabulator vier geschützte Leerzeichen. Er greift
+an fünf Stellen: Beschreibung von Projekt, Patent und Promotion, Abstract und Untertitel
+der Publikation.
+
+---
+
 ## [1.3.0] – 2026-05-12
 
 ### ⚠️ Breaking Change – Link-Handling für Personen und Organisationseinheiten geändert
