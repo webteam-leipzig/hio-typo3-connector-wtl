@@ -12,6 +12,17 @@ Es stellt Fluid-Templates, Data Processors und Backend-Vorschau-Renderer bereit.
 
 ## [Unreleased]
 
+### Behoben – Die Projektleitung erscheint wieder, und die Personen-Detailseite lädt
+
+Die API liefert die Personenrolle als Objekt, die Templates lasen sie als Text. Die
+Personen-Detailseite endete darum in einer Fluid-Ausnahme, und der Vergleich mit
+`filterProjectLead` war nie wahr — jede Projekt-Detailseite zeigte eine leere
+Projektleitung. Die Meta-Zeile liest den Projekttyp jetzt unter seinem aktuellen Namen
+`projectType`.
+
+Die Gegenseite dazu ist HIO-387 in `wtl/hio-typo3-connector`. Ohne sie bleiben die drei
+Werte leer, statt dass eine Seite ausfällt.
+
 ### Behoben – Die Meta-Zeile zeigt keinen Punkt zu viel
 
 Fehlte ein Feld, blieb sein Trennzeichen stehen — die Publikation zeigte
