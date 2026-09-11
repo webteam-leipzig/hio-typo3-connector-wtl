@@ -16,8 +16,8 @@
         <div class="bg-white px-4 py-6 lg:p-8">
             <div class="text-base/7 text-gray-700">
                 <p class="hio-meta-line font-semibold text-gray-600 py-0">
-                    <f:if condition="{project.details.type}">
-                        <span>{project.details.type}</span>
+                    <f:if condition="{project.details.projectType.name}">
+                        <span>{project.details.projectType.name}</span>
                     </f:if>
                     <f:if condition="{project.details.status}">
                         <span>{project.details.status.name}</span>
@@ -43,7 +43,7 @@
                         <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
                             <f:for each="{project.details.persons}" as="detailPerson">
                                 <span>
-                                    <f:if condition="{detailPerson.role} == {settings.projectDetails.persons.filterProjectLead}">
+                                    <f:if condition="{detailPerson.role.name} == {settings.projectDetails.persons.filterProjectLead}">
                                         <f:variable name="basePerson" value="{hio:findByProperty(haystack: project.persons, property: 'objectId', value: detailPerson.id)}"/>
                                         <f:render partial="Project/Show/PersonLink" arguments="{person: detailPerson, uid: basePerson.uid}" />
                                     </f:if>
