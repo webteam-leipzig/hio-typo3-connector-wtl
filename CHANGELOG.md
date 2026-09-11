@@ -12,6 +12,12 @@ Es stellt Fluid-Templates, Data Processors und Backend-Vorschau-Renderer bereit.
 
 ## [Unreleased]
 
+### Behoben – Die Meta-Zeile zeigt keinen Punkt zu viel
+
+Fehlte ein Feld, blieb sein Trennzeichen stehen — die Publikation zeigte
+`Journalartikel · · validiert`. Jedes Feld steht jetzt in einem eigenen `<span>`, und der
+Punkt kommt aus der Klasse `hio-meta-line` im CSS, mit leerem alternativen Text.
+
 ### Behoben – Freitext erscheint wieder, mit seinen Absätzen
 
 Die Projekt-Detailseite las die Beschreibung als `abstract`; die API liefert sie als
