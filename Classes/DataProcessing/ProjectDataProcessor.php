@@ -20,14 +20,16 @@ class ProjectDataProcessor implements DataProcessorInterface
     {
         $fieldName = $processorConfiguration['fieldName'] ?? '';
         $as = $processorConfiguration['as'] ?? 'featuredProject';
-        $projectUid = $processedData['data'][$fieldName] ?? null;
-
-        if ($projectUid) {
-            $project = $this->projectRepository->findByUid($projectUid);
-            $processedData[$as] = $project;
-        } else {
-            $processedData[$as] = null;
+        if (!is_string($fieldName) || !is_string($as)) {
+            return $processedData;
         }
+
+        $data = $processedData['data'] ?? null;
+        $projectUid = is_array($data) ? ($data[$fieldName] ?? null) : null;
+
+        $processedData[$as] = is_numeric($projectUid)
+            ? $this->projectRepository->findByUid((int)$projectUid)
+            : null;
 
         return $processedData;
     }
