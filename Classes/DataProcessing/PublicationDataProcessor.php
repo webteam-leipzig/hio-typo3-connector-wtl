@@ -20,14 +20,17 @@ class PublicationDataProcessor implements DataProcessorInterface
     {
         $fieldName = $processorConfiguration['fieldName'] ?? '';
         $as = $processorConfiguration['as'] ?? 'featuredPublication';
-        $publicationUid = $processedData['data'][$fieldName] ?? null;
-
-        if ($publicationUid) {
-            $publication = $this->publicationRepository->findByUid($publicationUid);
-            $processedData[$as] = $publication;
-        } else {
-            $processedData[$as] = null;
+        if (!is_string($fieldName) || !is_string($as)) {
+            return $processedData;
         }
+
+        $data = $processedData['data'] ?? null;
+        $publicationUid = is_array($data) ? ($data[$fieldName] ?? null) : null;
+        $publicationUid = filter_var($publicationUid, FILTER_VALIDATE_INT);
+
+        $processedData[$as] = $publicationUid !== false && $publicationUid > 0
+            ? $this->publicationRepository->findByUid($publicationUid)
+            : null;
 
         return $processedData;
     }

@@ -4,6 +4,7 @@ namespace Wtl\HioTypo3ConnectorWtl\Backend\Preview;
 
 use TYPO3\CMS\Backend\View\BackendLayout\Grid\GridColumnItem;
 use TYPO3\CMS\Backend\Preview\StandardContentPreviewRenderer;
+use Wtl\HioTypo3Connector\Domain\Model\Project;
 use Wtl\HioTypo3Connector\Domain\Repository\ProjectRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -22,13 +23,15 @@ class FeaturedProjectPreviewRenderer extends StandardContentPreviewRenderer
         $record = $item->getRecord();
         $uid = is_array($record) ? $record['tx_hiotypo3connectorwtl_featured_project'] : $record->get('tx_hiotypo3connectorwtl_featured_project');
         
-        if (!$uid) {
+        $uid = filter_var($uid, FILTER_VALIDATE_INT);
+
+        if ($uid === false || $uid < 1) {
             return $otherContentPreview;
         }
-        
+
         $project = $this->projectRepository->findByUid($uid);
-        
-        if (!$project) {
+
+        if (!$project instanceof Project) {
             return $otherContentPreview;
         }
 
