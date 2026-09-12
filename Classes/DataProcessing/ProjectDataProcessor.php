@@ -26,9 +26,10 @@ class ProjectDataProcessor implements DataProcessorInterface
 
         $data = $processedData['data'] ?? null;
         $projectUid = is_array($data) ? ($data[$fieldName] ?? null) : null;
+        $projectUid = filter_var($projectUid, FILTER_VALIDATE_INT);
 
-        $processedData[$as] = is_numeric($projectUid)
-            ? $this->projectRepository->findByUid((int)$projectUid)
+        $processedData[$as] = $projectUid !== false && $projectUid > 0
+            ? $this->projectRepository->findByUid($projectUid)
             : null;
 
         return $processedData;

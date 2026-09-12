@@ -26,9 +26,10 @@ class PublicationDataProcessor implements DataProcessorInterface
 
         $data = $processedData['data'] ?? null;
         $publicationUid = is_array($data) ? ($data[$fieldName] ?? null) : null;
+        $publicationUid = filter_var($publicationUid, FILTER_VALIDATE_INT);
 
-        $processedData[$as] = is_numeric($publicationUid)
-            ? $this->publicationRepository->findByUid((int)$publicationUid)
+        $processedData[$as] = $publicationUid !== false && $publicationUid > 0
+            ? $this->publicationRepository->findByUid($publicationUid)
             : null;
 
         return $processedData;

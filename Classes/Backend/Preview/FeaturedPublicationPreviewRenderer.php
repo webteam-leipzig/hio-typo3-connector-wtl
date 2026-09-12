@@ -23,11 +23,13 @@ class FeaturedPublicationPreviewRenderer extends StandardContentPreviewRenderer
         $record = $item->getRecord();
         $uid = is_array($record) ? $record['tx_hiotypo3connectorwtl_featured_publication'] : $record->get('tx_hiotypo3connectorwtl_featured_publication');
 
-        if (!is_numeric($uid)) {
+        $uid = filter_var($uid, FILTER_VALIDATE_INT);
+
+        if ($uid === false || $uid < 1) {
             return $otherContentPreview;
         }
 
-        $publication = $this->publicationRepository->findByUid((int)$uid);
+        $publication = $this->publicationRepository->findByUid($uid);
 
         if (!$publication instanceof Publication) {
             return $otherContentPreview;
