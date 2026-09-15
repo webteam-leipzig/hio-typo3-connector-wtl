@@ -51,12 +51,8 @@ Dieses Beispiel zeigt den typischen Aufbau einer Listen- und Detailseite.
 1. Legen Sie eine Seite `Publikationen` an.
 2. Fügen Sie auf dieser Seite das Plugin `HISinOne Publikationen` ein.
 3. Wählen Sie im Plugin optional eine Zitierweise, Sortierung und Trefferzahl pro Seite.
-4. Legen Sie eine Seite `Publikationsdetail` an.
-5. Tragen Sie die Seite `Publikationsdetail` in den TypoScript-Konstanten als
-   `publicationTargetPageUid` ein, wo aus anderen Ansichten auf Publikationen verlinkt
-   werden soll.
-6. Prüfen Sie im Frontend, ob die Publikationsliste angezeigt wird und Detail-Links auf die
-   Detailseite führen.
+4. Prüfen Sie im Frontend, ob die Publikationsliste angezeigt wird und die Detail-Links auf
+   die Detailansicht desselben Plugins führen.
 
 ![Backend-Konfiguration der Publikationsliste](Documentation/Images/publication-list-backend-plugin.png)
 
