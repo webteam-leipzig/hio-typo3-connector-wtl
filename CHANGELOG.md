@@ -10,7 +10,7 @@ Es stellt Fluid-Templates, Data Processors und Backend-Vorschau-Renderer bereit.
 
 ---
 
-## [Latest]
+## [1.6.0]
 
 ### Behoben – Publikationstitel in Listen und Detailansichten
 
