@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   finalize:
@@ -21,11 +22,27 @@ jobs:
       - name: Set changelog version from tag
         env:
           TAG_NAME: ${{ github.ref_name }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           escaped_tag=$(printf '%s' "$TAG_NAME" | sed 's/[\&|]/\\&/g')
           sed -i "0,/^## \[Latest\]$/s|^## \[Latest\]$|## [$escaped_tag]|" CHANGELOG.md
+          if git diff --quiet -- CHANGELOG.md; then
+            exit 0
+          fi
+
+          branch="changelog/${TAG_NAME}"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- CHANGELOG.md
           git commit -m "Document release ${TAG_NAME} in changelog"
-          git push origin HEAD:refs/heads/main
+          if ! git ls-remote --exit-code origin "refs/heads/$branch" >/dev/null; then
+            git push origin "HEAD:refs/heads/$branch"
+          fi
+
+          pr=$(gh pr list --base main --head "$branch" --state open --json number --jq '.[0].number // empty')
+          if [ -z "$pr" ]; then
+            pr=$(gh pr create --base main --head "$branch" \
+              --title "Document release ${TAG_NAME} in changelog" \
+              --body "Finalize the changelog for ${TAG_NAME}.")
+          fi
+          gh pr merge "$pr" --auto --squash
